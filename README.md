@@ -33,7 +33,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=660&height=70&lines=Computer+Science+Engineering+Student;Full+Stack+Developer;Java+Developer;Backend+Enthusiast;Always+Learning" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=660&height=70&lines=Computer+Science+Engineering+Student;Java+Developer;Backend+Enthusiast;Always+Learning" alt="Typing SVG" />
 </p>
 
 <p align="center" style="color: #8b949e;">
@@ -44,7 +44,7 @@
 
 <!-- ═══════════ 2 · HERO BANNER  ═══════════ -->
 <p align="center">
-  <img src="assets/banner.png" alt="Dhyanesh - Full Stack Developer banner" width="100%" />
+  <img src="assets/banner.png" alt="Dhyanesh - CSE Student & Developer banner" width="100%" />
 </p>
 
 <!-- ═══════════ 3 · ABOUT ME  ═══════════ -->
@@ -53,7 +53,7 @@
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 32px; min-width: 620px; max-width: 760px; text-align: left; color: #c9d1d9;">
     <p>🎓&nbsp;&nbsp;Computer Science Engineering Student</p>
-    <p>💻&nbsp;&nbsp;Passionate Full Stack Developer</p>
+    <p>💻&nbsp;&nbsp;Passionate Developer</p>
     <p>📚&nbsp;&nbsp;Currently learning Java, Spring Boot &amp; Next.js</p>
     <p>⚙️&nbsp;&nbsp;Interested in Backend Engineering &amp; System Design</p>
     <p>🌱&nbsp;&nbsp;Open Source Enthusiast</p>
@@ -217,6 +217,18 @@
     <b style="color: #60a5fa;">🌐 Portfolio</b>
     <p style="color: #8b949e; font-size: 13px;">Personal portfolio website built with Next.js &amp; Tailwind CSS.</p>
     <a href="https://github.com/Dhyanesh006/portfolio" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
+  </span>
+
+  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
+    <b style="color: #60a5fa;">🏠 Rental Hub <span style="color: #8b949e; font-size: 11px;">🔒</span></b>
+    <p style="color: #8b949e; font-size: 13px;">Property rental management platform — TypeScript monorepo (Next.js, React, NestJS).</p>
+    <a href="https://github.com/Dhyanesh006/Rental_Hub" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
+  </span>
+
+  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
+    <b style="color: #60a5fa;">🛒 PCStore <span style="color: #8b949e; font-size: 11px;">🔒</span></b>
+    <p style="color: #8b949e; font-size: 13px;">E-commerce platform for PC parts — Java, Spring Boot &amp; MySQL.</p>
+    <a href="https://github.com/Dhyanesh006/pcstore" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
   </span>
 </div>
 
