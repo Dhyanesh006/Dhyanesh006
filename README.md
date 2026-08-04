@@ -208,33 +208,15 @@
 
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
-    <b style="color: #60a5fa;">📁 Portfolio</b>
-    <p style="color: #8b949e; font-size: 13px;">My personal portfolio built with Next.js &amp; Tailwind CSS.</p>
+    <b style="color: #60a5fa;">🚀 GitHub Profile Repo</b>
+    <p style="color: #8b949e; font-size: 13px;">This profile — animated Pac-Man contribution graph, live stats cards &amp; GitHub Actions.</p>
     <a href="https://github.com/Dhyanesh006/Dhyanesh006" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
   </span>
 
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
-    <b style="color: #60a5fa;">🍽️ Food Review Platform</b>
-    <p style="color: #8b949e; font-size: 13px;">Full stack app built with Spring Boot &amp; React.</p>
-    <a href="https://github.com/Dhyanesh006" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
-  </span>
-
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
-    <b style="color: #60a5fa;">🏠 Rental Platform</b>
-    <p style="color: #8b949e; font-size: 13px;">Property rental platform using the MERN stack.</p>
-    <a href="https://github.com/Dhyanesh006" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
-  </span>
-
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
-    <b style="color: #60a5fa;">☕ Java Spring Boot Projects</b>
-    <p style="color: #8b949e; font-size: 13px;">A collection of REST APIs built with Java &amp; Spring Boot.</p>
-    <a href="https://github.com/Dhyanesh006" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
-  </span>
-
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
-    <b style="color: #60a5fa;">🤖 Machine Learning Projects</b>
-    <p style="color: #8b949e; font-size: 13px;">ML models and notebooks built with Python.</p>
-    <a href="https://github.com/Dhyanesh006" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
+    <b style="color: #60a5fa;">🌐 Portfolio</b>
+    <p style="color: #8b949e; font-size: 13px;">Personal portfolio website built with Next.js &amp; Tailwind CSS.</p>
+    <a href="https://github.com/Dhyanesh006/portfolio" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
   </span>
 </div>
 
