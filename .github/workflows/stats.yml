@@ -32,7 +32,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github&bg_color=09090b&title_color=fbbf24&text_color=f4f4f5&icon_color=a78bfa&border_color=3f3f46
+          options: username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github&bg_color=0d1117&title_color=ffffff&text_color=e6edf3&icon_color=8b949e&border_color=30363d
           path: profile/github-stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -41,7 +41,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&hide_border=true&bg_color=09090b&title_color=fbbf24&text_color=f4f4f5&icon_color=a78bfa&border_color=3f3f46
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=e6edf3&icon_color=8b949e&border_color=30363d
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
