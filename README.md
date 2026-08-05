@@ -25,7 +25,7 @@
 
 <!-- ═══════════ 1 · ANIMATED HEADER  ═══════════ -->
 <p align="center">
-  <img src="assets/icons/waving.gif" alt="Waving hand" width="110" />
+  <img src="assets/icons/pc-running.gif" alt="PC running" width="110" />
 </p>
 
 <h1 align="center" style="color: #f0f6fc; font-family: 'Segoe UI', sans-serif;">
@@ -33,7 +33,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=660&height=70&lines=Computer+Science+Engineering+Student;Java+Developer;Backend+Enthusiast;Always+Learning" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=660&height=70&lines=Computer+Science+Student;Cybersecurity+Learner;Networking+%26+Cloud+Learner;Always+Learning" alt="Typing SVG" />
 </p>
 
 <p align="center" style="color: #8b949e;">
@@ -52,12 +52,11 @@
 
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 32px; min-width: 620px; max-width: 760px; text-align: left; color: #c9d1d9;">
-    <p>🎓&nbsp;&nbsp;Computer Science Engineering Student</p>
-    <p>💻&nbsp;&nbsp;Passionate Developer</p>
-    <p>📚&nbsp;&nbsp;Currently learning Java, Spring Boot &amp; Next.js</p>
-    <p>⚙️&nbsp;&nbsp;Interested in Backend Engineering &amp; System Design</p>
-    <p>🌱&nbsp;&nbsp;Open Source Enthusiast</p>
-    <p>🚀&nbsp;&nbsp;Building scalable applications</p>
+    <p>🎓&nbsp;&nbsp;B.E. Computer Science &amp; Engineering Student</p>
+    <p>💻&nbsp;&nbsp;Full-stack developer &mdash; Java, Spring Boot, React &amp; modern web</p>
+    <p>🛡️&nbsp;&nbsp;Cybersecurity learner &amp; ethical hacking explorer</p>
+    <p>☁️&nbsp;&nbsp;Networking &amp; Cloud (AWS) enthusiast</p>
+    <p>🛠️&nbsp;&nbsp;Building end-to-end, scalable applications</p>
     <p>🧩&nbsp;&nbsp;Loves solving problems</p>
   </span>
 </div>
@@ -83,9 +82,9 @@
 <!-- ═══════════ 5 · TECH STACK  ═══════════ -->
 <h2 align="center" style="color: #38bdf8;">🛠️ &nbsp;Tech Stack</h2>
 
-<p align="center"><b style="color: #a78bfa;">Languages&nbsp; <span style="color: #8b949e;">(Java · JavaScript · TypeScript · Python · SQL)</span></b></p>
+<p align="center"><b style="color: #a78bfa;">Languages&nbsp; <span style="color: #8b949e;">(Java · Python · JavaScript · TypeScript)</span></b></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,javascript,typescript,python&perline=10" alt="Languages" />
+  <img src="https://skillicons.dev/icons?i=java,python,javascript,typescript&perline=10" alt="Languages" />
 </p>
 
 <p align="center"><b style="color: #a78bfa;">Frontend</b></p>
@@ -93,25 +92,27 @@
   <img src="https://skillicons.dev/icons?i=html,css,react,nextjs,tailwind&perline=10" alt="Frontend" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Backend</b></p>
+<p align="center"><b style="color: #a78bfa;">Backend&nbsp; <span style="color: #8b949e;">(Spring Boot · REST APIs · Node.js)</span></b></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=spring,nodejs,express&perline=10" alt="Backend" />
+  <img src="https://skillicons.dev/icons?i=spring,nodejs&perline=10" alt="Backend" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Database</b></p>
+<p align="center"><b style="color: #a78bfa;">Database&nbsp; <span style="color: #8b949e;">(MySQL · MongoDB)</span></b></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb&perline=10" alt="Database" />
+  <img src="https://skillicons.dev/icons?i=mysql,mongodb&perline=10" alt="Database" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Cloud &amp; Deployment</b></p>
+<p align="center"><b style="color: #a78bfa;">Tools&nbsp; <span style="color: #8b949e;">(Git · GitHub · VS Code · Docker · Linux · Power BI)</span></b></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=vercel,netlify&perline=10" alt="Cloud & Deployment" />
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,linux,powerbi&perline=10" alt="Tools" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Tools</b></p>
+<p align="center"><b style="color: #a78bfa;">Networking &amp; Cloud&nbsp; <span style="color: #8b949e;">(Networking · AWS)</span></b></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=git,github,docker,vscode,postman,linux&perline=10" alt="Tools" />
+  <img src="https://skillicons.dev/icons?i=aws&perline=10" alt="Networking & Cloud" />
 </p>
+
+<p align="center"><b style="color: #a78bfa;">Cybersecurity&nbsp; <span style="color: #8b949e;">(Cybersecurity · Ethical Hacking)</span></b></p>
 
 <br />
 
@@ -192,12 +193,12 @@
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 36px; min-width: 460px; text-align: left; color: #c9d1d9;">
     <p><b style="color: #8b949e;">Currently Learning</b></p>
-    <p>✔️&nbsp;&nbsp;Data Structures &amp; Algorithms</p>
-    <p>✔️&nbsp;&nbsp;Java</p>
-    <p>✔️&nbsp;&nbsp;Spring Boot</p>
-    <p>✔️&nbsp;&nbsp;Next.js</p>
+    <p>✔️&nbsp;&nbsp;Java &amp; Spring Boot (Backend)</p>
+    <p>✔️&nbsp;&nbsp;React &amp; Next.js</p>
+    <p>✔️&nbsp;&nbsp;Cybersecurity &amp; Ethical Hacking</p>
+    <p>✔️&nbsp;&nbsp;Networking</p>
+    <p>✔️&nbsp;&nbsp;Cloud Computing (AWS)</p>
     <p>✔️&nbsp;&nbsp;System Design</p>
-    <p>✔️&nbsp;&nbsp;Backend Development</p>
   </span>
 </div>
 
@@ -268,11 +269,11 @@
 <h2 align="center" style="color: #38bdf8;">🤝 &nbsp;Connect With Me</h2>
 
 <p align="center">
+  <a href="https://github.com/Dhyanesh006">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
   <a href="https://www.linkedin.com/in/dhyanesh-v-741738274">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://portfolio-dhyanesh.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-22d3ee?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
   </a>
   <a href="mailto:dhyanesh006@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
