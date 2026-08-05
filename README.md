@@ -29,6 +29,10 @@
 </p>
 
 <p align="center">
+  <img src="assets/banner.png" alt="Dhyanesh - CSE Student & Developer banner" width="100%" />
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=660&height=70&lines=Computer+Science+Student;Cybersecurity+Learner;Networking+%26+Cloud+Learner;Always+Learning" alt="Typing SVG" />
 </p>
 
@@ -37,11 +41,6 @@
 </p>
 
 <br />
-
-<!-- ═══════════ 2 · HERO BANNER  ═══════════ -->
-<p align="center">
-  <img src="assets/banner.png" alt="Dhyanesh - CSE Student & Developer banner" width="100%" />
-</p>
 
 <!-- ═══════════ 3 · ABOUT ME  ═══════════ -->
 <h2 align="center" style="color: #38bdf8;">✦ &nbsp;About Me&nbsp; ✦</h2>
