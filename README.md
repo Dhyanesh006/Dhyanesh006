@@ -29,7 +29,7 @@
 </p>
 
 <h1 align="center" style="color: #f0f6fc; font-family: 'Segoe UI', sans-serif;">
-  Hi, I'm <span style="background: linear-gradient(90deg, #f87171, #fbbf24, #4ade80, #38bdf8, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Dhyanesh</span> 👋
+  <span style="background: linear-gradient(90deg, #f87171, #fbbf24, #4ade80, #38bdf8, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Dhyanesh</span>
 </h1>
 
 <p align="center">
