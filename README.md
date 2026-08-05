@@ -33,7 +33,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=660&height=70&lines=Computer+Science+Student;Cybersecurity+Learner;Networking+%26+Cloud+Learner;Always+Learning" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=FFFFFF&center=true&vCenter=true&width=660&height=70&lines=Computer+Science+Student;Cybersecurity+Learner;Networking+%26+Cloud+Learner;Always+Learning" alt="Typing SVG" />
 </p>
 
 <p align="center" style="color: #8b949e;">
@@ -43,7 +43,7 @@
 <br />
 
 <!-- ═══════════ 3 · ABOUT ME  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">✦ &nbsp;About Me&nbsp; ✦</h2>
+<h2 align="center" style="color: #ffffff;">✦ &nbsp;About Me&nbsp; ✦</h2>
 
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 32px; min-width: 620px; max-width: 760px; text-align: left; color: #e6edf3;">
@@ -59,13 +59,13 @@
 <br />
 
 <!-- ═══════════ 4 · EDUCATION & CERTIFICATIONS  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">🎓 &nbsp;Education &amp; Certifications</h2>
+<h2 align="center" style="color: #ffffff;">🎓 &nbsp;Education &amp; Certifications</h2>
 
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 32px; min-width: 620px; max-width: 760px; text-align: left; color: #e6edf3;">
-    <p>🎓&nbsp;&nbsp;<b style="color: #38bdf8;">B.E. Computer Science &amp; Engineering</b>&nbsp;&nbsp;<span style="color: #8b949e;">(Pursuing)</span></p>
+    <p>🎓&nbsp;&nbsp;<b style="color: #ffffff;">B.E. Computer Science &amp; Engineering</b>&nbsp;&nbsp;<span style="color: #8b949e;">(Pursuing)</span></p>
     <p>📍&nbsp;&nbsp;Coimbatore, India</p>
-    <p>📜&nbsp;&nbsp;<b style="color: #38bdf8;">Certifications (2024)</b></p>
+    <p>📜&nbsp;&nbsp;<b style="color: #ffffff;">Certifications (2024)</b></p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;✔️&nbsp;&nbsp;MongoDB &middot; MATLAB (MathWorks) &middot; Microsoft &middot; Bentley</p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;✔️&nbsp;&nbsp;Celonis &middot; Wadhwani Foundation &middot; Professional Development</p>
     <p>🌐&nbsp;&nbsp;Explorations: Cybersecurity &amp; Cloud Computing</p>
@@ -75,39 +75,39 @@
 <br />
 
 <!-- ═══════════ 5 · TECH STACK  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">🛠️ &nbsp;Tech Stack</h2>
+<h2 align="center" style="color: #ffffff;">🛠️ &nbsp;Tech Stack</h2>
 
-<p align="center"><b style="color: #a78bfa;">Languages&nbsp; <span style="color: #8b949e;">(Java · Python · JavaScript · TypeScript)</span></b></p>
+<p align="center"><b style="color: #c9d1d9;">Languages&nbsp; <span style="color: #8b949e;">(Java · Python · JavaScript · TypeScript)</span></b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=java,python,javascript,typescript&perline=10" alt="Languages" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Frontend</b></p>
+<p align="center"><b style="color: #c9d1d9;">Frontend</b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,react,nextjs,tailwind&perline=10" alt="Frontend" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Backend&nbsp; <span style="color: #8b949e;">(Spring Boot · REST APIs · Node.js)</span></b></p>
+<p align="center"><b style="color: #c9d1d9;">Backend&nbsp; <span style="color: #8b949e;">(Spring Boot · REST APIs · Node.js)</span></b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=spring,nodejs&perline=10" alt="Backend" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Database&nbsp; <span style="color: #8b949e;">(MySQL · MongoDB)</span></b></p>
+<p align="center"><b style="color: #c9d1d9;">Database&nbsp; <span style="color: #8b949e;">(MySQL · MongoDB)</span></b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=mysql,mongodb&perline=10" alt="Database" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Tools&nbsp; <span style="color: #8b949e;">(Git · GitHub · VS Code · Docker · Linux · Power BI)</span></b></p>
+<p align="center"><b style="color: #c9d1d9;">Tools&nbsp; <span style="color: #8b949e;">(Git · GitHub · VS Code · Docker · Linux · Power BI)</span></b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,linux,powerbi&perline=10" alt="Tools" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Networking &amp; Cloud&nbsp; <span style="color: #8b949e;">(Networking · AWS)</span></b></p>
+<p align="center"><b style="color: #c9d1d9;">Networking &amp; Cloud&nbsp; <span style="color: #8b949e;">(Networking · AWS)</span></b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=aws&perline=10" alt="Networking & Cloud" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Cybersecurity&nbsp; <span style="color: #8b949e;">(Cybersecurity · Ethical Hacking)</span></b></p>
+<p align="center"><b style="color: #c9d1d9;">Cybersecurity&nbsp; <span style="color: #8b949e;">(Cybersecurity · Ethical Hacking)</span></b></p>
 
 <br />
 
@@ -117,7 +117,7 @@
   (.github/workflows/stats.yml) and committed into this repo, so they
   never depend on flaky third-party hosting.
 -->
-<h2 align="center" style="color: #38bdf8;">📊 &nbsp;GitHub Stats</h2>
+<h2 align="center" style="color: #ffffff;">📊 &nbsp;GitHub Stats</h2>
 
 <p align="center">
   <img src="profile/github-stats.svg" alt="GitHub Stats" width="430" />
@@ -125,7 +125,7 @@
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Dhyanesh006&hide_border=true&background=0d1117&stroke=30363d&ring=38bdf8&fire=38bdf8&currStreakNum=38bdf8&currStreakLabel=38bdf8&sideNums=c9d1d9&sideLabels=8b949e&dates=8b949e" alt="GitHub Streak" height="185" />
+  <img src="https://streak-stats.demolab.com/?user=Dhyanesh006&hide_border=true&background=0d1117&stroke=30363d&ring=ffffff&fire=ffffff&currStreakNum=ffffff&currStreakLabel=ffffff&sideNums=c9d1d9&sideLabels=8b949e&dates=8b949e" alt="GitHub Streak" height="185" />
 </p>
 
 <p align="center">
@@ -140,7 +140,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Dhyanesh006&theme=github-dark&hide_border=true&bg_color=0d1117&color=38bdf8&line=22d3ee&point=a78bfa&area=true" alt="Contribution Activity Graph" width="96%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Dhyanesh006&theme=github-dark&hide_border=true&bg_color=0d1117&color=ffffff&line=8b949e&point=c9d1d9&area=true" alt="Contribution Activity Graph" width="96%" />
 </p>
 
 <!-- Trophies are rendered statically (no external service) so they can
@@ -183,7 +183,7 @@
 <br />
 
 <!-- ═══════════ 7 · CURRENT FOCUS  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">🎯 &nbsp;Current Focus</h2>
+<h2 align="center" style="color: #ffffff;">🎯 &nbsp;Current Focus</h2>
 
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 36px; min-width: 460px; text-align: left; color: #e6edf3;">
@@ -200,38 +200,38 @@
 <br />
 
 <!-- ═══════════ 8 · FEATURED PROJECTS  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">📌 &nbsp;Featured Projects</h2>
+<h2 align="center" style="color: #ffffff;">📌 &nbsp;Featured Projects</h2>
 
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #e6edf3;">
-    <b style="color: #38bdf8;">🚀 GitHub Profile Repo</b>
+    <b style="color: #ffffff;">🚀 GitHub Profile Repo</b>
     <p style="color: #8b949e; font-size: 13px;">This profile — animated Pac-Man contribution graph, live stats cards &amp; GitHub Actions.</p>
-    <a href="https://github.com/Dhyanesh006/Dhyanesh006" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
+    <a href="https://github.com/Dhyanesh006/Dhyanesh006" style="color: #ffffff; text-decoration: none;">View Repo →</a>
   </span>
 
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #e6edf3;">
-    <b style="color: #38bdf8;">🌐 Portfolio</b>
+    <b style="color: #ffffff;">🌐 Portfolio</b>
     <p style="color: #8b949e; font-size: 13px;">Personal portfolio website built with Next.js &amp; Tailwind CSS.</p>
-    <a href="https://github.com/Dhyanesh006/portfolio" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
+    <a href="https://github.com/Dhyanesh006/portfolio" style="color: #ffffff; text-decoration: none;">View Repo →</a>
   </span>
 
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #e6edf3;">
-    <b style="color: #38bdf8;">🏠 Rental Hub <span style="color: #8b949e; font-size: 11px;">🔒</span></b>
+    <b style="color: #ffffff;">🏠 Rental Hub <span style="color: #8b949e; font-size: 11px;">🔒</span></b>
     <p style="color: #8b949e; font-size: 13px;">Property rental management platform — TypeScript monorepo (Next.js, React, NestJS).</p>
-    <a href="https://github.com/Dhyanesh006/Rental_Hub" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
+    <a href="https://github.com/Dhyanesh006/Rental_Hub" style="color: #ffffff; text-decoration: none;">View Repo →</a>
   </span>
 
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #e6edf3;">
-    <b style="color: #38bdf8;">🛒 PCStore <span style="color: #8b949e; font-size: 11px;">🔒</span></b>
+    <b style="color: #ffffff;">🛒 PCStore <span style="color: #8b949e; font-size: 11px;">🔒</span></b>
     <p style="color: #8b949e; font-size: 13px;">E-commerce platform for PC parts — Java, Spring Boot &amp; MySQL.</p>
-    <a href="https://github.com/Dhyanesh006/pcstore" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
+    <a href="https://github.com/Dhyanesh006/pcstore" style="color: #ffffff; text-decoration: none;">View Repo →</a>
   </span>
 </div>
 
 <br />
 
 <!-- ═══════════ 9 · RANDOM DEV QUOTE  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">💬 &nbsp;Random Dev Quote</h2>
+<h2 align="center" style="color: #ffffff;">💬 &nbsp;Random Dev Quote</h2>
 
 <p align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" alt="Random Dev Quote" />
@@ -244,12 +244,12 @@
   1. Authorize at: https://spotify-github-profile.kittinanx.com/api/login
   2. Replace YOUR_SPOTIFY_USER_ID with your Spotify user ID below.
 
-<h2 align="center" style="color: #38bdf8;">🎧 &nbsp;Now Playing on Spotify</h2>
+<h2 align="center" style="color: #ffffff;">🎧 &nbsp;Now Playing on Spotify</h2>
 
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 18px 28px; text-align: center; color: #e6edf3;">
     <p style="color: #8b949e;">Spotify card appears here once you connect your account.</p>
-    <a href="https://spotify-github-profile.kittinanx.com/api/login" style="color: #22d3ee; text-decoration: none;">Connect with Spotify →</a>
+    <a href="https://spotify-github-profile.kittinanx.com/api/login" style="color: #c9d1d9; text-decoration: none;">Connect with Spotify →</a>
   </span>
 </div>
 
@@ -261,7 +261,7 @@
 <br />
 
 <!-- ═══════════ 11 · CONNECT WITH ME  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">🤝 &nbsp;Connect With Me</h2>
+<h2 align="center" style="color: #ffffff;">🤝 &nbsp;Connect With Me</h2>
 
 <p align="center">
   <a href="https://github.com/Dhyanesh006">
@@ -284,10 +284,10 @@
 <br />
 
 <!-- ═══════════ 12 · VISITOR COUNTER  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">👀 &nbsp;Profile Visitors</h2>
+<h2 align="center" style="color: #ffffff;">👀 &nbsp;Profile Visitors</h2>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Dhyanesh006&style=for-the-badge&label=Profile+Views&color=38bdf8&abbreviated=true" alt="Profile Visitors" />
+  <img src="https://komarev.com/ghpvc/?username=Dhyanesh006&style=for-the-badge&label=Profile+Views&color=ffffff&abbreviated=true" alt="Profile Visitors" />
 </p>
 
 <br />
@@ -296,7 +296,7 @@
 <!-- The GitHub activity graph is displayed above in the GitHub Stats section. -->
 
 <!-- ═══════════ 14 · PAC-MAN CONTRIBUTION ANIMATION  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">👻 &nbsp;Pac-Man Contribution Animation</h2>
+<h2 align="center" style="color: #ffffff;">👻 &nbsp;Pac-Man Contribution Animation</h2>
 
 <p align="center">
   <picture>
@@ -307,8 +307,8 @@
 </p>
 
 <p align="center" style="color: #8b949e; font-size: 13px;">
-  <em>Auto-generated daily by <a href=".github/workflows/pacman.yml" style="color: #38bdf8;">GitHub Actions</a> using
-  <a href="https://github.com/abozanona/pacman-contribution-graph" style="color: #38bdf8;">abozanona/pacman-contribution-graph</a></em>
+  <em>Auto-generated daily by <a href=".github/workflows/pacman.yml" style="color: #ffffff;">GitHub Actions</a> using
+  <a href="https://github.com/abozanona/pacman-contribution-graph" style="color: #ffffff;">abozanona/pacman-contribution-graph</a></em>
 </p>
 
 <br />
