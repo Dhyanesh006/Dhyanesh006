@@ -25,10 +25,6 @@
 
 <!-- ═══════════ 1 · ANIMATED HEADER  ═══════════ -->
 <p align="center">
-  <img src="assets/icons/ironman-flying.gif" alt="Pixel art Iron Man flying" width="110" />
-</p>
-
-<p align="center">
   <img src="assets/banner-v3.png" alt="Dhyanesh - CSE Student & Developer banner" width="100%" />
 </p>
 
