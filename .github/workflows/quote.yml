@@ -12,7 +12,7 @@ name: Daily Motivation Quote
 
 on:
   schedule:
-    - cron: "15 0 * * *"    # daily at 00:15 UTC
+    - cron: "30 18 * * *"    # daily at 00:00 IST (18:30 UTC)
   workflow_dispatch:         # manual trigger from the Actions tab
 
 permissions:
