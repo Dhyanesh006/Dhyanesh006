@@ -1,0 +1,38 @@
+# ═══════════════════════════════════════════════════════════════════
+#  DAILY MOTIVATION QUOTE
+#  ----------------------------------------------------------------
+#  Picks a motivational quote from quotes.json (games, movies and
+#  inspiring people), determined by the day of the year, and writes
+#  it into the README so it updates every day.
+#  • Runs automatically every day at 00:15 UTC (staggered from pacman
+#    and stats runs)
+#  • Also runs manually from the Actions tab
+# ═══════════════════════════════════════════════════════════════════
+name: Daily Motivation Quote
+
+on:
+  schedule:
+    - cron: "15 0 * * *"    # daily at 00:15 UTC
+  workflow_dispatch:         # manual trigger from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-quote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Pick and write today's quote
+        run: node .github/scripts/update-quote.mjs
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update daily motivation quote" || exit 0
+          git push

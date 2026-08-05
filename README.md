@@ -230,11 +230,15 @@
 
 <br />
 
-<!-- ═══════════ 9 · RANDOM DEV QUOTE  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">💬 &nbsp;Random Dev Quote</h2>
+<!-- ═══════════ 9 · MOTIVATION OF THE DAY  ═══════════ -->
+<h2 align="center" style="color: #38bdf8;">💬 &nbsp;Motivation of the Day</h2>
 
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" alt="Random Dev Quote" />
+<p align="center" style="color: #c9d1d9; max-width: 720px; margin: 0 auto;">
+  <!-- QUOTE:START -->
+  <em>&ldquo;The flow of time is always cruel, but its speed seems different for each person.&rdquo;</em>
+  <br />
+  <span style="color: #8b949e;">&mdash; The Legend of Zelda: Majora's Mask <span style="color: #60a5fa;">(Game)</span></span>
+  <!-- QUOTE:END -->
 </p>
 
 <br />
