@@ -29,7 +29,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/banner.png" alt="Dhyanesh - CSE Student & Developer banner" width="100%" />
+  <img src="assets/banner-v2.png" alt="Dhyanesh - CSE Student & Developer banner" width="100%" />
 </p>
 
 <p align="center">
