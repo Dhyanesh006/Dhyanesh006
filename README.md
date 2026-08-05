@@ -29,7 +29,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/banner-v2.png" alt="Dhyanesh - CSE Student & Developer banner" width="100%" />
+  <img src="assets/banner-v3.png" alt="Dhyanesh - CSE Student & Developer banner" width="100%" />
 </p>
 
 <p align="center">
@@ -77,37 +77,37 @@
 <!-- ═══════════ 5 · TECH STACK  ═══════════ -->
 <h2 align="center" style="color: #38bdf8;">🛠️ &nbsp;Tech Stack</h2>
 
-<p align="center"><b style="color: #a78bfa;">Languages&nbsp; <span style="color: #8b949e;">(Java · Python · JavaScript · TypeScript)</span></b></p>
+<p align="center"><b style="color: #60a5fa;">Languages&nbsp; <span style="color: #8b949e;">(Java · Python · JavaScript · TypeScript)</span></b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=java,python,javascript,typescript&perline=10" alt="Languages" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Frontend</b></p>
+<p align="center"><b style="color: #60a5fa;">Frontend</b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,react,nextjs,tailwind&perline=10" alt="Frontend" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Backend&nbsp; <span style="color: #8b949e;">(Spring Boot · REST APIs · Node.js)</span></b></p>
+<p align="center"><b style="color: #60a5fa;">Backend&nbsp; <span style="color: #8b949e;">(Spring Boot · REST APIs · Node.js)</span></b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=spring,nodejs&perline=10" alt="Backend" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Database&nbsp; <span style="color: #8b949e;">(MySQL · MongoDB)</span></b></p>
+<p align="center"><b style="color: #60a5fa;">Database&nbsp; <span style="color: #8b949e;">(MySQL · MongoDB)</span></b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=mysql,mongodb&perline=10" alt="Database" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Tools&nbsp; <span style="color: #8b949e;">(Git · GitHub · VS Code · Docker · Linux · Power BI)</span></b></p>
+<p align="center"><b style="color: #60a5fa;">Tools&nbsp; <span style="color: #8b949e;">(Git · GitHub · VS Code · Docker · Linux · Power BI)</span></b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,linux,powerbi&perline=10" alt="Tools" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Networking &amp; Cloud&nbsp; <span style="color: #8b949e;">(Networking · AWS)</span></b></p>
+<p align="center"><b style="color: #60a5fa;">Networking &amp; Cloud&nbsp; <span style="color: #8b949e;">(Networking · AWS)</span></b></p>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=aws&perline=10" alt="Networking & Cloud" />
 </p>
 
-<p align="center"><b style="color: #a78bfa;">Cybersecurity&nbsp; <span style="color: #8b949e;">(Cybersecurity · Ethical Hacking)</span></b></p>
+<p align="center"><b style="color: #60a5fa;">Cybersecurity&nbsp; <span style="color: #8b949e;">(Cybersecurity · Ethical Hacking)</span></b></p>
 
 <br />
 
@@ -140,7 +140,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Dhyanesh006&theme=github-dark&hide_border=true&bg_color=0d1117&color=38bdf8&line=22d3ee&point=a78bfa&area=true" alt="Contribution Activity Graph" width="96%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Dhyanesh006&theme=github-dark&hide_border=true&bg_color=0d1117&color=38bdf8&line=38bdf8&point=60a5fa&area=true" alt="Contribution Activity Graph" width="96%" />
 </p>
 
 <!-- Trophies are rendered statically (no external service) so they can
@@ -249,7 +249,7 @@
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 18px 28px; text-align: center; color: #c9d1d9;">
     <p style="color: #8b949e;">Spotify card appears here once you connect your account.</p>
-    <a href="https://spotify-github-profile.kittinanx.com/api/login" style="color: #a78bfa; text-decoration: none;">Connect with Spotify →</a>
+    <a href="https://spotify-github-profile.kittinanx.com/api/login" style="color: #60a5fa; text-decoration: none;">Connect with Spotify →</a>
   </span>
 </div>
 
