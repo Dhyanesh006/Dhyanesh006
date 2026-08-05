@@ -43,9 +43,9 @@
 <br />
 
 <!-- ═══════════ 3 · ABOUT ME  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">✦ &nbsp;About Me&nbsp; ✦</h2>
+<h2 align="left" style="color: #38bdf8;">✦ &nbsp;About Me&nbsp; ✦</h2>
 
-<div align="center">
+<div align="left">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 32px; min-width: 620px; max-width: 760px; text-align: left; color: #c9d1d9;">
     <p>🎓&nbsp;&nbsp;B.E. Computer Science &amp; Engineering Student</p>
     <p>💻&nbsp;&nbsp;Full-stack developer &mdash; Java, Spring Boot, React &amp; modern web</p>
@@ -59,9 +59,9 @@
 <br />
 
 <!-- ═══════════ 4 · EDUCATION & CERTIFICATIONS  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">🎓 &nbsp;Education &amp; Certifications</h2>
+<h2 align="left" style="color: #38bdf8;">🎓 &nbsp;Education &amp; Certifications</h2>
 
-<div align="center">
+<div align="left">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 32px; min-width: 620px; max-width: 760px; text-align: left; color: #c9d1d9;">
     <p>🎓&nbsp;&nbsp;<b style="color: #60a5fa;">B.E. Computer Science &amp; Engineering</b>&nbsp;&nbsp;<span style="color: #8b949e;">(Pursuing)</span></p>
     <p>📍&nbsp;&nbsp;Coimbatore, India</p>
@@ -183,9 +183,9 @@
 <br />
 
 <!-- ═══════════ 7 · CURRENT FOCUS  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">🎯 &nbsp;Current Focus</h2>
+<h2 align="left" style="color: #38bdf8;">🎯 &nbsp;Current Focus</h2>
 
-<div align="center">
+<div align="left">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 36px; min-width: 460px; text-align: left; color: #c9d1d9;">
     <p><b style="color: #8b949e;">Currently Learning</b></p>
     <p>✔️&nbsp;&nbsp;Java &amp; Spring Boot (Backend)</p>
