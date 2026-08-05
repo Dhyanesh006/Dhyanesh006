@@ -235,9 +235,9 @@
 
 <p align="center" style="color: #c9d1d9; max-width: 720px; margin: 0 auto;">
   <!-- QUOTE:START -->
-  <em>&ldquo;The flow of time is always cruel, but its speed seems different for each person.&rdquo;</em>
+  <em>&ldquo;Don't be sorry. Be better.&rdquo;</em>
   <br />
-  <span style="color: #8b949e;">&mdash; The Legend of Zelda: Majora's Mask <span style="color: #60a5fa;">(Game)</span></span>
+  <span style="color: #8b949e;">&mdash; Kratos, God of War <span style="color: #60a5fa;">(Game)</span></span>
   <!-- QUOTE:END -->
 </p>
 
