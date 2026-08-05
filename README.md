@@ -205,7 +205,7 @@
 <div align="center">
   <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
     <b style="color: #60a5fa;">🚀 GitHub Profile Repo</b>
-    <p style="color: #8b949e; font-size: 13px;">This profile — animated Pac-Man contribution graph, live stats cards &amp; GitHub Actions.</p>
+    <p style="color: #8b949e; font-size: 13px;">This profile — animated contribution graph, live stats cards &amp; GitHub Actions.</p>
     <a href="https://github.com/Dhyanesh006/Dhyanesh006" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
   </span>
 
@@ -296,13 +296,13 @@
 <!-- The GitHub activity graph is displayed above in the GitHub Stats section. -->
 
 <!-- ═══════════ 14 · PAC-MAN CONTRIBUTION ANIMATION  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">👻 &nbsp;Pac-Man Contribution Animation</h2>
+<h2 align="center" style="color: #38bdf8;">👻 &nbsp;Contribution</h2>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dhyanesh006/Dhyanesh006/output/pacman-contribution-graph-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Dhyanesh006/Dhyanesh006/output/pacman-contribution-graph.svg" />
-    <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/Dhyanesh006/Dhyanesh006/output/pacman-contribution-graph.svg" />
+    <img alt="Contribution graph" src="https://raw.githubusercontent.com/Dhyanesh006/Dhyanesh006/output/pacman-contribution-graph.svg" />
   </picture>
 </p>
 
