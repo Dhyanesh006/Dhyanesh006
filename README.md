@@ -25,7 +25,7 @@
 
 <!-- ═══════════ 1 · ANIMATED HEADER  ═══════════ -->
 <p align="center">
-  <img src="assets/icons/arc-reactor.gif" alt="Arc reactor loading with DVD bounce" width="110" />
+  <img src="assets/icons/arc-reactor-pixel.gif" alt="Pixelated arc reactor loading" width="110" />
 </p>
 
 <p align="center">
@@ -230,8 +230,8 @@
 
 <br />
 
-<!-- ═══════════ 9 · MOTIVATION OF THE DAY  ═══════════ -->
-<h2 align="center" style="color: #38bdf8;">💬 &nbsp;Motivation of the Day</h2>
+<!-- ═══════════ 9 · QUOTES  ═══════════ -->
+<h2 align="center" style="color: #38bdf8;">💬 &nbsp;Quotes</h2>
 
 <p align="center" style="color: #c9d1d9; max-width: 720px; margin: 0 auto;">
   <!-- QUOTE:START -->
