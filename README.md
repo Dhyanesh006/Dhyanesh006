@@ -46,7 +46,7 @@
 <h2 align="center" style="color: #38bdf8;">✦ &nbsp;About Me&nbsp; ✦</h2>
 
 <div align="center">
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 32px; min-width: 620px; max-width: 760px; text-align: left; color: #c9d1d9;">
+  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 32px; min-width: 620px; max-width: 760px; text-align: left; color: #e6edf3;">
     <p>🎓&nbsp;&nbsp;B.E. Computer Science &amp; Engineering Student</p>
     <p>💻&nbsp;&nbsp;Full-stack developer &mdash; Java, Spring Boot, React &amp; modern web</p>
     <p>🛡️&nbsp;&nbsp;Cybersecurity learner &amp; ethical hacking explorer</p>
@@ -62,10 +62,10 @@
 <h2 align="center" style="color: #38bdf8;">🎓 &nbsp;Education &amp; Certifications</h2>
 
 <div align="center">
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 32px; min-width: 620px; max-width: 760px; text-align: left; color: #c9d1d9;">
-    <p>🎓&nbsp;&nbsp;<b style="color: #60a5fa;">B.E. Computer Science &amp; Engineering</b>&nbsp;&nbsp;<span style="color: #8b949e;">(Pursuing)</span></p>
+  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 32px; min-width: 620px; max-width: 760px; text-align: left; color: #e6edf3;">
+    <p>🎓&nbsp;&nbsp;<b style="color: #38bdf8;">B.E. Computer Science &amp; Engineering</b>&nbsp;&nbsp;<span style="color: #8b949e;">(Pursuing)</span></p>
     <p>📍&nbsp;&nbsp;Coimbatore, India</p>
-    <p>📜&nbsp;&nbsp;<b style="color: #60a5fa;">Certifications (2024)</b></p>
+    <p>📜&nbsp;&nbsp;<b style="color: #38bdf8;">Certifications (2024)</b></p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;✔️&nbsp;&nbsp;MongoDB &middot; MATLAB (MathWorks) &middot; Microsoft &middot; Bentley</p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;✔️&nbsp;&nbsp;Celonis &middot; Wadhwani Foundation &middot; Professional Development</p>
     <p>🌐&nbsp;&nbsp;Explorations: Cybersecurity &amp; Cloud Computing</p>
@@ -186,7 +186,7 @@
 <h2 align="center" style="color: #38bdf8;">🎯 &nbsp;Current Focus</h2>
 
 <div align="center">
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 36px; min-width: 460px; text-align: left; color: #c9d1d9;">
+  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 20px 36px; min-width: 460px; text-align: left; color: #e6edf3;">
     <p><b style="color: #8b949e;">Currently Learning</b></p>
     <p>✔️&nbsp;&nbsp;Java &amp; Spring Boot (Backend)</p>
     <p>✔️&nbsp;&nbsp;React &amp; Next.js</p>
@@ -203,26 +203,26 @@
 <h2 align="center" style="color: #38bdf8;">📌 &nbsp;Featured Projects</h2>
 
 <div align="center">
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
-    <b style="color: #60a5fa;">🚀 GitHub Profile Repo</b>
+  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #e6edf3;">
+    <b style="color: #38bdf8;">🚀 GitHub Profile Repo</b>
     <p style="color: #8b949e; font-size: 13px;">This profile — animated Pac-Man contribution graph, live stats cards &amp; GitHub Actions.</p>
     <a href="https://github.com/Dhyanesh006/Dhyanesh006" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
   </span>
 
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
-    <b style="color: #60a5fa;">🌐 Portfolio</b>
+  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #e6edf3;">
+    <b style="color: #38bdf8;">🌐 Portfolio</b>
     <p style="color: #8b949e; font-size: 13px;">Personal portfolio website built with Next.js &amp; Tailwind CSS.</p>
     <a href="https://github.com/Dhyanesh006/portfolio" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
   </span>
 
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
-    <b style="color: #60a5fa;">🏠 Rental Hub <span style="color: #8b949e; font-size: 11px;">🔒</span></b>
+  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #e6edf3;">
+    <b style="color: #38bdf8;">🏠 Rental Hub <span style="color: #8b949e; font-size: 11px;">🔒</span></b>
     <p style="color: #8b949e; font-size: 13px;">Property rental management platform — TypeScript monorepo (Next.js, React, NestJS).</p>
     <a href="https://github.com/Dhyanesh006/Rental_Hub" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
   </span>
 
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #c9d1d9;">
-    <b style="color: #60a5fa;">🛒 PCStore <span style="color: #8b949e; font-size: 11px;">🔒</span></b>
+  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 16px 22px; margin: 8px; width: 300px; text-align: center; color: #e6edf3;">
+    <b style="color: #38bdf8;">🛒 PCStore <span style="color: #8b949e; font-size: 11px;">🔒</span></b>
     <p style="color: #8b949e; font-size: 13px;">E-commerce platform for PC parts — Java, Spring Boot &amp; MySQL.</p>
     <a href="https://github.com/Dhyanesh006/pcstore" style="color: #38bdf8; text-decoration: none;">View Repo →</a>
   </span>
@@ -247,7 +247,7 @@
 <h2 align="center" style="color: #38bdf8;">🎧 &nbsp;Now Playing on Spotify</h2>
 
 <div align="center">
-  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 18px 28px; text-align: center; color: #c9d1d9;">
+  <span style="display: inline-block; background-color: #161b22; border: 1px solid #30363d; border-radius: 16px; padding: 18px 28px; text-align: center; color: #e6edf3;">
     <p style="color: #8b949e;">Spotify card appears here once you connect your account.</p>
     <a href="https://spotify-github-profile.kittinanx.com/api/login" style="color: #22d3ee; text-decoration: none;">Connect with Spotify →</a>
   </span>
@@ -316,7 +316,7 @@
 <!-- ═══════════ 15 · FOOTER  ═══════════ -->
 <hr />
 
-<p align="center" style="color: #c9d1d9; font-size: 16px;">
+<p align="center" style="color: #e6edf3; font-size: 16px;">
   Thanks for visiting! <img src="assets/icons/waving.gif" alt="waving hand" width="28" /> Have a great day!
 </p>
 
