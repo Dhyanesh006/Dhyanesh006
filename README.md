@@ -25,7 +25,7 @@
 
 <!-- ═══════════ 1 · ANIMATED HEADER  ═══════════ -->
 <p align="center">
-  <img src="assets/icons/pc-running.gif" alt="PC running" width="110" />
+  <img src="assets/icons/arc-reactor.gif" alt="Arc reactor loading with DVD bounce" width="110" />
 </p>
 
 <p align="center">
