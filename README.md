@@ -25,7 +25,7 @@
 
 <!-- ═══════════ 1 · ANIMATED HEADER  ═══════════ -->
 <p align="center">
-  <img src="assets/icons/arc-reactor-pixel.gif" alt="Pixelated arc reactor loading" width="110" />
+  <img src="assets/icons/ironman-flying.gif" alt="Pixel art Iron Man flying" width="110" />
 </p>
 
 <p align="center">
