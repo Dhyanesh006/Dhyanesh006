@@ -29,8 +29,8 @@
 </p>
 
 <p align="center">
-  <a href="https://portfolio-dhyanesh.vercel.app/" target="_blank" style="display: inline-block; background-color: #161b22; border: 1px solid #38bdf8; border-radius: 24px; padding: 8px 28px; color: #38bdf8; font-size: 16px; font-weight: 600; text-decoration: none;">
-    🚀 &nbsp;Visit My Portfolio
+  <a href="https://portfolio-dhyanesh.vercel.app/">
+    <img src="https://img.shields.io/badge/Portfolio-38BDF8?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
   </a>
 </p>
 
