@@ -28,15 +28,15 @@
   <img src="assets/icons/pc-running.gif" alt="PC running" width="110" />
 </p>
 
-<h1 align="center" style="color: #f0f6fc; font-family: 'Segoe UI', sans-serif;">
-  Hi, I'm <span style="background: linear-gradient(90deg, #38bdf8, #a78bfa, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Dhyanesh</span> 👋
+<h1 align="left" style="color: #f0f6fc; font-family: 'Segoe UI', sans-serif;">
+  Hi, I'm <span style="background: linear-gradient(90deg, #f87171, #fbbf24, #4ade80, #38bdf8, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Dhyanesh</span> 👋
 </h1>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=660&height=70&lines=Computer+Science+Student;Cybersecurity+Learner;Networking+%26+Cloud+Learner;Always+Learning" alt="Typing SVG" />
+<p align="left">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=false&vCenter=true&width=660&height=70&lines=Computer+Science+Student;Cybersecurity+Learner;Networking+%26+Cloud+Learner;Always+Learning" alt="Typing SVG" />
 </p>
 
-<p align="center" style="color: #8b949e;">
+<p align="left" style="color: #8b949e;">
   <em>Building scalable, real-world applications &mdash; one commit at a time.</em>
 </p>
 
