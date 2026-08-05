@@ -29,6 +29,12 @@
 </p>
 
 <p align="center">
+  <a href="https://portfolio-dhyanesh.vercel.app/" target="_blank" style="display: inline-block; background-color: #161b22; border: 1px solid #38bdf8; border-radius: 24px; padding: 8px 28px; color: #38bdf8; font-size: 16px; font-weight: 600; text-decoration: none;">
+    🚀 &nbsp;Visit My Portfolio
+  </a>
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=660&height=70&lines=Computer+Science+Student;Cybersecurity+Learner;Networking+%26+Cloud+Learner;Always+Learning" alt="Typing SVG" />
 </p>
 
