@@ -307,14 +307,3 @@
 </p>
 
 <br />
-
-<!-- ═══════════ 15 · FOOTER  ═══════════ -->
-<hr />
-
-<p align="center" style="color: #c9d1d9; font-size: 16px;">
-  Thanks for visiting! <img src="assets/icons/waving.gif" alt="waving hand" width="28" /> Have a great day!
-</p>
-
-<p align="center" style="color: #8b949e; font-size: 12px;">
-  © 2026 Dhyanesh · Built with ❤️ &amp; ☕
-</p>
