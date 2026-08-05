@@ -306,11 +306,6 @@
   </picture>
 </p>
 
-<p align="center" style="color: #8b949e; font-size: 13px;">
-  <em>Auto-generated daily by <a href=".github/workflows/pacman.yml" style="color: #38bdf8;">GitHub Actions</a> using
-  <a href="https://github.com/abozanona/pacman-contribution-graph" style="color: #38bdf8;">abozanona/pacman-contribution-graph</a></em>
-</p>
-
 <br />
 
 <!-- ═══════════ 15 · FOOTER  ═══════════ -->
