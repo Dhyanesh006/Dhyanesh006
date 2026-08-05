@@ -141,9 +141,7 @@
   <img src="profile-summary-card-output/github_dark/4-productive-time.svg" alt="Productive Time" />
 </p>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Dhyanesh006&theme=github-dark&hide_border=true&bg_color=0d1117&color=38bdf8&line=38bdf8&point=60a5fa&area=true" alt="Contribution Activity Graph" width="96%" />
-</p>
+<br />
 
 <!-- Trophies are rendered statically (no external service) so they can
      never break. The hosted github-profile-trophy service is currently
