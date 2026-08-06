@@ -3,7 +3,6 @@
 #  ----------------------------------------------------------------
 #  Keeps the profile README alive every day in a single run:
 #  • refreshes the daily motivation quote (.github/scripts/update-quote.mjs)
-#  • refreshes the last-sync timestamp (.github/scripts/update-last-updated.mjs)
 #  • refreshes the dynamic stats badges embedded in the README
 #    (profile/github-stats.svg + profile/top-langs.svg)
 #  Everything is committed in one push, so the old separate quote and
@@ -36,9 +35,6 @@ jobs:
 
       - name: Refresh today's motivation quote
         run: node .github/scripts/update-quote.mjs
-
-      - name: Refresh last-sync timestamp
-        run: node .github/scripts/update-last-updated.mjs
 
       # ── Dynamic stats badges → profile/*.svg (embedded in README) ──
       - name: Generate GitHub Stats badge

@@ -230,11 +230,6 @@ The banner, dividers, terminal and footer are original SVG animations living in 
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
-<!--  LAST SYNC  — managed by .github/workflows/profile-readme.yml   -->
-<!-- UPDATE:START -->
-  <span style="color: #00a32a;">[ matrix://last.sync ]</span>&nbsp; Last updated: <span style="color: #d4fdd9;">2026-08-06 18:38 IST</span>
-<!-- UPDATE:END -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
 
 <br />
 
