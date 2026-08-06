@@ -30,7 +30,7 @@ Hey there — I'm **Dhyanesh**, a Computer Science Engineering student who runs 
 
 <div align="center">
   <img src="https://img.shields.io/badge/EDUCATION-B.E.%20CSE-00a32a?style=for-the-badge&logo=readme&logoColor=00ff41&labelColor=000000" alt="Education" />
-  <img src="https://img.shields.io/badge/FOCUS-FULL%20STACK-00a32a?style=for-the-badge&logo=codecov&logoColor=00ff41&labelColor=000000" alt="Focus" />
+  <img src="https://img.shields.io/badge/AREA-NETWORKING-00a32a?style=for-the-badge&logo=junipernetworks&logoColor=00ff41&labelColor=000000" alt="Networking" />
   <img src="https://img.shields.io/badge/AREA-SECURITY-00a32a?style=for-the-badge&logo=shield&logoColor=00ff41&labelColor=000000" alt="Security" />
   <img src="https://img.shields.io/badge/AREA-CLOUD-00a32a?style=for-the-badge&logo=amazonaws&logoColor=00ff41&labelColor=000000" alt="Cloud" />
 </div>
@@ -108,7 +108,7 @@ Hey there — I'm **Dhyanesh**, a Computer Science Engineering student who runs 
 
 <div align="center">
   <img src="https://img.shields.io/badge/OPEN%20SOURCE-00ff41?style=for-the-badge&logo=github&logoColor=000&labelColor=000000" alt="Open Source" />
-  <img src="https://img.shields.io/badge/FULL%20STACK-00e640?style=for-the-badge&logo=react&logoColor=000&labelColor=000000" alt="Full Stack" />
+  <img src="https://img.shields.io/badge/NETWORKING-00e640?style=for-the-badge&logo=junipernetworks&logoColor=000&labelColor=000000" alt="Networking" />
   <img src="https://img.shields.io/badge/SECURITY-00a32a?style=for-the-badge&logo=shield&logoColor=000&labelColor=000000" alt="Security" />
   <img src="https://img.shields.io/badge/CLOUD-006b2e?style=for-the-badge&logo=amazonaws&logoColor=000&labelColor=000000" alt="Cloud" />
   <img src="https://img.shields.io/badge/JAVA-00ff41?style=for-the-badge&logo=openjdk&logoColor=000&labelColor=000000" alt="Java" />
