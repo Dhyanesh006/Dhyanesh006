@@ -83,7 +83,7 @@ Hey there — I'm **Dhyanesh**, a Computer Science Engineering student who runs 
   <img src="profile/github-stats.svg" width="460" alt="GitHub stats" />
   <img src="profile/top-langs.svg" width="460" alt="Top languages" />
   <br />
-  <img src="profile/metrics.svg" width="100%" alt="GitHub metrics — terminal theme" />
+  <img src="profile/metrics.svg" width="460" alt="GitHub metrics — terminal theme" />
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
