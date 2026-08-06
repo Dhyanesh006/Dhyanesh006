@@ -214,7 +214,7 @@ The banner, dividers, terminal and footer are original SVG animations living in 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Dhyanesh006&style=for-the-badge&label=PROFILE+VIEWS&color=00ff41&abbreviated=true" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=Dhyanesh006&style=for-the-badge&label=PROFILE+VIEWS&labelColor=000000&color=00a32a&logo=github&logoColor=00ff41&abbreviated=true" alt="Profile views" />
   <a href="https://github.com/Dhyanesh006?tab=followers">
     <img src="https://img.shields.io/github/followers/Dhyanesh006?style=for-the-badge&label=FOLLOWERS&labelColor=000000&color=00a32a&logo=github&logoColor=00ff41" alt="GitHub followers" />
   </a>
