@@ -13,18 +13,18 @@ name: Pac-Man Contribution Graph
 
 on:
   schedule:
-    - cron: "0 0 * * *"      # daily at midnight UTC
-  workflow_dispatch:          # manual trigger from the Actions tab
+    - cron: "0 0 * * *" # daily at midnight UTC
+  workflow_dispatch: # manual trigger from the Actions tab
   push:
     branches:
-      - main                  # runs once on first push so it works immediately
+      - main # runs once on first push so it works immediately
 
 concurrency:
   group: pacman-graph
   cancel-in-progress: true
 
 permissions:
-  contents: write             # required to push to the `output` branch
+  contents: write # required to push to the `output` branch
 
 jobs:
   generate:
@@ -36,10 +36,10 @@ jobs:
       - name: Generate Pac-Man contribution graph
         uses: abozanona/pacman-contribution-graph@main
         with:
-          github_user_name: ${{ github.repository_owner }}  # uses YOUR username automatically
-          github_token: ${{ secrets.GITHUB_TOKEN }}          # default; kept explicit for clarity
-          games: pacman                                     # pacman | breakout | galaga | bomberman | ...
-          player_style: opportunistic                       # opportunistic | aggressive | conservative
+          github_user_name: ${{ github.repository_owner }} # uses YOUR username automatically
+          github_token: ${{ secrets.GITHUB_TOKEN }} # default; kept explicit for clarity
+          games: pacman # pacman | breakout | galaga | bomberman | ...
+          player_style: opportunistic # opportunistic | aggressive | conservative
 
       # ── Step 2: publish ./dist to the `output` branch ──
       - name: Push generated SVG to the output branch

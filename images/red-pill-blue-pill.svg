@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="200" viewBox="0 0 1200 200" role="img" aria-label="Red pill and blue pill - the Matrix choice">
+  <defs>
+    <filter id="pillglow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="redGrad" cx="0.5" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#ff6a6a"/>
+      <stop offset="0.5" stop-color="#d1122b"/>
+      <stop offset="1" stop-color="#7a0a18"/>
+    </radialGradient>
+    <radialGradient id="blueGrad" cx="0.5" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#7ec8ff"/>
+      <stop offset="0.5" stop-color="#1467d8"/>
+      <stop offset="1" stop-color="#0a2d5e"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="200" fill="#000000"/>
+
+  <!-- faint rain glyphs -->
+  <g font-family="monospace" font-size="15" fill="#00521f">
+    <text x="40" y="40">ﾊ<animate attributeName="opacity" values="1;0;1" dur="2.2s" repeatCount="indefinite"/></text>
+    <text x="120" y="150">ｱ<animate attributeName="opacity" values="0;1;0;1" dur="3.1s" repeatCount="indefinite"/></text>
+    <text x="280" y="60">ﾑ<animate attributeName="opacity" values="1;1;0" dur="2.7s" repeatCount="indefinite"/></text>
+    <text x="450" y="170">ﾂ<animate attributeName="opacity" values="0;1;1;0" dur="3.6s" repeatCount="indefinite"/></text>
+    <text x="620" y="40">ﾖ<animate attributeName="opacity" values="1;0;0;1" dur="2.4s" repeatCount="indefinite"/></text>
+    <text x="760" y="150">ﾎ<animate attributeName="opacity" values="0;0;1;1" dur="3.3s" repeatCount="indefinite"/></text>
+    <text x="920" y="70">ﾜ<animate attributeName="opacity" values="1;1;0;1" dur="2.9s" repeatCount="indefinite"/></text>
+    <text x="1060" y="160">ﾆ<animate attributeName="opacity" values="0;1;0;1" dur="3.8s" repeatCount="indefinite"/></text>
+    <text x="1150" y="50">ﾗ<animate attributeName="opacity" values="1;0;1;0" dur="2.5s" repeatCount="indefinite"/></text>
+    <text x="180" y="100">ﾐ<animate attributeName="opacity" values="0;1;0;1;0" dur="4.0s" repeatCount="indefinite"/></text>
+    <text x="700" y="100">ｹ<animate attributeName="opacity" values="1;0;1;0" dur="3.4s" repeatCount="indefinite"/></text>
+  </g>
+
+  <!-- BLUE PILL -->
+  <g transform="translate(360 100)">
+    <rect x="-34" y="-88" width="68" height="176" rx="34" fill="url(#blueGrad)" filter="url(#pillglow)" stroke="#1467d8" stroke-width="2"/>
+    <ellipse cx="0" cy="-56" rx="30" ry="10" fill="#ffffff" opacity="0.25"/>
+  </g>
+  <g font-family="monospace">
+    <text x="435" y="70" font-size="20" font-weight="bold" fill="#7ec8ff" letter-spacing="2">BLUE PILL</text>
+    <text x="435" y="98" font-size="15" fill="#8fb8d9">// stay in wonderland</text>
+    <text x="435" y="124" font-size="15" fill="#5c7d99">and see how far the</text>
+    <text x="435" y="148" font-size="15" fill="#5c7d99">rabbit hole goes...</text>
+  </g>
+
+  <!-- RED PILL -->
+  <g transform="translate(840 100)">
+    <rect x="-34" y="-88" width="68" height="176" rx="34" fill="url(#redGrad)" filter="url(#pillglow)" stroke="#d1122b" stroke-width="2"/>
+    <ellipse cx="0" cy="-56" rx="30" ry="10" fill="#ffffff" opacity="0.25"/>
+  </g>
+  <g font-family="monospace">
+    <text x="845" y="70" font-size="20" font-weight="bold" fill="#ff5f6d" letter-spacing="2">RED PILL</text>
+    <text x="845" y="98" font-size="15" fill="#e8a2a8">// take it and I'll</text>
+    <text x="845" y="124" font-size="15" fill="#c97a82">show you how deep</text>
+    <text x="845" y="148" font-size="15" fill="#c97a82">the rabbit hole goes</text>
+  </g>
+
+  <!-- blinking cursor -->
+  <text x="985" y="162" font-family="monospace" font-size="15" fill="#ff5f6d">▮
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </text>
+  <text x="575" y="162" font-family="monospace" font-size="15" fill="#7ec8ff">▮
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="600" y="186" text-anchor="middle" font-family="monospace" font-size="13" fill="#006b2e">remember: all I'm offering is the truth</text>
+</svg>

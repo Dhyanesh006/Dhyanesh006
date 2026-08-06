@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-label="Animated Matrix digital rain divider">
+  <defs>
+    <linearGradient id="fadeTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="240" fill="#000000"/>
+
+  <g font-family="monospace" font-size="18">
+    <g fill="#00ff41">
+      <text>ﾊﾐﾋｰｳｼﾅﾓﾆｻ
+        <animateTransform attributeName="transform" type="translate" from="30 -200" to="30 280" dur="5.5s" begin="-0.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="5.5s" begin="-0.8s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00e640">
+      <text>ｳｼﾅﾓﾆｻﾜﾂｵ
+        <animateTransform attributeName="transform" type="translate" from="92 -220" to="92 280" dur="6.4s" begin="-2.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="6.4s" begin="-2.9s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#aaff00">
+      <text>ﾅﾓﾆｻﾜﾂｵﾘｱ
+        <animateTransform attributeName="transform" type="translate" from="154 -210" to="154 280" dur="4.9s" begin="-4.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="4.9s" begin="-4.6s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00ff41">
+      <text>ﾆｻﾜﾂｵﾘｱｴﾋ
+        <animateTransform attributeName="transform" type="translate" from="216 -230" to="216 280" dur="7.1s" begin="-1.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="7.1s" begin="-1.7s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00e640">
+      <text>ｻﾜﾂｵﾘｱｴﾋｹ
+        <animateTransform attributeName="transform" type="translate" from="278 -200" to="278 280" dur="5.8s" begin="-3.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="5.8s" begin="-3.3s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00ff41">
+      <text>ﾜﾂｵﾘｱｴﾋｹﾄ
+        <animateTransform attributeName="transform" type="translate" from="340 -240" to="340 280" dur="6.7s" begin="-5.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="6.7s" begin="-5.2s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#aaff00">
+      <text>ﾂｵﾘｱｴﾋｹﾄﾏ
+        <animateTransform attributeName="transform" type="translate" from="402 -210" to="402 280" dur="5.2s" begin="-0.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="5.2s" begin="-0.4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00e640">
+      <text>ｵﾘｱｴﾋｹﾄﾏｶ
+        <animateTransform attributeName="transform" type="translate" from="464 -230" to="464 280" dur="6.1s" begin="-2.1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="6.1s" begin="-2.1s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00ff41">
+      <text>ﾘｱｴﾋｹﾄﾏｶｷ
+        <animateTransform attributeName="transform" type="translate" from="526 -200" to="526 280" dur="7.4s" begin="-6.0s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="7.4s" begin="-6.0s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#aaff00">
+      <text>ｱｴﾋｹﾄﾏｶｷｸ
+        <animateTransform attributeName="transform" type="translate" from="588 -220" to="588 280" dur="5.6s" begin="-3.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="5.6s" begin="-3.8s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00e640">
+      <text>ｴﾋｹﾄﾏｶｷｸｹ
+        <animateTransform attributeName="transform" type="translate" from="650 -240" to="650 280" dur="6.9s" begin="-1.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="6.9s" begin="-1.3s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00ff41">
+      <text>ﾋｹﾄﾏｶｷｸｹｺ
+        <animateTransform attributeName="transform" type="translate" from="712 -210" to="712 280" dur="5.4s" begin="-4.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="5.4s" begin="-4.9s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#aaff00">
+      <text>ｹﾄﾏｶｷｸｹｺｻ
+        <animateTransform attributeName="transform" type="translate" from="774 -230" to="774 280" dur="6.3s" begin="-0.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="6.3s" begin="-0.9s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00e640">
+      <text>ﾄﾏｶｷｸｹｺｻｼ
+        <animateTransform attributeName="transform" type="translate" from="836 -200" to="836 280" dur="7.6s" begin="-5.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="7.6s" begin="-5.5s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00ff41">
+      <text>ﾏｶｷｸｹｺｻｼｽ
+        <animateTransform attributeName="transform" type="translate" from="898 -220" to="898 280" dur="5.9s" begin="-2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="5.9s" begin="-2.6s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#aaff00">
+      <text>ｶｷｸｹｺｻｼｽｾ
+        <animateTransform attributeName="transform" type="translate" from="960 -240" to="960 280" dur="6.6s" begin="-4.0s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="6.6s" begin="-4.0s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00e640">
+      <text>ｷｸｹｺｻｼｽｾｿ
+        <animateTransform attributeName="transform" type="translate" from="1022 -210" to="1022 280" dur="5.7s" begin="-1.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="5.7s" begin="-1.9s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#00ff41">
+      <text>ｸｹｺｻｼｽｾｿﾀ
+        <animateTransform attributeName="transform" type="translate" from="1084 -230" to="1084 280" dur="7.0s" begin="-6.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="7.0s" begin="-6.4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g fill="#aaff00">
+      <text>ｹｺｻｼｽｾｿﾀﾁ
+        <animateTransform attributeName="transform" type="translate" from="1146 -200" to="1146 280" dur="6.2s" begin="-3.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.7;0" keyTimes="0;0.3;0.75;1" dur="6.2s" begin="-3.2s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <g fill="#006b2e" font-size="16">
+      <text x="60" y="70">ﾐ<animate attributeName="opacity" values="1;0;1;1;0;1" dur="2.4s" repeatCount="indefinite"/></text>
+      <text x="130" y="160">ﾜ<animate attributeName="opacity" values="0;1;0;1;1" dur="3.3s" repeatCount="indefinite"/></text>
+      <text x="250" y="120">ｱ<animate attributeName="opacity" values="1;1;0;1" dur="2.7s" repeatCount="indefinite"/></text>
+      <text x="370" y="60">ﾔ<animate attributeName="opacity" values="0;1;1;0;1" dur="3.9s" repeatCount="indefinite"/></text>
+      <text x="490" y="180">ﾒ<animate attributeName="opacity" values="1;0;0;1" dur="2.1s" repeatCount="indefinite"/></text>
+      <text x="560" y="90">ﾇ<animate attributeName="opacity" values="0;0;1;1;0" dur="3.6s" repeatCount="indefinite"/></text>
+      <text x="680" y="200">ﾂ<animate attributeName="opacity" values="1;1;0;1;0" dur="2.5s" repeatCount="indefinite"/></text>
+      <text x="790" y="70">ﾖ<animate attributeName="opacity" values="0;1;0;1;1" dur="4.1s" repeatCount="indefinite"/></text>
+      <text x="870" y="160">ﾗ<animate attributeName="opacity" values="1;0;1;0;1" dur="2.8s" repeatCount="indefinite"/></text>
+      <text x="1010" y="90">ﾎ<animate attributeName="opacity" values="0;1;1;0;1" dur="3.4s" repeatCount="indefinite"/></text>
+      <text x="1100" y="190">ﾊ<animate attributeName="opacity" values="1;1;0;1" dur="2.2s" repeatCount="indefinite"/></text>
+      <text x="1170" y="80">ﾘ<animate attributeName="opacity" values="0;0;1;1;0" dur="3.8s" repeatCount="indefinite"/></text>
+    </g>
+  </g>
+
+  <rect width="1200" height="240" fill="url(#fadeTop)"/>
+
+  <rect x="0" y="118" width="1200" height="2" fill="#00ff41" opacity="0.25">
+    <animate attributeName="opacity" values="0.05;0.45;0.05" dur="2.8s" repeatCount="indefinite"/>
+  </rect>
+</svg>

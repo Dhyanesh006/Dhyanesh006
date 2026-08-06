@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Dhyanesh - Matrix digital rain banner">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#001407" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="320" fill="#000000"/>
+
+  <!-- ══════════ MATRIX DIGITAL RAIN ══════════ -->
+  <g font-family="monospace" font-size="18">
+    <!-- column 1 -->
+    <g fill="#00ff41">
+      <text>ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘ
+        <animateTransform attributeName="transform" type="translate" from="20 -220" to="20 340" dur="6.5s" begin="-1.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="6.5s" begin="-1.2s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 2 -->
+    <g fill="#00e640">
+      <text>ｳｼﾅﾓﾆｻﾜﾂｵﾘｱｴﾋ
+        <animateTransform attributeName="transform" type="translate" from="78 -260" to="78 360" dur="5.5s" begin="-3.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="5.5s" begin="-3.4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 3 -->
+    <g fill="#00ff41">
+      <text>ﾅﾓﾆｻﾜﾂｵﾘｱｴﾋｹ
+        <animateTransform attributeName="transform" type="translate" from="136 -240" to="136 360" dur="7.2s" begin="-5.1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="7.2s" begin="-5.1s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 4 -->
+    <g fill="#aaff00">
+      <text>ﾆｻﾜﾂｵﾘｱｴﾋｹﾄ
+        <animateTransform attributeName="transform" type="translate" from="194 -200" to="194 340" dur="4.8s" begin="-0.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="4.8s" begin="-0.6s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 5 -->
+    <g fill="#00e640">
+      <text>ｻﾜﾂｵﾘｱｴﾋｹﾄﾏ
+        <animateTransform attributeName="transform" type="translate" from="252 -260" to="252 360" dur="6.1s" begin="-2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="6.1s" begin="-2.2s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 6 -->
+    <g fill="#00ff41">
+      <text>ﾜﾂｵﾘｱｴﾋｹﾄﾏｶ
+        <animateTransform attributeName="transform" type="translate" from="310 -240" to="310 340" dur="7.8s" begin="-6.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="7.8s" begin="-6.3s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 7 -->
+    <g fill="#aaff00">
+      <text>ﾂｵﾘｱｴﾋｹﾄﾏｶｷ
+        <animateTransform attributeName="transform" type="translate" from="368 -220" to="368 360" dur="5.2s" begin="-4.0s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="5.2s" begin="-4.0s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 8 -->
+    <g fill="#00e640">
+      <text>ｵﾘｱｴﾋｹﾄﾏｶｷｸ
+        <animateTransform attributeName="transform" type="translate" from="426 -250" to="426 340" dur="6.8s" begin="-1.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="6.8s" begin="-1.8s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 9 -->
+    <g fill="#00ff41">
+      <text>ﾘｱｴﾋｹﾄﾏｶｷｸｹ
+        <animateTransform attributeName="transform" type="translate" from="484 -230" to="484 360" dur="5.8s" begin="-5.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="5.8s" begin="-5.6s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 10 -->
+    <g fill="#aaff00">
+      <text>ｱｴﾋｹﾄﾏｶｷｸｹｺ
+        <animateTransform attributeName="transform" type="translate" from="658 -240" to="658 340" dur="6.4s" begin="-0.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="6.4s" begin="-0.9s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 11 -->
+    <g fill="#00e640">
+      <text>ｴﾋｹﾄﾏｶｷｸｹｺｻ
+        <animateTransform attributeName="transform" type="translate" from="716 -210" to="716 360" dur="7.4s" begin="-3.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="7.4s" begin="-3.7s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 12 -->
+    <g fill="#00ff41">
+      <text>ﾋｹﾄﾏｶｷｸｹｺｻｼ
+        <animateTransform attributeName="transform" type="translate" from="774 -260" to="774 340" dur="5.6s" begin="-2.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="5.6s" begin="-2.9s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 13 -->
+    <g fill="#aaff00">
+      <text>ｹﾄﾏｶｷｸｹｺｻｼｽ
+        <animateTransform attributeName="transform" type="translate" from="832 -220" to="832 360" dur="6.9s" begin="-7.0s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="6.9s" begin="-7.0s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 14 -->
+    <g fill="#00e640">
+      <text>ﾄﾏｶｷｸｹｺｻｼｽｾ
+        <animateTransform attributeName="transform" type="translate" from="890 -250" to="890 340" dur="5.1s" begin="-1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="5.1s" begin="-1.5s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 15 -->
+    <g fill="#00ff41">
+      <text>ﾏｶｷｸｹｺｻｼｽｾｿ
+        <animateTransform attributeName="transform" type="translate" from="948 -240" to="948 360" dur="7.6s" begin="-4.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="7.6s" begin="-4.4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 16 -->
+    <g fill="#aaff00">
+      <text>ｶｷｸｹｺｻｼｽｾｿﾀ
+        <animateTransform attributeName="transform" type="translate" from="1006 -230" to="1006 340" dur="6.2s" begin="-0.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="6.2s" begin="-0.3s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 17 -->
+    <g fill="#00e640">
+      <text>ｷｸｹｺｻｼｽｾｿﾀﾁ
+        <animateTransform attributeName="transform" type="translate" from="1064 -260" to="1064 360" dur="5.9s" begin="-5.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="5.9s" begin="-5.9s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 18 -->
+    <g fill="#00ff41">
+      <text>ｸｹｺｻｼｽｾｿﾀﾁﾂ
+        <animateTransform attributeName="transform" type="translate" from="1122 -220" to="1122 340" dur="7.0s" begin="-2.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="7.0s" begin="-2.7s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <!-- column 19 -->
+    <g fill="#aaff00">
+      <text>ｹｺｻｼｽｾｿﾀﾁﾂﾃ
+        <animateTransform attributeName="transform" type="translate" from="1180 -250" to="1180 360" dur="6.3s" begin="-6.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;1;0.8;0" keyTimes="0;0.3;0.75;1" dur="6.3s" begin="-6.7s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- static flickering glyphs (density) -->
+    <g fill="#006b2e" font-size="16">
+      <text x="45" y="90">ｱ<animate attributeName="opacity" values="1;0;1;1;0;1" dur="2.1s" repeatCount="indefinite"/></text>
+      <text x="150" y="180">ﾎ<animate attributeName="opacity" values="0;1;1;0;1" dur="3.4s" repeatCount="indefinite"/></text>
+      <text x="230" y="60">ﾑ<animate attributeName="opacity" values="1;1;0;1" dur="2.7s" repeatCount="indefinite"/></text>
+      <text x="300" y="150">ｱ<animate attributeName="opacity" values="0;1;0;1;1" dur="4.2s" repeatCount="indefinite"/></text>
+      <text x="400" y="80">ﾈ<animate attributeName="opacity" values="1;0;0;1" dur="3.1s" repeatCount="indefinite"/></text>
+      <text x="470" y="210">ｿ<animate attributeName="opacity" values="0;1;1;0;1" dur="2.4s" repeatCount="indefinite"/></text>
+      <text x="560" y="130">ﾉ<animate attributeName="opacity" values="1;1;0;1;0" dur="3.8s" repeatCount="indefinite"/></text>
+      <text x="640" y="270">ﾒ<animate attributeName="opacity" values="0;1;0;1" dur="2.9s" repeatCount="indefinite"/></text>
+      <text x="700" y="90">ﾂ<animate attributeName="opacity" values="1;0;1;1;0" dur="3.3s" repeatCount="indefinite"/></text>
+      <text x="780" y="200">ﾖ<animate attributeName="opacity" values="0;1;1;0;1" dur="2.6s" repeatCount="indefinite"/></text>
+      <text x="860" y="60">ﾜ<animate attributeName="opacity" values="1;1;0;1" dur="3.9s" repeatCount="indefinite"/></text>
+      <text x="940" y="180">ﾗ<animate attributeName="opacity" values="0;0;1;1;0" dur="2.2s" repeatCount="indefinite"/></text>
+      <text x="1030" y="110">ﾇ<animate attributeName="opacity" values="1;0;1;0;1" dur="3.6s" repeatCount="indefinite"/></text>
+      <text x="1100" y="230">ﾊ<animate attributeName="opacity" values="0;1;0;1;1" dur="2.8s" repeatCount="indefinite"/></text>
+      <text x="1170" y="90">ﾘ<animate attributeName="opacity" values="1;1;0;1;0" dur="3.2s" repeatCount="indefinite"/></text>
+      <text x="90" y="270">ﾔ<animate attributeName="opacity" values="0;1;1;0;1" dur="2.5s" repeatCount="indefinite"/></text>
+      <text x="330" y="290">ﾂ<animate attributeName="opacity" values="1;0;0;1" dur="4.0s" repeatCount="indefinite"/></text>
+      <text x="530" y="40">ｱ<animate attributeName="opacity" values="0;1;0;1;0" dur="2.3s" repeatCount="indefinite"/></text>
+      <text x="810" y="290">ﾝ<animate attributeName="opacity" values="1;1;0;1" dur="3.5s" repeatCount="indefinite"/></text>
+      <text x="980" y="280">ﾑ<animate attributeName="opacity" values="0;0;1;1;0" dur="2.1s" repeatCount="indefinite"/></text>
+    </g>
+  </g>
+
+  <rect width="1200" height="320" fill="url(#fadeBottom)"/>
+
+  <!-- ══════════ HUD CORNERS ══════════ -->
+  <g font-family="monospace" font-size="13" fill="#00a32a">
+    <text x="18" y="24">&gt; matrix://profile.boot</text>
+    <text x="18" y="300" fill="#006b2e">&gt; status: ALIVE <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/></text>
+    <text x="1060" y="24" text-anchor="end">&gt; node: MATRIX-01</text>
+    <text x="1060" y="300" text-anchor="end" fill="#006b2e">&gt; kernel: linux --matrix</text>
+  </g>
+
+  <!-- ══════════ TITLE ══════════ -->
+  <g font-family="monospace">
+    <text x="600" y="172" text-anchor="middle" font-size="76" font-weight="bold" fill="#00ff41" filter="url(#glow)">
+      DHYANESH<tspan fill="#aaff00">006</tspan>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="3.2s" repeatCount="indefinite"/>
+    </text>
+    <text x="600" y="216" text-anchor="middle" font-size="21" fill="#00e640" font-family="monospace">
+      [ wake up, neo... follow the white rabbit. ]
+      <animate attributeName="opacity" values="1;0.5;1" dur="4.5s" repeatCount="indefinite"/>
+    </text>
+    <text x="600" y="246" text-anchor="middle" font-size="17" fill="#006b2e" font-family="monospace">
+      &gt; running: dhyanesh --role hacker-in-training
+    </text>
+  </g>
+
+  <!-- ══════════ SCANLINE ══════════ -->
+  <rect x="0" y="-6" width="1200" height="3" fill="#00ff41" opacity="0.35">
+    <animate attributeName="y" values="-6;323" dur="4s" begin="-1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ══════════ BOTTOM STATUS BAR ══════════ -->
+  <g font-family="monospace" font-size="12">
+    <rect x="0" y="308" width="1200" height="12" fill="#001407"/>
+    <text x="18" y="317" fill="#00a32a">&gt;_ follow_the_white_rabbit</text>
+    <text x="600" y="317" text-anchor="middle" fill="#006b2e" font-size="10">-- MATRIX v9.99 --</text>
+    <text x="1060" y="317" text-anchor="end" fill="#00a32a">signal: strong</text>
+  </g>
+</svg>
