@@ -146,14 +146,10 @@ Hey there — I'm **Dhyanesh**, a Computer Science Engineering student who runs 
 
 ## 10 · LEARNING ROADMAP
 
-- [x] Java & Spring Boot — server-side fundamentals
-- [x] JavaScript / TypeScript — modern frontend + Node.js
-- [x] MySQL & MongoDB — relational + document databases
-- [x] Docker & Linux — containerised deployments
-- [x] Git, GitHub & CI/CD — version control and automation
-- [ ] Networking & Cloud — AWS in progress
-- [ ] Security — CTFs, OWASP, hardening in progress
-- [ ] Competitive programming — LeetCode / Codeforces consistency
+<p align="center">
+  <img src="assets/matrix-roadmap.svg" alt="Learning roadmap - Matrix terminal boot log" width="100%" />
+</p>
+
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
