@@ -166,7 +166,7 @@ Hey there — I'm **Dhyanesh**, a Computer Science Engineering student who runs 
   <a href="https://www.linkedin.com/in/dhyanesh-v-741738274">
     <img src="https://img.shields.io/badge/LINKEDIN-%2300ff41?style=for-the-badge&logo=linkedin&logoColor=000&labelColor=000000" alt="LinkedIn" />
   </a>
-  <a href="https://x.com/dhyanesh">
+  <a href="https://x.com/dhyanesh006">
     <img src="https://img.shields.io/badge/X-%2300ff41?style=for-the-badge&logo=x&logoColor=000&labelColor=000000" alt="X / Twitter" />
   </a>
   <a href="mailto:dhyanesh006@gmail.com">
