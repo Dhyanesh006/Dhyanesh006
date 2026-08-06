@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 780 360" role="img" aria-label="Linux terminal with animated typing">
+  <defs>
+    <filter id="term-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05170b"/>
+      <stop offset="100%" stop-color="#020a05"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#term-glow)">
+    <rect x="4" y="4" width="772" height="352" rx="12" fill="url(#chrome)" stroke="#00a32a" stroke-width="1.5"/>
+    <rect x="4" y="4" width="772" height="34" rx="12" fill="#04120a" stroke="none"/>
+    <rect x="4" y="26" width="772" height="12" fill="#04120a" stroke="none"/>
+
+    <circle cx="26" cy="21" r="5" fill="#006b2e">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="44" cy="21" r="5" fill="#00a32a">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="62" cy="21" r="5" fill="#00ff41">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="390" y="25" text-anchor="middle" font-family="'Courier New', Consolas, monospace" font-size="11" letter-spacing="1" fill="#00a32a">dhyanesh@matrix-node — bash</text>
+  </g>
+
+  <g>
+    <clipPath id="c0">
+      <rect x="28" y="44" width="0" height="22">
+        <animate attributeName="width" from="0" to="67.20" dur="0.90s" begin="0.3s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <text x="28" y="58" clip-path="url(#c0)" font-family="'Courier New', Consolas, monospace" font-size="14" fill="#d4fdd9"><tspan fill="#00ff41">$ </tspan><tspan fill="#00e640">whoami</tspan></text>
+    <clipPath id="c1">
+      <rect x="28" y="71" width="0" height="22">
+        <animate attributeName="width" from="0" to="302.40" dur="0.70s" begin="1.6s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <text x="28" y="85" clip-path="url(#c1)" font-family="'Courier New', Consolas, monospace" font-size="14" fill="#d4fdd9"><tspan fill="#d4fdd9">Dhyanesh — Computer Science Engineer</tspan></text>
+    <clipPath id="c2">
+      <rect x="28" y="98" width="0" height="22">
+        <animate attributeName="width" from="0" to="67.20" dur="0.90s" begin="2.7s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <text x="28" y="112" clip-path="url(#c2)" font-family="'Courier New', Consolas, monospace" font-size="14" fill="#d4fdd9"><tspan fill="#00ff41">$ </tspan><tspan fill="#00e640">skills</tspan></text>
+    <clipPath id="c3">
+      <rect x="28" y="125" width="0" height="22">
+        <animate attributeName="width" from="0" to="470.40" dur="1.20s" begin="4s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <text x="28" y="139" clip-path="url(#c3)" font-family="'Courier New', Consolas, monospace" font-size="14" fill="#d4fdd9"><tspan fill="#d4fdd9">java · spring · next.js · react · mysql · linux · docker</tspan></text>
+    <clipPath id="c4">
+      <rect x="28" y="152" width="0" height="22">
+        <animate attributeName="width" from="0" to="67.20" dur="0.90s" begin="5.6s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <text x="28" y="166" clip-path="url(#c4)" font-family="'Courier New', Consolas, monospace" font-size="14" fill="#d4fdd9"><tspan fill="#00ff41">$ </tspan><tspan fill="#00e640">uptime</tspan></text>
+    <clipPath id="c5">
+      <rect x="28" y="179" width="0" height="22">
+        <animate attributeName="width" from="0" to="226.80" dur="0.90s" begin="6.9s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <text x="28" y="193" clip-path="url(#c5)" font-family="'Courier New', Consolas, monospace" font-size="14" fill="#d4fdd9"><tspan fill="#d4fdd9">always learning, never down</tspan></text>
+    <clipPath id="c6">
+      <rect x="28" y="206" width="0" height="22">
+        <animate attributeName="width" from="0" to="50.40" dur="0.90s" begin="8.2s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <text x="28" y="220" clip-path="url(#c6)" font-family="'Courier New', Consolas, monospace" font-size="14" fill="#d4fdd9"><tspan fill="#00ff41">$ </tspan><tspan fill="#00e640">exit</tspan></text>
+    <clipPath id="c7">
+      <rect x="28" y="233" width="0" height="22">
+        <animate attributeName="width" from="0" to="151.20" dur="0.90s" begin="9.5s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <text x="28" y="247" clip-path="url(#c7)" font-family="'Courier New', Consolas, monospace" font-size="14" fill="#d4fdd9"><tspan fill="#d4fdd9">connection closed.</tspan></text>
+  </g>
+
+  <rect x="28" y="46" width="9" height="15" fill="#00ff41" opacity="1" filter="url(#term-glow)">
+    <animate attributeName="x" values="28;28;95.20;28;330.40;28;95.20;28;498.40;28;95.20;28;254.80;28;78.40;28;179.20" keyTimes="0;0.0288;0.1154;0.1538;0.2212;0.2596;0.3462;0.3846;0.5000;0.5385;0.6250;0.6635;0.7500;0.7885;0.8750;0.9135;1.0000" dur="10.4s" fill="freeze"/>
+    <animate attributeName="y" values="58;58;58;85;85;112;112;139;139;166;166;193;193;220;220;247;247" keyTimes="0;0.0288;0.1154;0.1538;0.2212;0.2596;0.3462;0.3846;0.5000;0.5385;0.6250;0.6635;0.7500;0.7885;0.8750;0.9135;1.0000" dur="10.4s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;1" dur="10.4s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="0.9s" begin="10.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="28" y="290" font-family="'Courier New', Consolas, monospace" font-size="12" letter-spacing="1" fill="#00a32a" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.85" dur="0.7s" begin="10.8s" fill="freeze"/>
+    &gt; follow the white rabbit &#8212; the rabbit hole runs deep.
+  </text>
+
+  <line x1="28" y1="318" x2="752" y2="318" stroke="#00a32a" stroke-width="1" opacity="0.35"/>
+  <text x="28" y="342" font-family="'Courier New', Consolas, monospace" font-size="11" fill="#006b2e">node:~/profile $ _</text>
+</svg>

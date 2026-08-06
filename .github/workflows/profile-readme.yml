@@ -1,0 +1,66 @@
+# ═══════════════════════════════════════════════════════════════════
+#  PROFILE README AUTO-UPDATE
+#  ----------------------------------------------------------------
+#  Keeps the profile README alive every day in a single run:
+#  • refreshes the daily motivation quote (.github/scripts/update-quote.mjs)
+#  • refreshes the last-sync timestamp (.github/scripts/update-last-updated.mjs)
+#  • refreshes the dynamic stats badges embedded in the README
+#    (profile/github-stats.svg + profile/top-langs.svg)
+#  Everything is committed in one push, so the old separate quote and
+#  timestamp workflows are replaced (no more README write races).
+#  • Runs automatically every day at 00:30 UTC (staggered from pacman)
+#  • Also runs manually from the Actions tab
+#  • Latest maintained actions only
+# ═══════════════════════════════════════════════════════════════════
+name: Update Profile README
+
+on:
+  schedule:
+    - cron: "30 0 * * *" # daily at 00:30 UTC (00:00 IST)
+  workflow_dispatch: # manual trigger from the Actions tab
+
+concurrency:
+  group: profile-readme
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Refresh today's motivation quote
+        run: node .github/scripts/update-quote.mjs
+
+      - name: Refresh last-sync timestamp
+        run: node .github/scripts/update-last-updated.mjs
+
+      # ── Dynamic stats badges → profile/*.svg (embedded in README) ──
+      - name: Generate GitHub Stats badge
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=Dhyanesh006&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github&bg_color=000000&title_color=00ff41&text_color=00e640&icon_color=00ff41&border_color=00a32a
+          path: profile/github-stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Top Languages badge
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=Dhyanesh006&layout=compact&langs_count=8&hide_border=true&bg_color=000000&title_color=00ff41&text_color=00e640&icon_color=00ff41&border_color=00a32a
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md profile
+          git commit -m "chore: refresh profile README and stats" || exit 0
+          git push
