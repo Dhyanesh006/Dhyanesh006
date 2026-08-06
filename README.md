@@ -26,7 +26,9 @@
   <img src="https://github.com/Dhyanesh006.png" width="120" height="120" alt="Dhyanesh006 avatar" />
 </div>
 
-Hey there — I'm **Dhyanesh**, a Computer Science Engineering student who runs on coffee and terminal windows. I build web applications end-to-end, dig into networking and cloud infrastructure, and keep a foot in the security world. This profile is my digital playground — welcome to the Matrix.
+<p align="center">
+  <img src="assets/matrix-about.svg" alt="About me - Matrix terminal boot log" width="100%" />
+</p>
 
 <div align="center">
   <img src="https://img.shields.io/badge/EDUCATION-B.E.%20CSE-00a32a?style=for-the-badge&logo=readme&logoColor=00ff41&labelColor=000000" alt="Education" />
