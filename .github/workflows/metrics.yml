@@ -2,7 +2,8 @@
 #  GITHUB METRICS (ADVANCED, DARK MATRIX)
 #  ----------------------------------------------------------------
 #  Renders an advanced metrics card with lowlighter/metrics using the
-#  built-in `terminal` template (green on black — a Matrix look) and
+#  built-in `terminal` template (an SSH-session mockup) recolored to the
+#  Matrix palette (black background + neon greens) via `extras_css`, and
 #  commits it to profile/metrics.svg (embedded in the README).
 # • Runs automatically every day at 00:45 UTC (staggered from pacman
 #    and the profile-readme runs)
@@ -43,7 +44,31 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
-          template: terminal # SSH-session look: green on black (Matrix)
+          template: terminal # SSH-session mockup — recolored to Matrix below
+          extras_css: |
+            svg { color: #00ff41 !important; }
+            .header { background: linear-gradient(#003818 0%, #00180b 100%) !important; }
+            .title { color: #d4fdd9 !important; }
+            .button { background: linear-gradient(#006b2e 0%, #003c1a 100%) !important; color: #d4fdd9 !important; }
+            .button.exit { background: linear-gradient(#ff2d00 0%, #b80000 100%) !important; }
+            pre { background: #000000 !important; }
+            pre, .banner, footer { color: #00ff41 !important; }
+            .banner { color: #00ff41 !important; }
+            footer { color: #8fbf98 !important; }
+            .warnings { color: #d4fdd9 !important; }
+            .ps1-path { color: #00ff41 !important; }
+            .ps1-location { color: #00e640 !important; }
+            .diff { color: #00e640 !important; }
+            .error { color: #ff5555 !important; }
+            a { color: #00ff41 !important; }
+            .isocalendar svg { filter: none !important; }
+            :root {
+              --color-calendar-graph-day-bg: #003c1a;
+              --color-calendar-graph-day-L1-bg: #006b2e;
+              --color-calendar-graph-day-L2-bg: #00a32a;
+              --color-calendar-graph-day-L3-bg: #00e640;
+              --color-calendar-graph-day-L4-bg: #00ff41;
+            }
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Kolkata
           config_output: svg
