@@ -15,7 +15,7 @@
 ## 01 · BOOT SEQUENCE
 
 <div align="center">
-  <img src="assets/terminal.svg" width="100%" alt="Fake Linux terminal" />
+  <img src="assets/matrix-boot.svg" width="100%" alt="Matrix terminal boot sequence" />
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
