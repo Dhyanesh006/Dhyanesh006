@@ -350,31 +350,31 @@
   </rect>
 
   <g filter="url(#r-glow)" transform="translate(0 45)">
-    <text x="70" y="0" class="b0" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="0" class="b0" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">cat learning-roadmap.dat</tspan>
     </text>
-    <text x="70" y="0" class="b1" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="26" class="b1" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">Java &amp; Spring Boot &#8212; server-side fundamentals</tspan>
     </text>
-    <text x="70" y="26" class="b2" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="52" class="b2" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">JavaScript / TypeScript &#8212; modern frontend + Node.js</tspan>
     </text>
-    <text x="70" y="52" class="b3" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="78" class="b3" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">MySQL &amp; MongoDB &#8212; relational + document databases</tspan>
     </text>
-    <text x="70" y="78" class="b4" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="104" class="b4" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">Docker &amp; Linux &#8212; containerised deployments</tspan>
     </text>
-    <text x="70" y="104" class="b5" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="130" class="b5" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">Git, GitHub &amp; CI/CD &#8212; version control and automation</tspan>
     </text>
-    <text x="70" y="130" class="b6" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="156" class="b6" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00e640">[ RUN ]</tspan> <tspan fill="#8fbf98">Networking &amp; Cloud &#8212; AWS in progress</tspan>
     </text>
-    <text x="70" y="156" class="b7" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="182" class="b7" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00e640">[ RUN ]</tspan> <tspan fill="#8fbf98">Security &#8212; CTFs, OWASP, hardening in progress</tspan>
     </text>
-    <text x="70" y="182" class="b8" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="208" class="b8" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00e640">[ RUN ]</tspan> <tspan fill="#8fbf98">Competitive programming &#8212; LeetCode / Codeforces consistency</tspan>
       <tspan fill="#00ff41" class="cur">&#9608;</tspan>
     </text>
