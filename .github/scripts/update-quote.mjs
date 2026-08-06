@@ -55,12 +55,12 @@ const rain = RAIN.map(([x, dur, begin]) => {
       opacity = "0.8";
     }
     glyphs.push(
-      `      <text x="0" y="${13 + r * 14}" fill="${fill}" opacity="${opacity}">${ch}</text>`,
+      `      <text x="0" y="${26 + r * 28}" fill="${fill}" opacity="${opacity}">${ch}</text>`,
     );
   }
   return `    <g>
-      <animateTransform attributeName="transform" type="translate" values="-196 0;0 0" dur="${dur}" repeatCount="indefinite" begin="${begin}"/>
-      <g transform="translate(${x} 30)">
+      <animateTransform attributeName="transform" type="translate" values="-392 0;0 0" dur="${dur}" repeatCount="indefinite" begin="${begin}"/>
+      <g transform="translate(${x} 60)">
 ${glyphs.join("\n")}
       </g>
     </g>`;
@@ -71,33 +71,38 @@ const sourceTag = q.source
   : "";
 
 const bootLog = [
-  `<text x="70" y="0" font-family="'Courier New', Consolas, monospace" font-size="14" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.5s" fill="freeze"/>
+  `<text x="70" y="0" class="b0" font-family="'Courier New', Consolas, monospace" font-size="28" opacity="1">
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">cat daily-quote.dat</tspan>
     </text>`,
-  `<text x="70" y="20" font-family="'Courier New', Consolas, monospace" font-size="14" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" fill="freeze"/>
+  `<text x="70" y="40" class="b1" font-family="'Courier New', Consolas, monospace" font-size="28" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">accessing the oracle</tspan> <tspan fill="#006b2e">......</tspan>
     </text>`,
-  `<text x="70" y="40" font-family="'Courier New', Consolas, monospace" font-size="14" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2s" fill="freeze"/>
+  `<text x="70" y="80" class="b2" font-family="'Courier New', Consolas, monospace" font-size="28" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#d4fdd9">&#8220;${esc(q.text)}&#8221;</tspan>
     </text>`,
-  `<text x="70" y="60" font-family="'Courier New', Consolas, monospace" font-size="14" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.8s" fill="freeze"/>
+  `<text x="70" y="120" class="b3" font-family="'Courier New', Consolas, monospace" font-size="28" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">attribution</tspan> <tspan fill="#00ff41">${esc(q.by)}</tspan>${sourceTag}
     </text>`,
-  `<text x="70" y="80" font-family="'Courier New', Consolas, monospace" font-size="14" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="3.6s" fill="freeze"/>
+  `<text x="70" y="160" class="b4" font-family="'Courier New', Consolas, monospace" font-size="28" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">quote locked in memory</tspan> <tspan fill="#006b2e">.......</tspan>
-      <tspan fill="#00ff41">&#9608;<animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.9s" begin="4.2s" repeatCount="indefinite"/></tspan>
+      <tspan fill="#00ff41" class="cur">&#9608;</tspan>
     </text>`,
 ].join("\n");
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal boot log with daily quote">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal boot log with daily quote">
   <defs>
+    <style>
+      @keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
+      .b0 { animation: q-in 0.35s linear 0.5s both; }
+      .b1 { animation: q-in 0.35s linear 1.2s both; }
+      .b2 { animation: q-in 0.35s linear 2s both; }
+      .b3 { animation: q-in 0.35s linear 2.8s both; }
+      .b4 { animation: q-in 0.35s linear 3.6s both; }
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      .cur { animation: blink 1s steps(1, end) 4.2s infinite; }
+    </style>
     <filter id="q-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="blur"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -118,31 +123,30 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1
     </linearGradient>
   </defs>
 
-  <rect width="1200" height="240" fill="#000000"/>
+  <rect width="1200" height="480" fill="#000000"/>
 
   <g font-family="'Courier New', Consolas, monospace">
 ${rain}
   </g>
 
-  <rect x="0" y="0" width="1200" height="26" fill="#00ff41" opacity="0.045">
-    <animate attributeName="y" from="-26" to="240" dur="7s" repeatCount="indefinite"/>
+  <rect x="0" y="0" width="1200" height="52" fill="#00ff41" opacity="0.045">
+    <animate attributeName="y" from="-52" to="480" dur="7s" repeatCount="indefinite"/>
   </rect>
 
-  <g filter="url(#q-glow)" transform="translate(0 34)">
+  <g filter="url(#q-glow)" transform="translate(0 68)">
 ${bootLog}
-    <text x="70" y="140" font-family="'Courier New', Consolas, monospace" font-size="11" letter-spacing="4" fill="#006b2e" opacity="0">
-      <animate attributeName="opacity" from="0" to="0.8" dur="0.6s" begin="4.4s" fill="freeze"/>
+    <text x="70" y="280" font-family="'Courier New', Consolas, monospace" font-size="22" letter-spacing="8" fill="#006b2e" opacity="0.8">
       &gt; the oracle has spoken &#8212; see you next boot.
     </text>
   </g>
 
-  <line x1="160" y1="196" x2="1040" y2="196" stroke="url(#q-line)" stroke-width="1.5" opacity="0.8"/>
-  <text x="600" y="222" text-anchor="middle" font-family="'Courier New', Consolas, monospace" font-size="12" letter-spacing="8" fill="#00a32a">
+  <line x1="160" y1="392" x2="1040" y2="392" stroke="url(#q-line)" stroke-width="1.5" opacity="0.8"/>
+  <text x="600" y="444" text-anchor="middle" font-family="'Courier New', Consolas, monospace" font-size="24" letter-spacing="16" fill="#00a32a">
     <tspan fill="#00ff41">MATRIX</tspan> <tspan fill="#006b2e">//</tspan> <tspan fill="#00a32a">DAILY QUOTE</tspan>
   </text>
 
-  <rect width="1200" height="240" fill="url(#q-fade-top)"/>
-  <rect width="1200" height="240" fill="url(#q-fade-bottom)"/>
+  <rect width="1200" height="480" fill="url(#q-fade-top)"/>
+  <rect width="1200" height="480" fill="url(#q-fade-bottom)"/>
 </svg>
 `;
 
