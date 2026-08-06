@@ -159,22 +159,22 @@
 
 <div align="center">
   <a href="https://github.com/Dhyanesh006">
-    <img src="https://img.shields.io/badge/GITHUB-%2300a32a?style=for-the-badge&logo=github&logoColor=000&labelColor=000000" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GITHUB-00ff41?style=for-the-badge&logo=github&logoColor=000&labelColor=000000" alt="GitHub" />
   </a>
   <a href="https://www.linkedin.com/in/dhyanesh-v-741738274">
-    <img src="https://img.shields.io/badge/LINKEDIN-%2300a32a?style=for-the-badge&logo=linkedin&logoColor=000&labelColor=000000" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LINKEDIN-00e640?style=for-the-badge&logo=linkedin&logoColor=000&labelColor=000000" alt="LinkedIn" />
   </a>
   <a href="https://x.com/dhyanesh006">
-    <img src="https://img.shields.io/badge/X-%2300a32a?style=for-the-badge&logo=x&logoColor=000&labelColor=000000" alt="X / Twitter" />
+    <img src="https://img.shields.io/badge/X-00a32a?style=for-the-badge&logo=x&logoColor=000&labelColor=000000" alt="X / Twitter" />
   </a>
   <a href="mailto:dhyanesh006@gmail.com">
-    <img src="https://img.shields.io/badge/EMAIL-%2300a32a?style=for-the-badge&logo=gmail&logoColor=000&labelColor=000000" alt="Email" />
+    <img src="https://img.shields.io/badge/EMAIL-006b2e?style=for-the-badge&logo=gmail&logoColor=000&labelColor=000000" alt="Email" />
   </a>
   <a href="https://portfolio-dhyanesh.vercel.app/">
-    <img src="https://img.shields.io/badge/PORTFOLIO-%2300a32a?style=for-the-badge&logo=vercel&logoColor=000&labelColor=000000" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/PORTFOLIO-00ff41?style=for-the-badge&logo=vercel&logoColor=000&labelColor=000000" alt="Portfolio" />
   </a>
   <a href="{{LEETCODE}}">
-    <img src="https://img.shields.io/badge/LEETCODE-00a32a?style=for-the-badge&logo=leetcode&logoColor=000&labelColor=000000" alt="LeetCode" />
+    <img src="https://img.shields.io/badge/LEETCODE-00e640?style=for-the-badge&logo=leetcode&logoColor=000&labelColor=000000" alt="LeetCode" />
   </a>
   <a href="{{CODEFORCES}}">
     <img src="https://img.shields.io/badge/CODEFORCES-00a32a?style=for-the-badge&logo=codeforces&logoColor=000&labelColor=000000" alt="Codeforces" />
