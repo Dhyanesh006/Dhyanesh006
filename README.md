@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2600&pause=800&color=00FF41&center=true&vCenter=true&width=800&height=90&lines=Wake+up%2C+Neo...+;Follow+the+white+rabbit...+;Computer+Science+Engineer;Full+Stack+Developer;Cybersecurity+Enthusiast;Cloud+%26+DevOps+Learner;Welcome+to+my+GitHub" alt="Typing SVG — wake up, Neo" />
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2600&pause=800&color=00FF41&center=true&vCenter=true&width=800&height=90&lines=Wake+up%2C+Neo...+;Follow+the+white+rabbit...+;Computer+Science+Engineer;Full+Stack+Developer;Cybersecurity+Enthusiast;Cloud+%26+DevOps+Learner;Networking+%26+Cloud;Welcome+to+my+GitHub" alt="Typing SVG — wake up, Neo" />
 </div>
 
 <div align="center">
@@ -26,7 +26,7 @@
   <img src="https://github.com/Dhyanesh006.png" width="120" height="120" alt="Dhyanesh006 avatar" />
 </div>
 
-Hey there — I'm **Dhyanesh**, a Computer Science Engineering student who runs on coffee and terminal windows. I build full-stack web applications, dig into networking and cloud infrastructure, and keep a foot in the security world. This profile is my digital playground — welcome to the Matrix.
+Hey there — I'm **Dhyanesh**, a Computer Science Engineering student who runs on coffee and terminal windows. I build web applications end-to-end, dig into networking and cloud infrastructure, and keep a foot in the security world. This profile is my digital playground — welcome to the Matrix.
 
 <div align="center">
   <img src="https://img.shields.io/badge/EDUCATION-B.E.%20CSE-00a32a?style=for-the-badge&logo=readme&logoColor=00ff41&labelColor=000000" alt="Education" />
