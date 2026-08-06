@@ -209,16 +209,9 @@ The banner, dividers, terminal and footer are original SVG animations living in 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <!--  DAILY QUOTE  — managed by .github/workflows/profile-readme.yml  -->
 <!-- QUOTE:START -->
-<div align="center">
-<pre style="font-family: 'Courier New', Consolas, monospace; font-size: 14px; background: #000000; color: #00ff41; border: 1px solid #00a32a; border-radius: 8px; padding: 12px 20px; margin: 8px auto; text-align: left; display: inline-block; overflow-x: auto; line-height: 1.55;">
-<span style="color: #00ff41;">MATRIX</span> <span style="color: #006b2e;">//</span> <span style="color: #00a32a;">DAILY QUOTE SEQUENCE</span>
-$ <span style="color: #00e640;">cat daily-quote.dat</span>
-<span style="color: #00a32a;">[ OK ]</span> <span style="color: #8fbf98;">accessing the oracle</span> <span style="color: #006b2e;">......</span>
-<span style="color: #00a32a;">[ OK ]</span> <span style="color: #d4fdd9;">&ldquo;Don't be sorry. Be better.&rdquo;</span>
-<span style="color: #00a32a;">[ OK ]</span> <span style="color: #8fbf98;">attribution</span> <span style="color: #00ff41;">Kratos, God of War</span> <span style="color: #006b2e;">(Game)</span>
-<span style="color: #00a32a;">[ OK ]</span> <span style="color: #8fbf98;">quote locked in memory</span> <span style="color: #006b2e;">.......</span>
-<span style="color: #00ff41;">&#9608;</span></pre>
-</div>
+<p align="center">
+  <img src="profile/quote.svg" alt="Daily Matrix boot-log quote" width="100%" />
+</p>
   <!-- QUOTE:END -->
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
