@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix digital rain banner">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1920 524" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix digital rain banner">
   <defs>
     <filter id="matrix-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
@@ -22,8 +22,8 @@
       <stop offset="100%" stop-color="#000000" stop-opacity="0.92"/>
     </linearGradient>
   </defs>
-  <rect width="1920" height="500" fill="#000000"/>
-  <rect width="1920" height="500" fill="url(#core-glow)"/>
+  <rect width="1920" height="524" fill="#000000"/>
+  <rect width="1920" height="524" fill="url(#core-glow)"/>
   <g filter="url(#matrix-glow)" font-family="'Courier New', Consolas, monospace" font-size="16" text-anchor="middle">
     <g>
       <animateTransform attributeName="transform" type="translate" values="-512 0;0 0" dur="6.29s" repeatCount="indefinite" begin="-1.60s"/>
@@ -1136,6 +1136,6 @@
       </g>
     </g>
   </g>
-  <rect width="1920" height="500" fill="url(#fade-top)"/>
-  <rect width="1920" height="500" fill="url(#fade-bottom)"/>
+  <rect width="1920" height="524" fill="url(#fade-top)"/>
+  <rect width="1920" height="524" fill="url(#fade-bottom)"/>
 </svg>
