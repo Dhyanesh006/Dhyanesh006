@@ -31,11 +31,11 @@
       </rect></clipPath>
       <text x="0" y="36" clip-path="url(#tc1)" fill="#00e640"><tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">follow the white rabbit…</tspan></text>
       <clipPath id="tc2"><rect x="0" y="54" width="0" height="30">
-        <animate attributeName="width" from="0" to="430" dur="1.6s" begin="4.2s" fill="freeze"/>
+        <animate attributeName="width" from="0" to="490" dur="1.6s" begin="4.2s" fill="freeze"/>
       </rect></clipPath>
       <text x="0" y="72" clip-path="url(#tc2)" fill="#d4fdd9"><tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">role</tspan> <tspan fill="#006b2e">=</tspan> <tspan fill="#d4fdd9">Computer Science Engineer</tspan></text>
       <clipPath id="tc3"><rect x="0" y="90" width="0" height="30">
-        <animate attributeName="width" from="0" to="320" dur="1.3s" begin="6.6s" fill="freeze"/>
+        <animate attributeName="width" from="0" to="560" dur="1.3s" begin="6.6s" fill="freeze"/>
       </rect></clipPath>
       <text x="0" y="108" clip-path="url(#tc3)" fill="#d4fdd9"><tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">mode</tspan> <tspan fill="#006b2e">=</tspan> <tspan fill="#d4fdd9">Full Stack · Security · Cloud</tspan></text>
       <clipPath id="tc4"><rect x="0" y="126" width="0" height="30">
@@ -43,10 +43,10 @@
       </rect></clipPath>
       <text x="0" y="144" clip-path="url(#tc4)" fill="#00e640"><tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">echo $WELCOME</tspan></text>
       <clipPath id="tc5"><rect x="0" y="162" width="0" height="30">
-        <animate attributeName="width" from="0" to="520" dur="1.8s" begin="10.9s" fill="freeze"/>
+        <animate attributeName="width" from="0" to="580" dur="1.8s" begin="10.9s" fill="freeze"/>
       </rect></clipPath>
       <text x="0" y="180" clip-path="url(#tc5)" fill="#d4fdd9"><tspan fill="#00a32a">welcome to my GitHub</tspan> <tspan fill="#006b2e">//</tspan> <tspan fill="#00ff41">enter the matrix</tspan></text>
-      <rect class="t-cur" x="532" y="-19" width="12" height="24" fill="#00ff41"/>
+      <rect class="t-cur" x="560" y="-19" width="12" height="24" fill="#00ff41"/>
       <text x="0" y="218" class="t-hint" font-size="13" letter-spacing="6" fill="#006b2e" opacity="0.85">
         &gt; all input streams nominal — stay in the matrix
       </text>
