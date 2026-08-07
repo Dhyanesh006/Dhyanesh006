@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 268" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal typewriter — roles and greetings">
+  <defs>
+    <filter id="t-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      @keyframes t-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      .t-cur { animation: t-blink 1s steps(1, end) 16.6s infinite; }
+      @keyframes t-fade { from { opacity: 0; } to { opacity: 1; } }
+      .t-hint { animation: t-fade 0.6s linear 16s both; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="268" fill="#000000"/>
+  <rect x="0" y="0" width="1200" height="14" fill="#00ff41" opacity="0.05">
+    <animate attributeName="y" from="-14" to="268" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <g filter="url(#t-glow)" font-family="'Courier New', Consolas, monospace" font-size="22">
+    <g transform="translate(70 46)">
+      <clipPath id="tc0"><rect x="0" y="-18" width="0" height="30">
+        <animate attributeName="width" from="0" to="330" dur="1.3s" begin="0.4s" fill="freeze"/>
+      </rect></clipPath>
+      <text x="0" y="0" clip-path="url(#tc0)" fill="#00ff41"><tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">wake up, neo…</tspan></text>
+      <clipPath id="tc1"><rect x="0" y="18" width="0" height="30">
+        <animate attributeName="width" from="0" to="360" dur="1.4s" begin="2.2s" fill="freeze"/>
+      </rect></clipPath>
+      <text x="0" y="36" clip-path="url(#tc1)" fill="#00e640"><tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">follow the white rabbit…</tspan></text>
+      <clipPath id="tc2"><rect x="0" y="54" width="0" height="30">
+        <animate attributeName="width" from="0" to="430" dur="1.6s" begin="4.2s" fill="freeze"/>
+      </rect></clipPath>
+      <text x="0" y="72" clip-path="url(#tc2)" fill="#d4fdd9"><tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">role</tspan> <tspan fill="#006b2e">=</tspan> <tspan fill="#d4fdd9">Computer Science Engineer</tspan></text>
+      <clipPath id="tc3"><rect x="0" y="90" width="0" height="30">
+        <animate attributeName="width" from="0" to="320" dur="1.3s" begin="6.6s" fill="freeze"/>
+      </rect></clipPath>
+      <text x="0" y="108" clip-path="url(#tc3)" fill="#d4fdd9"><tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">mode</tspan> <tspan fill="#006b2e">=</tspan> <tspan fill="#d4fdd9">Full Stack · Security · Cloud</tspan></text>
+      <clipPath id="tc4"><rect x="0" y="126" width="0" height="30">
+        <animate attributeName="width" from="0" to="360" dur="1.4s" begin="9s" fill="freeze"/>
+      </rect></clipPath>
+      <text x="0" y="144" clip-path="url(#tc4)" fill="#00e640"><tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">echo $WELCOME</tspan></text>
+      <clipPath id="tc5"><rect x="0" y="162" width="0" height="30">
+        <animate attributeName="width" from="0" to="520" dur="1.8s" begin="10.9s" fill="freeze"/>
+      </rect></clipPath>
+      <text x="0" y="180" clip-path="url(#tc5)" fill="#d4fdd9"><tspan fill="#00a32a">welcome to my GitHub</tspan> <tspan fill="#006b2e">//</tspan> <tspan fill="#00ff41">enter the matrix</tspan></text>
+      <rect class="t-cur" x="532" y="-19" width="12" height="24" fill="#00ff41"/>
+      <text x="0" y="218" class="t-hint" font-size="13" letter-spacing="6" fill="#006b2e" opacity="0.85">
+        &gt; all input streams nominal — stay in the matrix
+      </text>
+    </g>
+  </g>
+
+  <line x1="70" y1="242" x2="1130" y2="242" stroke="#00a32a" stroke-width="1.5" opacity="0.4"/>
+</svg>

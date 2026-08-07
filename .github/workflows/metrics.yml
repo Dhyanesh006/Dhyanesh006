@@ -1,28 +1,17 @@
 # ═══════════════════════════════════════════════════════════════════
 #  GITHUB METRICS (ADVANCED, DARK MATRIX)
 #  ----------------------------------------------------------------
-#  Renders an advanced metrics card with lowlighter/metrics using the
-#  built-in `terminal` template (an SSH-session mockup) recolored to the
-#  Matrix palette (black background + neon greens) via `extras_css`, and
-#  commits it to profile/metrics.svg (embedded in the README).
-# • Runs automatically every day at 00:45 UTC (staggered from pacman
-#    and the profile-readme runs)
-# • Also runs on every push to main so the card is always fresh
-# • Also runs manually from the Actions tab
-#  • Uses the latest lowlighter/metrics release (no deprecated plugins)
-#  • NOTE: some advanced plugins (achievements) benefit from a Personal
-#    Access Token with `public_repo` scope. Save it as the secret
-#    `METRICS_TOKEN` and it will be used automatically; otherwise the
-#    workflow falls back to the scoped GITHUB_TOKEN.
+#  DISABLED — replaced by .github/scripts/generate-stats.mjs, which
+#  renders the animated Matrix stats + activity cards in pure SVG with
+#  no external action. Kept for reference; delete when no longer needed.
+#  Originally rendered an advanced metrics card with lowlighter/metrics
+#  (terminal template recolored to the Matrix palette) and committed it
+#  to profile/metrics.svg.
+# • Manual trigger only (the daily cron and push triggers are removed)
 # ═══════════════════════════════════════════════════════════════════
 name: Generate GitHub Metrics
 
 on:
-  schedule:
-    - cron: "45 0 * * *" # daily at 00:45 UTC
-  push:
-    branches:
-      - main # generate the card on every push to main
   workflow_dispatch: # manual trigger from the Actions tab
 
 concurrency:

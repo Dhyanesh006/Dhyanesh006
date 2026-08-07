@@ -31,9 +31,7 @@ const RAIN = [
   [1163, "9.92s", "-5.96s"],
 ];
 
-const KATA =
-  "ã‚¢ã‚¤ã‚¦ã‚¨ã‚ªã‚«ã‚­ã‚¯ã‚±ã‚³ã‚µã‚·ã‚¹ã‚»ã‚½ã‚¿ãƒãƒ„ãƒ†ãƒˆãƒŠãƒ‹ãƒŒãƒãƒŽãƒãƒ’ãƒ•ãƒ˜ãƒ›ãƒžãƒŸãƒ ãƒ¡ãƒ¢ãƒ¤ãƒ¦ãƒ¨ãƒ©ãƒªãƒ«ãƒ¬ãƒ­ãƒ¯ãƒ²ãƒ³";
-const POOL = KATA + "0123456789ABCDEF";
+const POOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 const rain = RAIN.map(([x, dur, begin]) => {
   const glyphs = [];
