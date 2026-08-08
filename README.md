@@ -83,6 +83,12 @@
   <a href="https://github.com/Dhyanesh006/portfolio">
     <img src="assets/projects/matrix-portfolio.svg" alt="Featured project — portfolio" width="47%" />
   </a>
+  <a href="https://github.com/Dhyanesh006/rentalhub">
+    <img src="assets/projects/matrix-rentalhub.svg" alt="Featured project — RentalHub" width="47%" />
+  </a>
+  <a href="https://github.com/Dhyanesh006/pc-store">
+    <img src="assets/projects/matrix-pcstore.svg" alt="Featured project — PC Store" width="47%" />
+  </a>
 </div>
 
 > More projects are on the way — most are still private while they bake.
