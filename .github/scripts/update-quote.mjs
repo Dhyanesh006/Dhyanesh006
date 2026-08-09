@@ -68,26 +68,72 @@ const sourceTag = q.source
   ? ` <tspan fill="#006b2e">(${esc(q.source)})</tspan>`
   : "";
 
+const QUOTE_FS = 26;
+const LOG_FS = 18;
+const QUOTE_BUDGET = 1200 - 140;
+
+const maxCharsFor = (fs) => Math.floor(QUOTE_BUDGET / (fs * 0.6));
+
+const wrap = (text, maxChars) => {
+  if (text.length <= maxChars) return [text];
+  const words = text.split(" ");
+  const lines = [];
+  let cur = "";
+  for (const w of words) {
+    const candidate = cur ? `${cur} ${w}` : w;
+    if (candidate.length > maxChars && cur) {
+      lines.push(cur);
+      cur = w;
+    } else {
+      cur = candidate;
+    }
+  }
+  if (cur) lines.push(cur);
+  return lines;
+};
+
+let qfs = QUOTE_FS;
+let quoteLines = wrap(q.text, maxCharsFor(qfs));
+while (quoteLines.length > 2) {
+  qfs -= 2;
+  quoteLines = wrap(q.text, maxCharsFor(qfs));
+}
+
+const quoteBlock = quoteLines
+  .map((ln, i) => {
+    const t =
+      (i === 0 ? "&#8220;" : "") +
+      esc(ln) +
+      (i === quoteLines.length - 1 ? "&#8221;" : "");
+    return `<text x="70" y="${62 + i * 32}" class="b2" font-family="'Courier New', Consolas, monospace" font-size="${qfs}" opacity="1">
+      <tspan fill="#d4fdd9">${t}</tspan>
+    </text>`;
+  })
+  .join("\n");
+
+const attrY = 62 + quoteLines.length * 32;
+
 const bootLog = [
-  `<text x="70" y="0" class="b0" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+  `<text x="70" y="0" class="b0" font-family="'Courier New', Consolas, monospace" font-size="${LOG_FS}" opacity="1">
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">cat daily-quote.dat</tspan>
     </text>`,
-  `<text x="70" y="24" class="b1" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+  `<text x="70" y="28" class="b1" font-family="'Courier New', Consolas, monospace" font-size="${LOG_FS}" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">accessing the oracle</tspan> <tspan fill="#006b2e">......</tspan>
     </text>`,
-  `<text x="70" y="48" class="b2" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
-      <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#d4fdd9">&#8220;${esc(q.text)}&#8221;</tspan>
-    </text>`,
-  `<text x="70" y="72" class="b3" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+  quoteBlock,
+  `<text x="70" y="${attrY}" class="b3" font-family="'Courier New', Consolas, monospace" font-size="${LOG_FS}" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">attribution</tspan> <tspan fill="#00ff41">${esc(q.by)}</tspan>${sourceTag}
     </text>`,
-  `<text x="70" y="96" class="b4" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+  `<text x="70" y="${attrY + 26}" class="b4" font-family="'Courier New', Consolas, monospace" font-size="${LOG_FS}" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">quote locked in memory</tspan> <tspan fill="#006b2e">.......</tspan>
       <tspan fill="#00ff41" class="cur">&#9608;</tspan>
     </text>`,
+  `<text x="70" y="${attrY + 82}" font-family="'Courier New', Consolas, monospace" font-size="13" letter-spacing="5" fill="#006b2e" opacity="0.8">
+      &gt; the oracle has spoken &#8212; see you next boot.
+    </text>`,
 ].join("\n");
 
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 288" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal boot log with daily quote">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal boot log with daily quote">
   <defs>
     <style>
       @keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
@@ -121,30 +167,27 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1
     </linearGradient>
   </defs>
 
-  <rect width="1200" height="288" fill="#000000"/>
+  <rect width="1200" height="340" fill="#000000"/>
 
   <g font-family="'Courier New', Consolas, monospace">
 ${rain}
   </g>
 
   <rect x="0" y="0" width="1200" height="31" fill="#00ff41" opacity="0.045">
-    <animate attributeName="y" from="-31" to="288" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="y" from="-31" to="340" dur="7s" repeatCount="indefinite"/>
   </rect>
 
   <g filter="url(#q-glow)" transform="translate(0 41)">
 ${bootLog}
-    <text x="70" y="168" font-family="'Courier New', Consolas, monospace" font-size="13" letter-spacing="5" fill="#006b2e" opacity="0.8">
-      &gt; the oracle has spoken &#8212; see you next boot.
-    </text>
   </g>
 
-  <line x1="160" y1="392" x2="1040" y2="392" stroke="url(#q-line)" stroke-width="1.5" opacity="0.8"/>
-  <text x="600" y="266" text-anchor="middle" font-family="'Courier New', Consolas, monospace" font-size="14" letter-spacing="10" fill="#00a32a">
+  <line x1="160" y1="330" x2="1040" y2="330" stroke="url(#q-line)" stroke-width="1.5" opacity="0.8"/>
+  <text x="600" y="316" text-anchor="middle" font-family="'Courier New', Consolas, monospace" font-size="14" letter-spacing="10" fill="#00a32a">
     <tspan fill="#00ff41">MATRIX</tspan> <tspan fill="#006b2e">//</tspan> <tspan fill="#00a32a">DAILY QUOTE</tspan>
   </text>
 
-  <rect width="1200" height="288" fill="url(#q-fade-top)"/>
-  <rect width="1200" height="288" fill="url(#q-fade-bottom)"/>
+  <rect width="1200" height="340" fill="url(#q-fade-top)"/>
+  <rect width="1200" height="340" fill="url(#q-fade-bottom)"/>
 </svg>
 `;
 
