@@ -1,21 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="430" viewBox="0 0 1200 430" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal boot log with tech stack">
   <defs>
-    <style>
-      @keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
-      .b0 { animation: q-in 0.35s linear 0.5s both; }
-      .b1 { animation: q-in 0.35s linear 1.2s both; }
-      .b2 { animation: q-in 0.35s linear 1.9s both; }
-      .b3 { animation: q-in 0.35s linear 2.6s both; }
-      .b4 { animation: q-in 0.35s linear 3.3s both; }
-      .b5 { animation: q-in 0.35s linear 4s both; }
-      .b6 { animation: q-in 0.35s linear 4.7s both; }
-      .b7 { animation: q-in 0.35s linear 5.4s both; }
-      .b8 { animation: q-in 0.35s linear 6.1s both; }
-      .b9 { animation: q-in 0.35s linear 6.8s both; }
-      .b10 { animation: q-in 0.35s linear 7.5s both; }
-      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-      .cur { animation: blink 1s steps(1, end) 8.2s infinite; }
-    </style>
+    
     <filter id="tech-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur"/>
       <feMerge>
@@ -352,33 +337,53 @@
   </rect>
 
   <g filter="url(#tech-glow)" transform="translate(0 45)">
-    <text x="70" y="0" class="b0" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+    <text x="70" y="0" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.5s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">cat tech-stack.dat</tspan>
     </text>
-    <text x="70" y="27" class="b1" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+    <text x="70" y="27" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">languages</tspan> <tspan fill="#006b2e">.....................</tspan> <tspan fill="#d4fdd9">Java · Python · JavaScript · TypeScript</tspan>
     </text>
-    <text x="70" y="54" class="b2" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+    <text x="70" y="54" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.9s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">frontend</tspan> <tspan fill="#006b2e">......................</tspan> <tspan fill="#d4fdd9">HTML · CSS · React · Next.js · Tailwind · Bootstrap</tspan>
     </text>
-    <text x="70" y="81" class="b3" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+    <text x="70" y="81" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.6s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">backend</tspan> <tspan fill="#006b2e">.......................</tspan> <tspan fill="#d4fdd9">Spring · Node.js · Express</tspan>
     </text>
-    <text x="70" y="108" class="b4" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+    <text x="70" y="108" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="3.3s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">database</tspan> <tspan fill="#006b2e">......................</tspan> <tspan fill="#d4fdd9">MySQL · MongoDB</tspan>
     </text>
-    <text x="70" y="135" class="b5" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+    <text x="70" y="135" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">tools</tspan> <tspan fill="#006b2e">............................</tspan> <tspan fill="#d4fdd9">Git · GitHub · VS Code · Docker · Linux · Postman · Figma</tspan>
     </text>
-    <text x="70" y="162" class="b6" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+    <text x="70" y="162" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4.7s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">networking &amp; cloud</tspan> <tspan fill="#006b2e">..........</tspan> <tspan fill="#d4fdd9">Networking · AWS</tspan>
     </text>
-    <text x="70" y="189" class="b7" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+    <text x="70" y="189" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="5.4s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00e640">[ RUN ]</tspan> <tspan fill="#8fbf98">security</tspan> <tspan fill="#006b2e">......................</tspan> <tspan fill="#d4fdd9">Cybersecurity · Ethical Hacking · CTFs</tspan>
     </text>
-    <text x="70" y="216" class="b8" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+    <text x="70" y="216" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="6.1s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00e640">[ RUN ]</tspan> <tspan fill="#8fbf98">competitive programming</tspan> <tspan fill="#006b2e">....</tspan> <tspan fill="#d4fdd9">LeetCode · Codeforces</tspan>
-      <tspan fill="#00ff41" class="cur">&#9608;</tspan>
+      <tspan fill="#00ff41">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="infinite" fill="remove"/>
+      &#9608;</tspan>
     </text>
     <text x="70" y="247" font-family="'Courier New', Consolas, monospace" font-size="17" letter-spacing="5" fill="#006b2e" opacity="0.8">
       &gt; stack loaded — compilers armed, keep building, neo.

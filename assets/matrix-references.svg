@@ -1,15 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="230" viewBox="0 0 1200 230" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal with references">
   <defs>
-    <style>
-      @keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
-      .b0 { animation: q-in 0.35s linear 0.4s both; }
-      .b1 { animation: q-in 0.35s linear 1s both; }
-      .b2 { animation: q-in 0.35s linear 1.6s both; }
-      .b3 { animation: q-in 0.35s linear 2.2s both; }
-      .b4 { animation: q-in 0.35s linear 2.8s both; }
-      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-      .cur { animation: blink 1s steps(1, end) 3.4s infinite; }
-    </style>
+    
     <filter id="ref-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
       <feMerge>
@@ -30,21 +21,33 @@
   </rect>
 
   <g filter="url(#ref-glow)" transform="translate(70 36)" font-family="'Courier New', Consolas, monospace">
-    <text x="0" y="0" class="b0" font-size="21" opacity="1">
+    <text x="0" y="0" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.4s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">man matrix-readme</tspan>
     </text>
-    <text x="0" y="33" class="b1" font-size="21" opacity="1">
+    <text x="0" y="33" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ INFO ]</tspan> <tspan fill="#8fbf98">every banner, divider, terminal, card &amp; badge</tspan>
     </text>
-    <text x="0" y="62" class="b2" font-size="21" opacity="1">
+    <text x="0" y="62" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.6s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ INFO ]</tspan> <tspan fill="#8fbf98">is a hand-built animated SVG living in /assets</tspan>
     </text>
-    <text x="0" y="91" class="b3" font-size="21" opacity="1">
+    <text x="0" y="91" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.2s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ INFO ]</tspan> <tspan fill="#8fbf98">pure SVG + SMIL · zero JavaScript · zero external services</tspan>
     </text>
-    <text x="0" y="124" class="b4" font-size="21" opacity="1">
+    <text x="0" y="124" font-size="21" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.8s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">echo "daily refresh by GitHub Actions"</tspan>
-      <tspan fill="#00ff41" class="cur">&#9608;</tspan>
+      <tspan fill="#00ff41">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="infinite" fill="remove"/>
+      &#9608;</tspan>
     </text>
   </g>
 

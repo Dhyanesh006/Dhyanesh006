@@ -1,17 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 288" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal shutdown footer">
   <defs>
-    <style>
-      @keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
-      .b0 { animation: q-in 0.35s linear 0.5s both; }
-      .b1 { animation: q-in 0.35s linear 1.2s both; }
-      .b2 { animation: q-in 0.35s linear 2s both; }
-      .b3 { animation: q-in 0.35s linear 2.8s both; }
-      .b4 { animation: q-in 0.35s linear 3.6s both; }
-      .b5 { animation: q-in 0.35s linear 4.4s both; }
-      .b6 { animation: q-in 0.35s linear 5.2s both; }
-      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-      .cur { animation: blink 1s steps(1, end) 5.6s infinite; }
-    </style>
+    
     <filter id="foot-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur"/>
       <feMerge>
@@ -348,29 +337,47 @@
   </rect>
 
   <g filter="url(#foot-glow)" transform="translate(0 41)">
-    <text x="70" y="0" class="b0" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+    <text x="70" y="0" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.5s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">poweroff</tspan>
     </text>
-    <text x="70" y="24" class="b1" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+    <text x="70" y="24" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">closing running processes</tspan> <tspan fill="#006b2e">....</tspan>
     </text>
-    <text x="70" y="48" class="b2" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+    <text x="70" y="48" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">clearing neural cache</tspan> <tspan fill="#006b2e">.........</tspan>
     </text>
-    <text x="70" y="72" class="b3" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+    <text x="70" y="72" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.8s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">disconnecting from the mainframe</tspan> <tspan fill="#006b2e">...</tspan>
     </text>
-    <text x="70" y="96" class="b4" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+    <text x="70" y="96" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="3.6s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">encrypting exit trace</tspan> <tspan fill="#006b2e">......</tspan>
     </text>
-    <text x="70" y="120" class="b5" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+    <text x="70" y="120" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4.4s" repeatCount="1" fill="freeze"/>
+      
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">goodnight, neo.</tspan>
     </text>
     <g transform="translate(70 144)">
-      <text x="0" y="0" class="b6" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+      <text x="0" y="0" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="1">
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="5.2s" repeatCount="1" fill="freeze"/>
+      
         <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#d4fdd9">connection closed.</tspan>
       </text>
-      <rect class="cur" x="247" y="-13" width="10" height="17" fill="#00ff41" opacity="1"/>
+      <rect x="247" y="-13" width="10" height="17" fill="#00ff41" opacity="1">
+      
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="infinite" fill="remove"/>
+      
+    </rect>
     </g>
     <text x="70" y="168" font-family="'Courier New', Consolas, monospace" font-size="13" letter-spacing="5" fill="#006b2e" opacity="0.8">
       &gt; there is no spoon &#8212; see you next boot.
