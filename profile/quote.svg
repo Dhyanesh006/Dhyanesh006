@@ -1,6 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal boot log with daily quote">
   <defs>
-    
+    <style>
+      @keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
+      .b0 { animation: q-in 0.35s linear 0.5s both; }
+      .b1 { animation: q-in 0.35s linear 1.2s both; }
+      .b2 { animation: q-in 0.35s linear 2s both; }
+      .b3 { animation: q-in 0.35s linear 2.8s both; }
+      .b4 { animation: q-in 0.35s linear 3.6s both; }
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      .cur { animation: blink 1s steps(1, end) 4.2s infinite; }
+    </style>
     <filter id="q-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur"/>
       <feMerge>
@@ -337,35 +346,26 @@
   </rect>
 
   <g filter="url(#q-glow)" transform="translate(0 41)">
-<text x="70" y="0" font-family="'Courier New', Consolas, monospace" font-size="18" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.5s" repeatCount="1" fill="freeze"/>
-      
+<text x="70" y="0" class="b0" font-family="'Courier New', Consolas, monospace" font-size="18" opacity="1">
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">cat daily-quote.dat</tspan>
     </text>
-<text x="70" y="28" font-family="'Courier New', Consolas, monospace" font-size="18" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" repeatCount="1" fill="freeze"/>
-      
+<text x="70" y="28" class="b1" font-family="'Courier New', Consolas, monospace" font-size="18" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">accessing the oracle</tspan> <tspan fill="#006b2e">......</tspan>
     </text>
-<text x="70" y="62" font-family="'Courier New', Consolas, monospace" font-size="26" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2s" repeatCount="1" fill="freeze"/>
-      
-      <tspan fill="#d4fdd9">&#8220;With great power comes great responsibility.&#8221;</tspan>
+<text x="70" y="62" class="b2" font-family="'Courier New', Consolas, monospace" font-size="26" opacity="1">
+      <tspan fill="#d4fdd9">&#8220;Whatever comes our way, whatever battle is raging inside us, we</tspan>
     </text>
-<text x="70" y="94" font-family="'Courier New', Consolas, monospace" font-size="18" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.8s" repeatCount="1" fill="freeze"/>
-      
-      <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">attribution</tspan> <tspan fill="#00ff41">Uncle Ben, Spider-Man</tspan> <tspan fill="#006b2e">(Movie)</tspan>
+<text x="70" y="94" class="b2" font-family="'Courier New', Consolas, monospace" font-size="26" opacity="1">
+      <tspan fill="#d4fdd9">always have a choice.&#8221;</tspan>
     </text>
-<text x="70" y="120" font-family="'Courier New', Consolas, monospace" font-size="18" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="3.6s" repeatCount="1" fill="freeze"/>
-      
+<text x="70" y="126" class="b3" font-family="'Courier New', Consolas, monospace" font-size="18" opacity="1">
+      <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">attribution</tspan> <tspan fill="#00ff41">Dumbledore, Harry Potter</tspan> <tspan fill="#006b2e">(Movie)</tspan>
+    </text>
+<text x="70" y="152" class="b4" font-family="'Courier New', Consolas, monospace" font-size="18" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">quote locked in memory</tspan> <tspan fill="#006b2e">.......</tspan>
-      <tspan fill="#00ff41">
-        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="infinite" fill="remove"/>
-      &#9608;</tspan>
+      <tspan fill="#00ff41" class="cur">&#9608;</tspan>
     </text>
-<text x="70" y="176" font-family="'Courier New', Consolas, monospace" font-size="13" letter-spacing="5" fill="#006b2e" opacity="0.8">
+<text x="70" y="208" font-family="'Courier New', Consolas, monospace" font-size="13" letter-spacing="5" fill="#006b2e" opacity="0.8">
       &gt; the oracle has spoken &#8212; see you next boot.
     </text>
   </g>

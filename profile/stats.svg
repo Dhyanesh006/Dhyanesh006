@@ -1,6 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal with profile statistics">
   <defs>
-    
+    <style>
+      @keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
+      .b0 { animation: q-in 0.35s linear 0.5s both; }
+      .b1 { animation: q-in 0.35s linear 1.1s both; }
+      .b2 { animation: q-in 0.35s linear 1.7s both; }
+      .b3 { animation: q-in 0.35s linear 2.3s both; }
+      .b4 { animation: q-in 0.35s linear 2.9s both; }
+      .b5 { animation: q-in 0.35s linear 3.5s both; }
+      .b6 { animation: q-in 0.35s linear 4.1s both; }
+      .b7 { animation: q-in 0.35s linear 4.7s both; }
+      .b8 { animation: q-in 0.35s linear 5.3s both; }
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      .cur { animation: blink 1s steps(1, end) 6s infinite; }
+      @keyframes cell-on { from { opacity: 0.15; } to { opacity: 1; } }
+      .cell { opacity: 0.25; }
+      .cell.on { opacity: 1; }
+      .cell.pop { animation: cell-on 0.8s ease-out both; }
+    </style>
     <filter id="s-glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur"/>
       <feMerge>
@@ -364,58 +381,36 @@
     <animate attributeName="y" from="-31" to="340" dur="7s" repeatCount="indefinite"/>
   </rect>
   <g filter="url(#s-glow)" transform="translate(0 45)">
-<text x="70" y="0" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.5s" repeatCount="1" fill="freeze"/>
-      
+<text x="70" y="0" class="b0" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">cat profile.dat</tspan>
     </text>
-    <text x="70" y="56" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.1s" repeatCount="1" fill="freeze"/>
-      
+    <text x="70" y="56" class="b1" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">username</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">Dhyanesh006</tspan>
     </text>
-    <text x="70" y="85" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.7s" repeatCount="1" fill="freeze"/>
-      
+    <text x="70" y="85" class="b2" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">realname</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">Dhyanesh V</tspan>
     </text>
-    <text x="70" y="114" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.3s" repeatCount="1" fill="freeze"/>
-      
+    <text x="70" y="114" class="b3" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">location</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">Coimbatore</tspan>
     </text>
-    <text x="70" y="143" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.9s" repeatCount="1" fill="freeze"/>
-      
+    <text x="70" y="143" class="b4" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">public repos</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">2</tspan>
     </text>
-    <text x="70" y="172" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="3.5s" repeatCount="1" fill="freeze"/>
-      
+    <text x="70" y="172" class="b5" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">followers</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">12</tspan>
     </text>
-    <text x="70" y="201" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4.1s" repeatCount="1" fill="freeze"/>
-      
+    <text x="70" y="201" class="b6" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">following</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">9</tspan>
     </text>
-    <text x="70" y="230" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4.7s" repeatCount="1" fill="freeze"/>
-      
+    <text x="70" y="230" class="b7" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">stars earned</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">0 · top: TypeScript</tspan>
     </text>
-    <text x="70" y="259" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="5.3s" repeatCount="1" fill="freeze"/>
-      
+    <text x="70" y="259" class="b8" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">joined</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">Jan 2024</tspan>
     </text>
-<text x="70" y="288" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="5.3s" repeatCount="1" fill="freeze"/>
-      
+<text x="70" y="288" class="b8" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">echo "still in the matrix"</tspan>
-      <tspan fill="#00ff41">
-        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="infinite" fill="remove"/>
-      &#9608;</tspan>
+      <tspan fill="#00ff41" class="cur">&#9608;</tspan>
     </text>
   </g>
   <line x1="160" y1="340" x2="1040" y2="340" stroke="url(#s-line)" stroke-width="1.5" opacity="0.8"/>
