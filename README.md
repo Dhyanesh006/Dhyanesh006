@@ -125,8 +125,11 @@
   <a href="https://x.com/dhyanesh006">
     <img src="assets/badges/x.svg" alt="X / Twitter" />
   </a>
-  <a href="mailto:dhyanesh006@gmail.com">
+  <a href="mailto:dhyanesh.vishnu@gmail.com">
     <img src="assets/badges/email.svg" alt="Email" />
+  </a>
+  <a href="mailto:dhyanesh.v@protonmail.com">
+    <img src="assets/badges/proton.svg" alt="Proton Mail" />
   </a>
   <a href="https://portfolio-dhyanesh.vercel.app/">
     <img src="assets/badges/portfolio.svg" alt="Portfolio" />
