@@ -133,23 +133,15 @@ const bootLog = [
     </text>`,
 ].join("\n");
 
-const REVEAL_CYCLE = 10; // seconds per full replay of the quote lines
-const REVEAL_CSS = [0.5, 1.2, 2, 2.8, 3.6]
-  .map((t, i) => {
-    const a = ((t / REVEAL_CYCLE) * 100).toFixed(2);
-    const b = (((t + 0.35) / REVEAL_CYCLE) * 100).toFixed(2);
-    const c = (((REVEAL_CYCLE - 0.6) / REVEAL_CYCLE) * 100).toFixed(2);
-    return (
-      `@keyframes q${i} { 0%, ${a}% { opacity: 0; } ${b}%, ${c}% { opacity: 1; } 100% { opacity: 0; } }\n` +
-      `      .b${i} { animation: q${i} ${REVEAL_CYCLE}s linear infinite both; }`
-    );
-  })
-  .join("\n      ");
-
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal boot log with daily quote">
   <defs>
     <style>
-      ${REVEAL_CSS}
+      @keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
+      .b0 { animation: q-in 0.35s linear 0.5s both; }
+      .b1 { animation: q-in 0.35s linear 1.2s both; }
+      .b2 { animation: q-in 0.35s linear 2s both; }
+      .b3 { animation: q-in 0.35s linear 2.8s both; }
+      .b4 { animation: q-in 0.35s linear 3.6s both; }
       @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
       .cur { animation: blink 1s steps(1, end) 4.2s infinite; }
     </style>
@@ -211,33 +203,10 @@ try {
   svgChanged = true;
 }
 
-const block = [
-  `<p align="center">`,
-  `  <img src="profile/quote.svg" alt="Daily Matrix boot-log quote" width="100%" />`,
-  `</p>`,
-].join("\n");
+/* The README shows profile/showcase.svg, which embeds this quote. There is no
+   separate quote block to patch, so this script only regenerates the SVG. */
 
-const readmePath = new URL("README.md", root);
-const readme = readFileSync(readmePath, "utf8");
-
-const startMarker = "<!-- QUOTE:START -->";
-const endMarker = "<!-- QUOTE:END -->";
-const s = readme.indexOf(startMarker);
-const e = readme.indexOf(endMarker);
-if (s === -1 || e === -1 || e < s) {
-  console.error("ERROR: QUOTE markers not found in README");
-  process.exit(1);
-}
-
-const newBlock = startMarker + "\n" + block + "\n  " + endMarker;
-const readmeChanged = readme.slice(s, e + endMarker.length) !== newBlock;
-
-if (readmeChanged) {
-  const updated = readme.slice(0, s) + newBlock + readme.slice(e + endMarker.length);
-  writeFileSync(readmePath, updated);
-}
-
-if (!svgChanged && !readmeChanged) {
+if (!svgChanged) {
   console.log("quote unchanged:", q.text, "—", q.by);
 } else {
   console.log("quote updated:", q.text, "—", q.by);

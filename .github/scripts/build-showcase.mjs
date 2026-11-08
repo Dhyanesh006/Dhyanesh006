@@ -1,15 +1,17 @@
 /**
  * build-showcase.mjs
  * ----------------------------------------------------------------
- * Composes every Matrix section SVG + the daily Pac-Man graph into
- * ONE animated loop that plays each section in sequence.
+ * Composes every Matrix section into ONE tall animated SVG.
  *
  * Output: profile/showcase.svg
  *
- * The source sections keep their original look (same palette, rain,
- * glow, scanline, Courier terminal). Their one-shot intro animations
- * are re-timed onto a single master cycle so every section replays
- * its boot sequence each loop. The Pac-Man graph plays last.
+ * Unlike the old single-stage carousel, this version stacks every
+ * section vertically (one below another). All intro lines share one
+ * master timeline: sections appear in reading order, each intro
+ * finishes on its own clock, and every line stays visible once it
+ * has appeared. Decorative loops (rain, cursors, scanlines, Pac-Man)
+ * keep playing. Section labels are drawn between the blocks so the
+ * single image still reads as the numbered profile.
  */
 
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
@@ -22,8 +24,6 @@ const readText = (path) => readFileSync(new URL(path, root), "utf8");
 /* ------------------------------------------------------------------ */
 
 const fmt = (n) => String(Math.round(n * 10000) / 10000);
-const clamp01 = (n) => Math.min(1, Math.max(0, n));
-
 const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
@@ -46,53 +46,6 @@ function splitList(value) {
     .filter((v) => v !== "");
 }
 
-function keyTimes(list) {
-  let prev = -1;
-  const out = [];
-  for (const raw of list) {
-    let n = clamp01(Number(raw));
-    if (n <= prev) n = prev + 0.000001;
-    if (n > 1) n = 1;
-    out.push(fmt(n));
-    prev = n;
-  }
-  return out.join(";");
-}
-
-/* ------------------------------------------------------------------ */
-/*  master timeline                                                   */
-/* ------------------------------------------------------------------ */
-
-const PAD = 0.45; // fade breathing room at the start/end of a scene
-const STAGE = { x: 60, y: 78, w: 1080, h: 490 };
-const WIDTH = 1200;
-const HEIGHT = 640;
-
-const SCENES = [
-  { num: "01", label: "WAKE UP", kind: "file", file: "assets/matrix-banner.svg", dur: 3.8, removeBg: true },
-  { num: "02", label: "WHITE RABBIT", kind: "file", file: "assets/matrix-typing.svg", dur: 7.0, removeBg: true },
-  { num: "03", label: "BOOT SEQUENCE", kind: "file", file: "assets/matrix-boot.svg", dur: 4.8, removeBg: true },
-  { num: "04", label: "ABOUT ME", kind: "about", dur: 4.8 },
-  { num: "05", label: "TECH STACK", kind: "file", file: "assets/matrix-tech.svg", dur: 4.8, removeBg: true },
-  { num: "06", label: "PROFILE STATS", kind: "file", file: "profile/stats.svg", dur: 4.8, removeBg: true },
-  { num: "07", label: "ACTIVITY", kind: "file", file: "profile/activity.svg", dur: 4.8, removeBg: true },
-  { num: "08", label: "TROPHIES", kind: "file", file: "assets/matrix-trophies.svg", dur: 4.8, removeBg: true },
-  { num: "09", label: "PROJECTS", kind: "projects", dur: 5.8 },
-  { num: "10", label: "ROADMAP", kind: "file", file: "assets/matrix-roadmap.svg", dur: 4.8, removeBg: true },
-  { num: "11", label: "DAILY QUOTE", kind: "file", file: "profile/quote.svg", dur: 5.8, removeBg: true },
-  { num: "12", label: "CONNECT", kind: "connect", dur: 4.0 },
-  { num: "13", label: "REFERENCES", kind: "file", file: "assets/matrix-references.svg", dur: 4.0, removeBg: true },
-  { num: "14", label: "SHUTDOWN", kind: "file", file: "assets/matrix-footer.svg", dur: 4.0, removeBg: true },
-  { num: "15", label: "PAC-MAN // LAST LEVEL", kind: "pacman", dur: 8.0 },
-];
-
-let clock = 0;
-for (const scene of SCENES) {
-  scene.start = clock;
-  clock += scene.dur;
-}
-const CYCLE = clock;
-
 /* ------------------------------------------------------------------ */
 /*  source-SVG sanitising                                             */
 /* ------------------------------------------------------------------ */
@@ -100,8 +53,7 @@ const CYCLE = clock;
 const RAIN_GROUP =
   /<g>\s*<animateTransform\b[^>]*\btype="translate"[^>]*\bvalues="-?\d+ 0;0 0"[^>]*\/>[\s\S]*?<\/g>\s*<\/g>/g;
 
-const FADE_RECT =
-  /<rect\b[^>]*\bfill="url\(#[^)]*fade[^)]*\)"[^>]*\/>/g;
+const FADE_RECT = /<rect\b[^>]*\bfill="url\(#[^)]*fade[^)]*\)"[^>]*\/>/g;
 
 function extractInner(svg) {
   let inner = svg.replace(/^[\s\S]*?<svg\b[^>]*>/, "").replace(/<\/svg>\s*$/, "");
@@ -112,9 +64,6 @@ function extractInner(svg) {
 }
 
 function viewBoxOf(svg) {
-  // Only trust the root <svg> tag. Some sources (e.g. the Pac-Man graph)
-  // have no root viewBox, and the first viewBox in the file belongs to a
-  // <symbol> sprite — using it would scale the whole scene wrong.
   const open = svg.match(/<svg\b[^>]*>/i);
   const tag = open ? open[0] : "";
   const vb = tag.match(/\bviewBox="([^"]+)"/);
@@ -138,154 +87,128 @@ function prefixIds(inner, prefix) {
     .replace(/(\b(?:xlink:)?href)="#([^"]+)"/g, (_, attr, id) => `${attr}="#${prefix}-${id}"`);
 }
 
-function cssDelays(inner) {
+/* ------------------------------------------------------------------ */
+/*  CSS reveal parsing (.b0 … .b8, .cur, heat-map cells)              */
+/* ------------------------------------------------------------------ */
+
+function parseCss(inner) {
   const style = inner.match(/<style>([\s\S]*?)<\/style>/);
-  const b = {};
-  if (!style) return b;
-  for (const m of style[1].matchAll(
-    /\.(b\d+)\s*\{\s*animation:\s*q-in\s+([\d.]+)s\s+linear\s+([\d.]+)s\s+both;?\s*\}/g,
+  const css = style ? style[1] : "";
+  const reveals = {};
+  for (const m of css.matchAll(
+    /\.b(\d+)\s*\{\s*animation:\s*q-in\s+([\d.]+)s\s+linear\s+([\d.]+)s\s+both;?\s*\}/g,
   )) {
-    b[m[1]] = { dur: Number(m[2]), delay: Number(m[3]) };
+    reveals[m[1]] = { dur: Number(m[2]), delay: Number(m[3]) };
   }
-  return b;
+  const cur = css.match(
+    /\.cur\s*\{\s*animation:\s*blink\s+[\d.]+s\s+steps\(1,\s*end\)\s+([\d.]+)s\s+infinite/,
+  );
+  const cell = css.match(/\.cell\.pop\s*\{\s*animation:\s*cell-on\s+([\d.]+)s/);
+  return {
+    reveals,
+    curDelay: cur ? Number(cur[1]) : null,
+    cellDur: cell ? Number(cell[1]) : 0.8,
+    hasStyle: Boolean(style),
+  };
 }
 
 function measureSpan(inner) {
   let span = 0;
   for (const m of inner.matchAll(/<animate\b([^>]*)>/g)) {
     const a = attrs(m[1]);
-    if (a.begin && a.fill === "freeze" && a.dur) {
+    if (a.fill === "freeze" || a.repeatCount === "1") {
       span = Math.max(span, secs(a.begin) + secs(a.dur));
     }
   }
-  for (const value of inner.matchAll(/animation-delay:\s*([\d.]+)s/g)) {
-    span = Math.max(span, Number(value[1]) + 0.8);
+  const css = parseCss(inner);
+  for (const r of Object.values(css.reveals)) {
+    span = Math.max(span, r.delay + r.dur);
   }
-  const delays = cssDelays(inner);
-  for (const d of Object.values(delays)) span = Math.max(span, d.delay + d.dur);
-  return span || 1;
+  for (const m of inner.matchAll(/animation-delay:\s*([\d.]+)s/g)) {
+    span = Math.max(span, Number(m[1]) + css.cellDur);
+  }
+  return span;
 }
 
-function mapTime(t, start, scale, cycle) {
-  return clamp01((start + t * scale) / cycle);
+function offsetOneShotTimes(inner, { start, scale }) {
+  return inner.replace(/<(animate|animateTransform|animateMotion)\b([^>]*?)\/?>/g, (full, tag, raw) => {
+    const a = attrs(raw);
+    if (a.repeatCount === "indefinite") return full;
+
+    if (!a.begin) {
+      if (a.fill !== "freeze") return full;
+      let out = full;
+      if (a.dur != null) out = out.replace(/\bdur="[^"]*"/, `dur="${fmt(secs(a.dur) * scale)}s"`);
+      return out.replace(/\s*\/?>$/, (m) => ` begin="${fmt(start)}s"${m}`);
+    }
+
+    if (!/^\s*-?[\d.]+(?:ms|s)?\s*$/.test(a.begin)) return full;
+    const begin = secs(a.begin);
+    let out = full.replace(/\bbegin="[^"]*"/, `begin="${fmt(start + begin * scale)}s"`);
+    if (a.dur != null) out = out.replace(/\bdur="[^"]*"/, `dur="${fmt(secs(a.dur) * scale)}s"`);
+    return out;
+  });
 }
 
-function opacityAnimation(delay, duration, start, scale, cycle) {
-  const t0 = mapTime(delay, start, scale, cycle);
-  const t1 = mapTime(delay + duration, start, scale, cycle);
-  return `<animate attributeName="opacity" values="0;0;1;1" keyTimes="${keyTimes([0, t0, t1, 1])}" dur="${fmt(cycle)}s" repeatCount="indefinite"/>`;
-}
+function transformCss(inner, { start, scale }) {
+  const css = parseCss(inner);
+  let out = inner.replace(/<style>[\s\S]*?<\/style>/, "");
 
-function transformCssAnimations(inner, { start, scale, cycle }) {
-  const style = inner.match(/<style>([\s\S]*?)<\/style>/);
-  if (!style) return inner;
-
-  const delays = cssDelays(inner);
-  let out = inner.replace(style[0], "");
-
-  // Activity heat-map cells -------------------------------------------------
-  out = out.replace(
-    /<rect\b([^>]*?)\sclass="([^"]*)"([^>]*?)(\/?)>/g,
-    (full, pre, cls, post, selfClose) => {
-      const classes = cls.split(/\s+/).filter(Boolean);
-      if (!classes.includes("cell")) return full;
-      const isPop = classes.includes("pop");
-      const delayMatch = `${pre} ${post}`.match(/animation-delay:\s*([\d.]+)s/);
-      const delay = delayMatch ? Number(delayMatch[1]) : 0.3;
-      let clean = `${pre} ${post}`
-        .replace(/\sstyle="[^"]*"/g, "")
-        .replace(/\sopacity="[^"]*"/g, "");
-      if (isPop) {
-        const t0 = mapTime(delay, start, scale, cycle);
-        const t1 = mapTime(delay + 0.8, start, scale, cycle);
-        return `<rect${clean} opacity="1"><animate attributeName="opacity" values="0.15;0.15;1;1" keyTimes="${keyTimes([0, t0, t1, 1])}" dur="${fmt(cycle)}s" repeatCount="indefinite"/></rect>`;
-      }
-      return `<rect${clean} opacity="0.25"${selfClose}>`;
-    },
-  );
-
-  // Class-based reveal (.b0 … .b8) + blinking cursor ----------------------
   out = out.replace(
     /<([a-zA-Z][\w:-]*)([^>]*?)\sclass="([^"]*)"([^>]*?)(\/?)>/g,
     (full, tag, pre, cls, post, selfClose) => {
       const classes = cls.split(/\s+/).filter(Boolean);
-      if (classes.includes("cell")) return full;
+      if (!classes.length) return full;
 
-      let animate = "";
+      /* Activity heat-map cells -------------------------------------- */
+      if (classes.includes("cell")) {
+        const isOn = classes.includes("on");
+        const isPop = classes.includes("pop");
+        const delayMatch = `${pre} ${post}`.match(/animation-delay:\s*([\d.]+)s/);
+        const delay = delayMatch ? Number(delayMatch[1]) : 0;
+        const clean = `${pre} ${post}`
+          .replace(/\sstyle="[^"]*"/g, "")
+          .replace(/\sopacity="[^"]*"/g, "");
+        if (isPop) {
+          return `<${tag}${clean} opacity="0.15"><animate attributeName="opacity" from="0.15" to="1" dur="${fmt(
+            css.cellDur * scale,
+          )}s" begin="${fmt(start + delay * scale)}s" repeatCount="1" fill="freeze"/></${tag}>`;
+        }
+        return `<${tag}${clean} opacity="${isOn ? "1" : "0.25"}"${selfClose}>`;
+      }
+
+      /* Typed boot-log lines + blinking cursor ----------------------- */
       const reveal = classes.find((c) => /^b\d+$/.test(c));
-      if (reveal && delays[reveal]) {
-        animate += opacityAnimation(
-          delays[reveal].delay,
-          delays[reveal].dur,
-          start,
-          scale,
-          cycle,
-        );
-      }
-      if (classes.includes("cur")) {
-        animate += `<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" begin="${fmt(start)}s"/>`;
-      }
+      const isCur = classes.includes("cur");
+      let animate = "";
+      let opacity = null;
 
-      const rest = classes.filter((c) => c !== "cur" && !/^b\d+$/.test(c));
-      const classAttr = rest.length ? ` class="${rest.join(" ")}"` : "";
-      if (animate) {
-        if (selfClose) return `<${tag}${pre}${classAttr}${post}>${animate}</${tag}>`;
-        return `<${tag}${pre}${classAttr}${post}>${animate}`;
+      if (reveal && css.reveals[reveal.slice(1)]) {
+        const r = css.reveals[reveal.slice(1)];
+        opacity = "0";
+        animate += `<animate attributeName="opacity" from="0" to="1" dur="${fmt(r.dur * scale)}s" begin="${fmt(
+          start + r.delay * scale,
+        )}s" repeatCount="1" fill="freeze"/>`;
       }
-      return `<${tag}${pre}${classAttr}${post}${selfClose}>`;
+      if (isCur) {
+        animate += `<animate attributeName="opacity" values="1;0;1" dur="1s" begin="${fmt(
+          start + css.curDelay * scale,
+        )}s" repeatCount="indefinite"/>`;
+      }
+      if (!animate) return full;
+
+      const clean = `${pre} ${post}`;
+      if (opacity != null) {
+        const attrs = clean.replace(/\sopacity="[^"]*"/g, "");
+        if (selfClose) return `<${tag}${attrs} opacity="${opacity}">${animate}</${tag}>`;
+        return `<${tag}${attrs} opacity="${opacity}">${animate}`;
+      }
+      if (selfClose) return `<${tag}${clean}>${animate}</${tag}>`;
+      return `<${tag}${clean}>${animate}`;
     },
   );
 
   return out;
-}
-
-function transformOneShotAnimations(inner, { start, scale, cycle }) {
-  return inner.replace(/<animate\b([^>]*?)\/?>/g, (full, raw) => {
-    const a = attrs(raw);
-    if (!a.begin || a.fill !== "freeze" || !a.dur) return full;
-    if (a.repeatCount && a.repeatCount !== "1") return full;
-
-    const begin = secs(a.begin);
-    const duration = secs(a.dur);
-    let values;
-    let times;
-
-    if (a.values != null) {
-      const source = splitList(a.values);
-      const sourceTimes = a.keyTimes
-        ? splitList(a.keyTimes).map(Number)
-        : source.map((_, i) => (source.length === 1 ? 0 : i / (source.length - 1)));
-      const mapped = sourceTimes.map((k) => mapTime(begin + k * duration, start, scale, cycle));
-      values = [source[0], ...source, source[source.length - 1]];
-      times = [0, ...mapped, 1];
-    } else {
-      const from = a.from != null ? a.from : "0";
-      const to = a.to != null ? a.to : "1";
-      values = [from, from, to, to];
-      times = [0, mapTime(begin, start, scale, cycle), mapTime(begin + duration, start, scale, cycle), 1];
-    }
-
-    // Drop duplicated keyTimes, keeping the later value.
-    const keep = [];
-    for (let i = 0; i < values.length; i++) {
-      if (i === 0 || times[i] > times[keep[keep.length - 1]]) keep.push(i);
-      else keep[keep.length - 1] = i;
-    }
-
-    const out = {
-      attributeName: a.attributeName,
-      values: keep.map((i) => values[i]).join(";"),
-      keyTimes: keyTimes(keep.map((i) => times[i])),
-      dur: `${fmt(cycle)}s`,
-      repeatCount: "indefinite",
-    };
-    if (a.calcMode) out.calcMode = a.calcMode;
-    if (a.additive) out.additive = a.additive;
-
-    return `<animate ${Object.entries(out)
-      .map(([k, v]) => `${k}="${v}"`)
-      .join(" ")}/>`;
-  });
 }
 
 function sanitize(inner, options) {
@@ -293,16 +216,14 @@ function sanitize(inner, options) {
     prefix,
     start,
     scale,
-    cycle,
     removeBg = false,
     removeRain = false,
     removeFades = false,
   } = options;
 
   let out = inner;
-  out = transformCssAnimations(out, { start, scale, cycle });
-  out = transformOneShotAnimations(out, { start, scale, cycle });
-  // SMIL only understands "indefinite" (some source files say "infinite").
+  out = offsetOneShotTimes(out, { start, scale });
+  out = transformCss(out, { start, scale });
   out = out.replace(/repeatCount="infinite"/g, 'repeatCount="indefinite"');
   if (removeRain) out = out.replace(RAIN_GROUP, "");
   if (removeBg) out = removeFirstFullBleed(out);
@@ -312,244 +233,47 @@ function sanitize(inner, options) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  scene builders                                                    */
+/*  master layout / timeline                                          */
 /* ------------------------------------------------------------------ */
 
-function sceneWindow(scene) {
-  return scene.dur - PAD * 2;
-}
+const WIDTH = 1200;
+const SPEED = 0.62; // compress every section's local timeline a little
+const LEAD_CAP = 2.4; // longest one section may hold the page before the next starts
+const GAP_TIME = 0.35; // quiet beat between sections, in seconds
+const GAP_PX = 16; // breathing room between stacked sections
+const HEADING_H = 52; // height reserved for each section label
+const TOP_PAD = 12;
+const BOTTOM_PAD = 12;
 
-function fileScene(scene, prefix, index) {
-  const raw = readText(scene.file);
-  const vb = viewBoxOf(raw);
-  let inner = extractInner(raw);
-  const span = measureSpan(inner);
-  const start = scene.start + PAD;
-  const window = sceneWindow(scene);
-  inner = sanitize(inner, {
-    prefix,
-    start,
-    scale: window / span,
-    cycle: CYCLE,
-    removeBg: scene.removeBg,
-    removeRain: true,
-    removeFades: true,
-  });
-  return { content: inner, viewBox: vb.join(" "), index };
-}
-
-function aboutScene(scene, prefix) {
-  const window = sceneWindow(scene);
-
-  const avatarRaw = readText("assets/matrix-avatar.svg");
-  const avatar = sanitize(extractInner(avatarRaw), {
-    prefix: `${prefix}-avatar`,
-    start: scene.start + PAD,
-    scale: 1,
-    cycle: CYCLE,
-  });
-
-  const aboutRaw = readText("assets/matrix-about.svg");
-  const aboutVb = viewBoxOf(aboutRaw);
-  const aboutInner = extractInner(aboutRaw);
-  const aboutSpan = measureSpan(aboutInner);
-  const aboutStart = scene.start + PAD + 0.2;
-  const about = sanitize(aboutInner, {
-    prefix: `${prefix}-about`,
-    start: aboutStart,
-    scale: (window - 0.2) / aboutSpan,
-    cycle: CYCLE,
-    removeBg: true,
-    removeRain: true,
-    removeFades: true,
-  });
-
-  return {
-    viewBox: "0 0 1200 540",
-    content: `
-      <svg x="32" y="190" width="154" height="154" viewBox="0 0 140 140" preserveAspectRatio="xMidYMid meet">${avatar}</svg>
-      <svg x="215" y="110" width="945" height="320" viewBox="${aboutVb.join(" ")}" preserveAspectRatio="xMidYMid meet">${about}</svg>`,
-  };
-}
-
-function projectsScene(scene, prefix) {
-  const cards = [
-    "matrix-profile.svg",
-    "matrix-portfolio.svg",
-    "matrix-rentalhub.svg",
-    "matrix-pcstore.svg",
-  ];
-  const positions = [
-    [60, 0],
-    [620, 0],
-    [60, 290],
-    [620, 290],
-  ];
-  const window = sceneWindow(scene);
-  const stagger = 0.22;
-
-  const content = cards
-    .map((file, i) => {
-      const raw = readText(`assets/projects/${file}`);
-      const vb = viewBoxOf(raw);
-      const inner = extractInner(raw);
-      const span = measureSpan(inner);
-      const start = scene.start + PAD + i * stagger;
-      const duration = window - i * stagger;
-      const svg = sanitize(inner, {
-        prefix: `${prefix}-c${i}`,
-        start,
-        scale: duration / span,
-        cycle: CYCLE,
-      });
-      return `<svg x="${positions[i][0]}" y="${positions[i][1]}" width="520" height="250" viewBox="${vb.join(" ")}" preserveAspectRatio="xMidYMid meet">${svg}</svg>`;
-    })
-    .join("\n");
-
-  return { viewBox: "0 0 1200 540", content };
-}
-
-function connectScene(scene, prefix) {
-  const badges = [
-    "github",
-    "linkedin",
-    "x",
-    "email",
-    "proton",
-    "portfolio",
-    "leetcode",
-    "codeforces",
-    "devto",
-  ];
-  const content = badges
-    .map((name, i) => {
-      const raw = readText(`assets/badges/${name}.svg`);
-      const vb = viewBoxOf(raw);
-      const inner = sanitize(extractInner(raw), {
-        prefix: `${prefix}-b${i}`,
-        start: scene.start + PAD,
-        scale: 1,
-        cycle: CYCLE,
-      });
-      const col = i % 3;
-      const row = Math.floor(i / 3);
-      const x = 195 + col * 280;
-      const y = 152 + row * 90;
-      return `<svg x="${x}" y="${y}" width="250" height="55" viewBox="${vb.join(" ")}" preserveAspectRatio="xMidYMid meet">${inner}</svg>`;
-    })
-    .join("\n");
-  return { viewBox: "0 0 1200 540", content };
-}
-
-function pacmanScene(scene, prefix, pacmanSvg) {
-  if (!pacmanSvg) {
-    return {
-      viewBox: "0 0 1200 540",
-      content: `<g font-family="'Courier New', Consolas, monospace" text-anchor="middle">
-        <text x="600" y="255" font-size="22" fill="#00a32a">[ OFFLINE ]</text>
-        <text x="600" y="292" font-size="16" fill="#006b2e">pac-man graph unavailable — the next run will retry</text>
-        <text x="600" y="322" font-size="14" fill="#00ff41">&#9608;</text>
-      </g>`,
-    };
-  }
-
-  const vb = viewBoxOf(pacmanSvg);
-  let inner = extractInner(pacmanSvg);
-  inner = inner.replace(/<rect\b[^>]*width="100%"[^>]*height="100%"[^>]*fill="#0d1117"[^>]*\/>/, "");
-  inner = inner.replace(
-    /<(animate(?:Transform|Motion)?)\b([^>]*?)(\/?)>/g,
-    (full, tag, raw, selfClose) => {
-      if (/\bbegin=/.test(raw)) return full;
-      return `<${tag}${raw} begin="${fmt(scene.start + PAD)}s"${selfClose}>`;
-    },
-  );
-  inner = prefixIds(inner, prefix);
-  return { viewBox: vb.join(" "), content: inner };
-}
-
-/* ------------------------------------------------------------------ */
-/*  background, chrome, scene wrapper                                 */
-/* ------------------------------------------------------------------ */
-
-const RAIN = [
-  [38, "11.29s", "-1.26s"],
-  [113, "10.12s", "-3.48s"],
-  [188, "8.07s", "-2.60s"],
-  [263, "7.68s", "-6.32s"],
-  [338, "9.93s", "-0.71s"],
-  [413, "7.33s", "-2.38s"],
-  [488, "10.52s", "-6.20s"],
-  [563, "7.71s", "-6.51s"],
-  [638, "8.53s", "-4.44s"],
-  [713, "8.02s", "-6.76s"],
-  [788, "11.60s", "-7.37s"],
-  [863, "11.50s", "-3.82s"],
-  [938, "10.72s", "-4.69s"],
-  [1013, "10.96s", "-9.61s"],
-  [1088, "9.16s", "-3.10s"],
-  [1163, "9.92s", "-5.96s"],
+const sections = [
+  { id: "banner", file: "assets/matrix-banner.svg", keepRain: true },
+  { id: "typing", file: "assets/matrix-typing.svg" },
+  { id: "divider", file: "assets/matrix-divider.svg" },
+  { id: "h-boot", kind: "heading", label: "01 · BOOT SEQUENCE" },
+  { id: "boot", file: "assets/matrix-boot.svg" },
+  { id: "h-about", kind: "heading", label: "02 · ABOUT ME" },
+  { id: "about", kind: "about" },
+  { id: "h-tech", kind: "heading", label: "03 · TECH STACK" },
+  { id: "tech", file: "assets/matrix-tech.svg" },
+  { id: "h-stats", kind: "heading", label: "04 · STATS" },
+  { id: "stats", file: "profile/stats.svg" },
+  { id: "activity", file: "profile/activity.svg" },
+  { id: "h-trophies", kind: "heading", label: "05 · TROPHIES & ACHIEVEMENTS" },
+  { id: "trophies", file: "assets/matrix-trophies.svg" },
+  { id: "h-pacman", kind: "heading", label: "06 · PAC-MAN — DAILY CONTRIBUTION GRAPH" },
+  { id: "pacman", kind: "pacman" },
+  { id: "h-projects", kind: "heading", label: "07 · FEATURED PROJECTS" },
+  { id: "projects", kind: "projects" },
+  { id: "h-roadmap", kind: "heading", label: "08 · LEARNING ROADMAP" },
+  { id: "roadmap", file: "assets/matrix-roadmap.svg" },
+  { id: "h-quote", kind: "heading", label: "09 · DAILY QUOTE" },
+  { id: "quote", file: "profile/quote.svg" },
+  { id: "h-connect", kind: "heading", label: "10 · CONNECT" },
+  { id: "connect", kind: "connect" },
+  { id: "h-references", kind: "heading", label: "11 · MATRIX REFERENCES" },
+  { id: "references", file: "assets/matrix-references.svg" },
+  { id: "footer", file: "assets/matrix-footer.svg" },
 ];
-
-const POOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
-function globalRain() {
-  const rows = Math.max(8, Math.floor((HEIGHT - 40) / 17));
-  return RAIN.map(([x, dur, begin]) => {
-    const glyphs = [];
-    for (let r = 0; r < rows; r++) {
-      const ch = POOL[(x * 7 + r * 13) % POOL.length];
-      let fill;
-      let opacity;
-      if (r < 5) {
-        fill = "#006b2e";
-        opacity = "0.3";
-      } else if (r < 10) {
-        fill = "#00a32a";
-        opacity = "0.45";
-      } else if (r < 13) {
-        fill = "#00e640";
-        opacity = "0.6";
-      } else {
-        fill = "#00ff41";
-        opacity = "0.8";
-      }
-      glyphs.push(`<text x="0" y="${16 + r * 17}" fill="${fill}" opacity="${opacity}">${ch}</text>`);
-    }
-    return `<g><animateTransform attributeName="transform" type="translate" values="-235 0;0 0" dur="${dur}" repeatCount="indefinite" begin="${begin}"/><g transform="translate(${x} 24)">${glyphs.join("")}</g></g>`;
-  }).join("\n");
-}
-
-function sceneOpacity(scene) {
-  const S = scene.start / CYCLE;
-  const E = (scene.start + scene.dur) / CYCLE;
-  const fade = 0.4 / CYCLE;
-
-  if (scene.start === 0) {
-    return {
-      values: "1;1;0;0",
-      keyTimes: keyTimes([0, Math.max(0, E - fade), E, 1]),
-    };
-  }
-  if (scene.start + scene.dur >= CYCLE - 1e-6) {
-    return {
-      values: "0;0;1;1",
-      keyTimes: keyTimes([0, S, Math.min(1, S + fade), 1]),
-    };
-  }
-  return {
-    values: "0;0;1;1;0;0",
-    keyTimes: keyTimes([0, S, Math.min(1, S + fade), Math.max(0, E - fade), E, 1]),
-  };
-}
-
-function wrapScene(scene, piece) {
-  const opacity = sceneOpacity(scene);
-  return `<g opacity="0">
-    <animate attributeName="opacity" values="${opacity.values}" keyTimes="${opacity.keyTimes}" dur="${fmt(CYCLE)}s" repeatCount="indefinite"/>
-    <text x="60" y="68" font-family="'Courier New', Consolas, monospace" font-size="15" letter-spacing="4" fill="#00a32a"><tspan fill="#00ff41">[ ${scene.num} ]</tspan> ${esc(scene.label)}</text>
-    <svg x="${STAGE.x}" y="${STAGE.y}" width="${STAGE.w}" height="${STAGE.h}" viewBox="${piece.viewBox}" preserveAspectRatio="xMidYMid meet">${piece.content}</svg>
-  </g>`;
-}
 
 async function loadPacman() {
   const fromEnv = process.env.PACMAN_SVG;
@@ -569,85 +293,329 @@ async function loadPacman() {
   return null;
 }
 
+const pacmanSvg = await loadPacman();
+
+function readPiece(file) {
+  const raw = readText(file);
+  const inner = extractInner(raw);
+  const css = parseCss(inner);
+  if (/class="b\d/.test(inner) && !Object.keys(css.reveals).length) {
+    throw new Error(
+      `${file}: found .bN reveal classes but no one-shot .bN rules — ` +
+        `the section would render invisible in the showcase`,
+    );
+  }
+  return { vb: viewBoxOf(raw), inner, span: Math.max(measureSpan(inner), 0.6) };
+}
+
+function prepare(sec) {
+  if (sec.kind === "heading") {
+    sec.height = HEADING_H;
+    sec.span = 0.4;
+    return;
+  }
+
+  if (sec.file) {
+    const piece = readPiece(sec.file);
+    sec.vb = piece.vb;
+    sec.inner = piece.inner;
+    sec.span = piece.span;
+    sec.height = (piece.vb[3] / piece.vb[2]) * WIDTH;
+    return;
+  }
+
+  if (sec.kind === "about") {
+    sec.avatar = readPiece("assets/matrix-avatar.svg");
+    sec.about = readPiece("assets/matrix-about.svg");
+    sec.span = Math.max(sec.about.span + 0.2, 1);
+    sec.height = 288;
+    return;
+  }
+
+  if (sec.kind === "projects") {
+    sec.cards = [
+      "matrix-profile.svg",
+      "matrix-portfolio.svg",
+      "matrix-rentalhub.svg",
+      "matrix-pcstore.svg",
+    ].map((name) => readPiece(`assets/projects/${name}`));
+    sec.stagger = 0.9;
+    sec.cardW = 560;
+    sec.cardH = (250 / 520) * sec.cardW;
+    sec.height = sec.cardH * 2 + 20;
+    sec.span = Math.max(...sec.cards.map((c) => c.span)) + (sec.cards.length - 1) * sec.stagger;
+    return;
+  }
+
+  if (sec.kind === "connect") {
+    sec.badges = [
+      "github",
+      "linkedin",
+      "x",
+      "email",
+      "proton",
+      "portfolio",
+      "leetcode",
+      "codeforces",
+      "devto",
+    ].map((name) => readPiece(`assets/badges/${name}.svg`));
+    sec.stagger = 0.18;
+    sec.badgeW = 260;
+    sec.badgeH = (44 / 200) * sec.badgeW;
+    sec.height = sec.badgeH * 3 + 28;
+    sec.span = (sec.badges.length - 1) * sec.stagger + 0.4;
+    return;
+  }
+
+  if (sec.kind === "pacman") {
+    sec.span = 0.6;
+    if (pacmanSvg) {
+      const inner = extractInner(pacmanSvg);
+      sec.vb = viewBoxOf(pacmanSvg);
+      sec.inner = inner;
+      sec.height = (sec.vb[3] / sec.vb[2]) * WIDTH;
+    } else {
+      sec.vb = [0, 0, 1200, 120];
+      sec.inner = null;
+      sec.height = 120;
+    }
+  }
+}
+
+for (const sec of sections) prepare(sec);
+
+let clock = 0;
+for (const sec of sections) {
+  sec.start = clock;
+  // Later sections overlap the tail of a long intro (they sit far below the
+  // fold), so the page is fully written in well under a minute.
+  sec.lead = Math.min(Math.max(sec.span * SPEED, 0.35), LEAD_CAP);
+  clock += sec.lead + GAP_TIME;
+}
+
+let cursorY = TOP_PAD;
+for (const sec of sections) {
+  sec.y = cursorY;
+  cursorY += sec.height + GAP_PX;
+}
+const HEIGHT = cursorY - GAP_PX + BOTTOM_PAD;
+
+if (process.env.DEBUG_TIMELINE) {
+  for (const sec of sections) {
+    console.log(
+      `${sec.id.padEnd(14)} start=${fmt(sec.start).padStart(8)} end=${fmt(sec.start + sec.lead).padStart(
+        8,
+      )} lead=${fmt(sec.lead).padStart(6)} h=${fmt(sec.height)}`,
+    );
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  section renderers                                                 */
+/* ------------------------------------------------------------------ */
+
+function headingSection(sec) {
+  const label = esc(sec.label);
+  return `<g font-family="'Courier New', Consolas, monospace" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="${fmt(
+        sec.start,
+      )}s" repeatCount="1" fill="freeze"/>
+      <text x="40" y="${fmt(sec.y + 30)}" font-size="20" letter-spacing="3" fill="#00ff41" filter="url(#page-glow)">${label}</text>
+      <text x="40" y="${fmt(sec.y + 30)}" font-size="20" letter-spacing="3" fill="#d4fdd9" opacity="0.25">${label}</text>
+      <rect x="40" y="${fmt(sec.y + 42)}" width="1120" height="1" fill="#006b2e" opacity="0.55"/>
+    </g>`;
+}
+
+function fileSection(sec) {
+  const content = sanitize(sec.inner, {
+    prefix: sec.id,
+    start: sec.start,
+    scale: SPEED,
+    removeBg: true,
+    removeRain: !sec.keepRain,
+    removeFades: true,
+  });
+  return `<svg x="0" y="${fmt(sec.y)}" width="${WIDTH}" height="${fmt(sec.height)}" viewBox="${sec.vb.join(
+    " ",
+  )}" preserveAspectRatio="xMidYMid meet">${content}</svg>`;
+}
+
+function aboutSection(sec) {
+  const avatar = sanitize(sec.avatar.inner, {
+    prefix: `${sec.id}-avatar`,
+    start: sec.start,
+    scale: SPEED,
+    removeRain: true,
+  });
+  const about = sanitize(sec.about.inner, {
+    prefix: `${sec.id}-text`,
+    start: sec.start + 0.2 * SPEED,
+    scale: SPEED,
+    removeBg: true,
+    removeRain: true,
+    removeFades: true,
+  });
+  const aboutW = 950;
+  const aboutH = (288 / 1200) * aboutW;
+  return `<svg x="40" y="${fmt(sec.y + (sec.height - 140) / 2)}" width="140" height="140" viewBox="${sec.avatar.vb.join(
+    " ",
+  )}" preserveAspectRatio="xMidYMid meet">${avatar}</svg>
+    <svg x="210" y="${fmt(sec.y + (sec.height - aboutH) / 2)}" width="${aboutW}" height="${fmt(
+      aboutH,
+    )}" viewBox="${sec.about.vb.join(" ")}" preserveAspectRatio="xMidYMid meet">${about}</svg>`;
+}
+
+function projectsSection(sec) {
+  const pos = [
+    [30, 0],
+    [30 + sec.cardW + 20, 0],
+    [30, sec.cardH + 20],
+    [30 + sec.cardW + 20, sec.cardH + 20],
+  ];
+  return sec.cards
+    .map((card, i) => {
+      const content = sanitize(card.inner, {
+        prefix: `${sec.id}-${i}`,
+        start: sec.start + i * sec.stagger * SPEED,
+        scale: SPEED,
+        removeBg: true,
+        removeRain: true,
+        removeFades: true,
+      });
+      return `<svg x="${fmt(pos[i][0])}" y="${fmt(sec.y + pos[i][1])}" width="${fmt(
+        sec.cardW,
+      )}" height="${fmt(sec.cardH)}" viewBox="${card.vb.join(" ")}" preserveAspectRatio="xMidYMid meet">${content}</svg>`;
+    })
+    .join("\n    ");
+}
+
+function connectSection(sec) {
+  return sec.badges
+    .map((badge, i) => {
+      const content = sanitize(badge.inner, {
+        prefix: `${sec.id}-${i}`,
+        start: sec.start,
+        scale: SPEED,
+        removeRain: true,
+      });
+      const x = 170 + (i % 3) * 280;
+      const y = sec.y + Math.floor(i / 3) * (sec.badgeH + 14);
+      return `<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="${fmt(
+        sec.start + i * sec.stagger * SPEED,
+      )}s" repeatCount="1" fill="freeze"/><svg x="${x}" y="${fmt(y)}" width="${fmt(
+        sec.badgeW,
+      )}" height="${fmt(sec.badgeH)}" viewBox="${badge.vb.join(
+        " ",
+      )}" preserveAspectRatio="xMidYMid meet">${content}</svg></g>`;
+    })
+    .join("\n    ");
+}
+
+function pacmanSection(sec) {
+  if (!sec.inner) {
+    return `<g font-family="'Courier New', Consolas, monospace" text-anchor="middle">
+      <text x="600" y="${fmt(sec.y + 48)}" font-size="22" fill="#00a32a">[ OFFLINE ]</text>
+      <text x="600" y="${fmt(sec.y + 80)}" font-size="16" fill="#006b2e">pac-man graph unavailable — the next run will retry</text>
+    </g>`;
+  }
+  const content = sanitize(sec.inner, {
+    prefix: sec.id,
+    start: sec.start,
+    scale: SPEED,
+  })
+    /* let the page's black backdrop show through instead of the graph's own panel */
+    .replace(/<rect\b[^>]*\bwidth="100%"[^>]*\bfill="#0d1117"[^>]*\/>/g, "");
+  return `<svg x="0" y="${fmt(sec.y)}" width="${WIDTH}" height="${fmt(sec.height)}" viewBox="${sec.vb.join(
+    " ",
+  )}" preserveAspectRatio="xMidYMid meet">${content}</svg>`;
+}
+
+function render(sec) {
+  switch (sec.kind) {
+    case "heading":
+      return headingSection(sec);
+    case "about":
+      return aboutSection(sec);
+    case "projects":
+      return projectsSection(sec);
+    case "connect":
+      return connectSection(sec);
+    case "pacman":
+      return pacmanSection(sec);
+    default:
+      return fileSection(sec);
+  }
+}
+
+const body = sections.map((sec) => `    <!-- ${sec.id} -->\n    ${render(sec)}`).join("\n");
+
+/* ------------------------------------------------------------------ */
+/*  global backdrop rain                                              */
+/* ------------------------------------------------------------------ */
+
+const POOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+function globalRain() {
+  const columns = 16;
+  const gap = WIDTH / columns;
+  const rows = Math.max(10, Math.ceil((HEIGHT - 24) / 30));
+  const out = [];
+  for (let c = 0; c < columns; c++) {
+    const glyphs = [];
+    for (let r = 0; r < rows; r++) {
+      const ch = POOL[(c * 7 + r * 13) % POOL.length];
+      const phase = (r + c * 3) % 10;
+      let fill;
+      let opacity;
+      if (phase < 4) {
+        fill = "#006b2e";
+        opacity = "0.18";
+      } else if (phase < 7) {
+        fill = "#00a32a";
+        opacity = "0.24";
+      } else if (phase < 9) {
+        fill = "#00e640";
+        opacity = "0.3";
+      } else {
+        fill = "#00ff41";
+        opacity = "0.34";
+      }
+      glyphs.push(`<text x="0" y="${16 + r * 30}" fill="${fill}" opacity="${opacity}">${ch}</text>`);
+    }
+    const x = Math.round(c * gap + gap / 2);
+    const dur = (8 + ((c * 37) % 60) / 10).toFixed(2);
+    const begin = (-((c * 53) % 90) / 10).toFixed(2);
+    out.push(
+      `<g><animateTransform attributeName="transform" type="translate" values="-${gap} 0;0 0" dur="${dur}s" repeatCount="indefinite" begin="${begin}s"/><g transform="translate(${x} 8)">${glyphs.join(
+        "",
+      )}</g></g>`,
+    );
+  }
+  return out.join("\n      ");
+}
+
 /* ------------------------------------------------------------------ */
 /*  compose                                                           */
 /* ------------------------------------------------------------------ */
 
-const pacmanSvg = await loadPacman();
-
-const scenes = SCENES.map((scene, index) => {
-  const prefix = `s${String(index + 1).padStart(2, "0")}`;
-  let piece;
-  switch (scene.kind) {
-    case "about":
-      piece = aboutScene(scene, prefix);
-      break;
-    case "projects":
-      piece = projectsScene(scene, prefix);
-      break;
-    case "connect":
-      piece = connectScene(scene, prefix);
-      break;
-    case "pacman":
-      piece = pacmanScene(scene, prefix, pacmanSvg);
-      break;
-    default:
-      piece = fileScene(scene, prefix, index);
-  }
-  return wrapScene(scene, piece);
-}).join("\n");
-
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 ${WIDTH} ${HEIGHT}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Matrix profile showcase — every section animated in one loop, ending with the Pac-Man contribution graph">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" viewBox="0 0 ${WIDTH} ${HEIGHT}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Dhyanesh's Matrix profile — every section stacked in one file, written line by line">
   <defs>
-    <filter id="g-glow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="2.4" result="blur"/>
+    <filter id="page-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <linearGradient id="g-fade-top" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#000000" stop-opacity="0.75"/>
-      <stop offset="9%" stop-color="#000000" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="g-fade-bottom" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="90%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.75"/>
-    </linearGradient>
-    <linearGradient id="g-line" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00420f" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#00a32a" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#00420f" stop-opacity="0"/>
-    </linearGradient>
   </defs>
 
   <rect width="${WIDTH}" height="${HEIGHT}" fill="#000000"/>
   <g font-family="'Courier New', Consolas, monospace" font-size="14">
-${globalRain()}
+      ${globalRain()}
   </g>
 
-  <rect x="0" y="0" width="${WIDTH}" height="28" fill="#00ff41" opacity="0.045">
-    <animate attributeName="y" from="-28" to="${HEIGHT}" dur="7s" repeatCount="indefinite"/>
-  </rect>
-
-  <g id="g-scenes">
-${scenes}
-  </g>
-
-  <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#g-fade-top)"/>
-  <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#g-fade-bottom)"/>
-
-  <g font-family="'Courier New', Consolas, monospace">
-    <text x="60" y="34" font-size="15" letter-spacing="5" fill="#00a32a"><tspan fill="#00ff41">MATRIX</tspan> <tspan fill="#006b2e">//</tspan> PROFILE</text>
-    <text x="1140" y="34" text-anchor="end" font-size="12" letter-spacing="3" fill="#006b2e">ONE LOOP · ALL SYSTEMS GREEN</text>
-    <line x1="60" y1="48" x2="1140" y2="48" stroke="url(#g-line)" stroke-width="1.5" opacity="0.8"/>
-
-    <text x="60" y="612" font-size="12" letter-spacing="3" fill="#006b2e">&gt; one terminal session · every section · pac-man takes the last level</text>
-    <text x="1140" y="612" text-anchor="end" font-size="12" letter-spacing="3" fill="#006b2e">LOOP ${fmt(CYCLE)}s</text>
-    <line x1="60" y1="624" x2="1140" y2="624" stroke="#00420f" stroke-width="2"/>
-    <rect x="60" y="621" width="90" height="6" fill="#00ff41" opacity="0.9" filter="url(#g-glow)">
-      <animate attributeName="x" from="60" to="1050" dur="${fmt(CYCLE)}s" repeatCount="indefinite"/>
-    </rect>
+  <g id="page">
+${body}
   </g>
 </svg>
 `;
@@ -660,9 +628,15 @@ try {
   /* first build */
 }
 
+const sectionCount = sections.filter((sec) => sec.kind !== "heading").length;
+const finishAt = Math.max(...sections.map((sec) => sec.start + sec.span * SPEED));
+const summary = `${(svg.length / 1024).toFixed(1)} KiB · ${HEIGHT.toFixed(0)}px tall · ${sectionCount} sections · written by ${fmt(
+  finishAt,
+)}s`;
+
 if (previous === svg) {
-  console.log(`showcase unchanged (${(svg.length / 1024).toFixed(1)} KiB, ${fmt(CYCLE)}s loop, ${SCENES.length} scenes)`);
+  console.log(`showcase unchanged (${summary})`);
 } else {
   writeFileSync(out, svg);
-  console.log(`showcase written (${(svg.length / 1024).toFixed(1)} KiB, ${fmt(CYCLE)}s loop, ${SCENES.length} scenes)`);
+  console.log(`showcase written (${summary})`);
 }

@@ -6,8 +6,8 @@
 #  • regenerates the animated Matrix stats cards via the GitHub API
 #    (.github/scripts/generate-stats.mjs → profile/stats.svg +
 #    profile/activity.svg)
-#  • rebuilds the single-loop showcase that plays every section in
-#    sequence and ends with the Pac-Man graph
+#  • rebuilds the stacked showcase that writes every section into one
+#    tall SVG, top to bottom, ending with the Pac-Man graph
 #    (.github/scripts/build-showcase.mjs → profile/showcase.svg)
 #  Everything is committed in one push, so the old separate quote and
 #  timestamp workflows are replaced (no more README write races).
@@ -46,14 +46,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node .github/scripts/generate-stats.mjs
 
-      # ── Single-loop showcase: every section in order, Pac-Man last ──────
+      # ── Stacked showcase: every section in reading order, Pac-Man last ──
       - name: Fetch latest Pac-Man graph
         continue-on-error: true
         run: |
           curl -fsSL "https://raw.githubusercontent.com/Dhyanesh006/Dhyanesh006/output/pacman-contribution-graph-dark.svg" \
             -o "$RUNNER_TEMP/pacman-dark.svg"
 
-      - name: Build single-loop showcase
+      - name: Build stacked showcase
         env:
           PACMAN_SVG: ${{ runner.temp }}/pacman-dark.svg
         run: node .github/scripts/build-showcase.mjs

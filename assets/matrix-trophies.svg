@@ -334,47 +334,47 @@
 
   <g filter="url(#trophy-glow)" transform="translate(0 35)">
     <text x="70" y="0" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.04;0.068;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.5s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">cat achievements.log</tspan>
     </text>
     <text x="70" y="29" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.096;0.124;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00e640">TROPHY</tspan> <tspan fill="#00ff41">&#9733;</tspan> <tspan fill="#8fbf98">github contributor</tspan> <tspan fill="#006b2e">.........................</tspan> <tspan fill="#d4fdd9">[UNLOCKED]</tspan>
     </text>
     <text x="70" y="58" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.152;0.18;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.9s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00e640">TROPHY</tspan> <tspan fill="#00ff41">&#127938;</tspan> <tspan fill="#8fbf98">open source builder</tspan> <tspan fill="#006b2e">.................</tspan> <tspan fill="#d4fdd9">[UNLOCKED]</tspan>
     </text>
     <text x="70" y="87" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.208;0.236;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.6s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00e640">TROPHY</tspan> <tspan fill="#00ff41">&#128189;</tspan> <tspan fill="#8fbf98">security &amp; hacking</tspan> <tspan fill="#006b2e">................</tspan> <tspan fill="#d4fdd9">[IN PROGRESS]</tspan>
     </text>
     <text x="70" y="116" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.264;0.292;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="3.3s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00e640">TROPHY</tspan> <tspan fill="#00ff41">&#127793;</tspan> <tspan fill="#8fbf98">networking &amp; cloud</tspan> <tspan fill="#006b2e">...............</tspan> <tspan fill="#d4fdd9">[IN PROGRESS]</tspan>
     </text>
     <text x="70" y="145" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.32;0.348;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00e640">TROPHY</tspan> <tspan fill="#00ff41">&#128218;</tspan> <tspan fill="#8fbf98">lifelong learner</tspan> <tspan fill="#006b2e">....................</tspan> <tspan fill="#d4fdd9">[ALWAYS ON]</tspan>
     </text>
     <text x="70" y="178" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.376;0.404;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4.7s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">certifications</tspan> <tspan fill="#006b2e">....................</tspan> <tspan fill="#d4fdd9">MongoDB · MATLAB · Microsoft · Bentley</tspan>
     </text>
     <text x="70" y="207" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.432;0.46;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="5.4s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">certifications</tspan> <tspan fill="#006b2e">....................</tspan> <tspan fill="#d4fdd9">Celonis · Wadhwani · Professional Development</tspan>
     </text>
     <text x="70" y="236" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.488;0.516;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
+        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="6.1s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">echo "trophies loaded — keep breaking limits"</tspan>
       <tspan fill="#00ff41">
