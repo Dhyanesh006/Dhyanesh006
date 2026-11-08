@@ -338,47 +338,47 @@
 
   <g filter="url(#tech-glow)" transform="translate(0 45)">
     <text x="70" y="0" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.5s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.04;0.068;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">cat tech-stack.dat</tspan>
     </text>
     <text x="70" y="27" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.096;0.124;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">languages</tspan> <tspan fill="#006b2e">.....................</tspan> <tspan fill="#d4fdd9">Java · Python · JavaScript · TypeScript</tspan>
     </text>
     <text x="70" y="54" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.9s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.152;0.18;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">frontend</tspan> <tspan fill="#006b2e">......................</tspan> <tspan fill="#d4fdd9">HTML · CSS · React · Next.js · Tailwind · Bootstrap</tspan>
     </text>
     <text x="70" y="81" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.6s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.208;0.236;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">backend</tspan> <tspan fill="#006b2e">.......................</tspan> <tspan fill="#d4fdd9">Spring · Node.js · Express</tspan>
     </text>
     <text x="70" y="108" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="3.3s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.264;0.292;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">database</tspan> <tspan fill="#006b2e">......................</tspan> <tspan fill="#d4fdd9">MySQL · MongoDB</tspan>
     </text>
     <text x="70" y="135" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.32;0.348;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">tools</tspan> <tspan fill="#006b2e">............................</tspan> <tspan fill="#d4fdd9">Git · GitHub · VS Code · Docker · Linux · Postman · Figma</tspan>
     </text>
     <text x="70" y="162" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4.7s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.376;0.404;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">networking &amp; cloud</tspan> <tspan fill="#006b2e">..........</tspan> <tspan fill="#d4fdd9">Networking · AWS</tspan>
     </text>
     <text x="70" y="189" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="5.4s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.432;0.46;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00e640">[ RUN ]</tspan> <tspan fill="#8fbf98">security</tspan> <tspan fill="#006b2e">......................</tspan> <tspan fill="#d4fdd9">Cybersecurity · Ethical Hacking · CTFs</tspan>
     </text>
     <text x="70" y="216" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="6.1s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.488;0.516;0.952;1" dur="12.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00e640">[ RUN ]</tspan> <tspan fill="#8fbf98">competitive programming</tspan> <tspan fill="#006b2e">....</tspan> <tspan fill="#d4fdd9">LeetCode · Codeforces</tspan>
       <tspan fill="#00ff41">

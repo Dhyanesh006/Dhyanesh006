@@ -133,15 +133,23 @@ const bootLog = [
     </text>`,
 ].join("\n");
 
+const REVEAL_CYCLE = 10; // seconds per full replay of the quote lines
+const REVEAL_CSS = [0.5, 1.2, 2, 2.8, 3.6]
+  .map((t, i) => {
+    const a = ((t / REVEAL_CYCLE) * 100).toFixed(2);
+    const b = (((t + 0.35) / REVEAL_CYCLE) * 100).toFixed(2);
+    const c = (((REVEAL_CYCLE - 0.6) / REVEAL_CYCLE) * 100).toFixed(2);
+    return (
+      `@keyframes q${i} { 0%, ${a}% { opacity: 0; } ${b}%, ${c}% { opacity: 1; } 100% { opacity: 0; } }\n` +
+      `      .b${i} { animation: q${i} ${REVEAL_CYCLE}s linear infinite both; }`
+    );
+  })
+  .join("\n      ");
+
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Matrix terminal boot log with daily quote">
   <defs>
     <style>
-      @keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
-      .b0 { animation: q-in 0.35s linear 0.5s both; }
-      .b1 { animation: q-in 0.35s linear 1.2s both; }
-      .b2 { animation: q-in 0.35s linear 2s both; }
-      .b3 { animation: q-in 0.35s linear 2.8s both; }
-      .b4 { animation: q-in 0.35s linear 3.6s both; }
+      ${REVEAL_CSS}
       @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
       .cur { animation: blink 1s steps(1, end) 4.2s infinite; }
     </style>

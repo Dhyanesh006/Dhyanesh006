@@ -338,32 +338,32 @@
 
   <g filter="url(#a-glow)" transform="translate(0 41)">
     <text x="70" y="0" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.5s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.04762;0.08095;0.94286;1" dur="10.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">cat about-me.dat</tspan>
     </text>
     <text x="70" y="24" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.11429;0.14762;0.94286;1" dur="10.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">operator</tspan> <tspan fill="#006b2e">..................</tspan> <tspan fill="#00ff41">Dhyanesh</tspan>
     </text>
     <text x="70" y="48" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.9s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.18095;0.21429;0.94286;1" dur="10.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">role</tspan> <tspan fill="#006b2e">.....................</tspan> <tspan fill="#00ff41">Computer Science Engineering student</tspan>
     </text>
     <text x="70" y="72" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.6s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.24762;0.28095;0.94286;1" dur="10.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">builds</tspan> <tspan fill="#006b2e">....................</tspan> <tspan fill="#00ff41">web applications end-to-end</tspan>
     </text>
     <text x="70" y="96" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="3.3s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.31429;0.34762;0.94286;1" dur="10.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">digs into</tspan> <tspan fill="#006b2e">.................</tspan> <tspan fill="#00ff41">networking &amp; cloud infrastructure</tspan>
     </text>
     <text x="70" y="120" font-family="'Courier New', Consolas, monospace" font-size="17" opacity="0">
-        <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4s" repeatCount="1" fill="freeze"/>
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.38095;0.41429;0.94286;1" dur="10.5s" begin="0s" repeatCount="indefinite" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">security</tspan> <tspan fill="#006b2e">..................</tspan> <tspan fill="#00ff41">CTFs, OWASP, hardening</tspan>
       <tspan fill="#00ff41">

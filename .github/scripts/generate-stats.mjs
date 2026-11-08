@@ -106,18 +106,21 @@ async function load() {
   return data;
 }
 
+const REVEAL_CYCLE = 11.5; // seconds per full replay of the boot-log lines
+const REVEAL_CSS = Array.from({ length: 9 }, (_, i) => {
+  const t = 0.5 + i * 0.6;
+  const a = ((t / REVEAL_CYCLE) * 100).toFixed(2);
+  const b = (((t + 0.35) / REVEAL_CYCLE) * 100).toFixed(2);
+  const c = (((REVEAL_CYCLE - 0.6) / REVEAL_CYCLE) * 100).toFixed(2);
+  return (
+    `@keyframes q${i} { 0%, ${a}% { opacity: 0; } ${b}%, ${c}% { opacity: 1; } 100% { opacity: 0; } }\n` +
+    `      .b${i} { animation: q${i} ${REVEAL_CYCLE}s linear infinite both; }`
+  );
+}).join("\n      ");
+
 const DEFS = `
     <style>
-      @keyframes q-in { from { opacity: 0; } to { opacity: 1; } }
-      .b0 { animation: q-in 0.35s linear 0.5s both; }
-      .b1 { animation: q-in 0.35s linear 1.1s both; }
-      .b2 { animation: q-in 0.35s linear 1.7s both; }
-      .b3 { animation: q-in 0.35s linear 2.3s both; }
-      .b4 { animation: q-in 0.35s linear 2.9s both; }
-      .b5 { animation: q-in 0.35s linear 3.5s both; }
-      .b6 { animation: q-in 0.35s linear 4.1s both; }
-      .b7 { animation: q-in 0.35s linear 4.7s both; }
-      .b8 { animation: q-in 0.35s linear 5.3s both; }
+      ${REVEAL_CSS}
       @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
       .cur { animation: blink 1s steps(1, end) 6s infinite; }
       @keyframes cell-on { from { opacity: 0.15; } to { opacity: 1; } }
