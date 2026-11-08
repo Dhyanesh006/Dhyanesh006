@@ -20,7 +20,7 @@
 
   <rect x="0" y="0" width="520" height="16" fill="#00ff41" opacity="0.05">
       
-        <animateTransform attributeName="transform" type="translate" values="0 -8;0 246" dur="4s" repeatCount="infinite" fill="remove"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -8;0 246" dur="4s" repeatCount="indefinite" fill="remove"/>
       
     </rect>
 
@@ -52,7 +52,7 @@
       
       <tspan fill="#006b2e">[ stack ]</tspan> <tspan fill="#00a32a">markdown</tspan> <tspan fill="#006b2e">·</tspan> <tspan fill="#00a32a">svg</tspan> <tspan fill="#006b2e">·</tspan> <tspan fill="#00a32a">github actions</tspan>
       <tspan fill="#00ff41">
-        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="infinite" fill="remove"/>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" fill="remove"/>
       &#9608;</tspan>
     </text>
   </g>

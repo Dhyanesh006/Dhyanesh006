@@ -21,32 +21,32 @@
   </rect>
 
   <g filter="url(#ref-glow)" transform="translate(70 36)" font-family="'Courier New', Consolas, monospace">
-    <text x="0" y="0" font-size="21" opacity="1">
+    <text x="0" y="0" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.4s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">man matrix-readme</tspan>
     </text>
-    <text x="0" y="33" font-size="21" opacity="1">
+    <text x="0" y="33" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00a32a">[ INFO ]</tspan> <tspan fill="#8fbf98">every banner, divider, terminal, card &amp; badge</tspan>
     </text>
-    <text x="0" y="62" font-size="21" opacity="1">
+    <text x="0" y="62" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.6s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00a32a">[ INFO ]</tspan> <tspan fill="#8fbf98">is a hand-built animated SVG living in /assets</tspan>
     </text>
-    <text x="0" y="91" font-size="21" opacity="1">
+    <text x="0" y="91" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.2s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00a32a">[ INFO ]</tspan> <tspan fill="#8fbf98">pure SVG + SMIL · zero JavaScript · zero external services</tspan>
     </text>
-    <text x="0" y="124" font-size="21" opacity="1">
+    <text x="0" y="124" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.8s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">echo "daily refresh by GitHub Actions"</tspan>
       <tspan fill="#00ff41">
-        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="infinite" fill="remove"/>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" fill="remove"/>
       &#9608;</tspan>
     </text>
   </g>

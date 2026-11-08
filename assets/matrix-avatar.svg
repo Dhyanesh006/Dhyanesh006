@@ -13,13 +13,13 @@
 
   <rect x="3" y="3" width="134" height="12" rx="6" fill="#00ff41" opacity="0.08">
       
-        <animateTransform attributeName="transform" type="translate" values="0 -140;0 140" dur="4.5s" repeatCount="infinite" fill="remove"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -140;0 140" dur="4.5s" repeatCount="indefinite" fill="remove"/>
       
     </rect>
 
   <g transform="translate(70 62)" text-anchor="middle" font-family="'Courier New', Consolas, monospace">
     <text x="0" y="0" font-size="40" font-weight="bold" fill="#00ff41">
-        <animate attributeName="opacity" values="1;1;0.5" dur="2.6s" repeatCount="infinite" fill="remove"/>
+        <animate attributeName="opacity" values="1;1;0.5" dur="2.6s" repeatCount="indefinite" fill="remove"/>
       
       <tspan fill="#00ff41">D</tspan><tspan fill="#00e640">V</tspan>
     </text>
@@ -29,7 +29,7 @@
 
   <text x="70" y="120" text-anchor="middle" font-family="'Courier New', Consolas, monospace" font-size="13" fill="#00a32a">
     <tspan fill="#00ff41">$</tspan> whoami <tspan fill="#00ff41">
-        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="infinite" fill="remove"/>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" fill="remove"/>
       &#9608;</tspan>
   </text>
 </svg>

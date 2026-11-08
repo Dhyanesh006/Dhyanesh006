@@ -43,10 +43,10 @@
       <text x="0" y="180" clip-path="url(#tc5)" fill="#d4fdd9"><tspan fill="#00a32a">welcome to my GitHub</tspan> <tspan fill="#006b2e">//</tspan> <tspan fill="#00ff41">enter the matrix</tspan></text>
       <rect x="560" y="-19" width="12" height="24" fill="#00ff41">
       
-        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="infinite" fill="remove"/>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" fill="remove"/>
       
     </rect>
-      <text x="0" y="218" font-size="13" letter-spacing="6" fill="#006b2e" opacity="0.85">
+      <text x="0" y="218" font-size="13" letter-spacing="6" fill="#006b2e" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="16s" repeatCount="1" fill="freeze"/>
       
         &gt; all input streams nominal — stay in the matrix

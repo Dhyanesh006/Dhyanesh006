@@ -9,7 +9,7 @@
   <rect x="1" y="1" width="198" height="42" rx="7" fill="url(#pb)" stroke="#006b2e" stroke-width="1.6"/>
   <rect x="0" y="0" width="200" height="8" fill="#006b2e" opacity="0.12">
 
-        <animateTransform attributeName="transform" type="translate" values="0 -6;0 44" dur="3.2s" repeatCount="infinite" fill="remove"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -6;0 44" dur="3.2s" repeatCount="indefinite" fill="remove"/>
 
     </rect>
   <text x="100" y="28" text-anchor="middle" font-family="'Courier New', Consolas, monospace" font-size="20" font-weight="bold" fill="#006b2e" letter-spacing="3">PROTON MAIL</text>

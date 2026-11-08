@@ -337,52 +337,52 @@
   </rect>
 
   <g filter="url(#r-glow)" transform="translate(0 45)">
-      <text x="70" y="0" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="0" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.5s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00ff41">$</tspan> <tspan fill="#00e640">cat learning-roadmap.dat</tspan>
     </text>
-      <text x="70" y="26" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="26" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.2s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">Java &amp; Spring Boot &#8212; server-side fundamentals</tspan>
     </text>
-      <text x="70" y="52" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="52" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.9s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">JavaScript / TypeScript &#8212; modern frontend + Node.js</tspan>
     </text>
-      <text x="70" y="78" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="78" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="2.6s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">MySQL &amp; MongoDB &#8212; relational + document databases</tspan>
     </text>
-      <text x="70" y="104" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="104" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="3.3s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">Docker &amp; Linux &#8212; containerised deployments</tspan>
     </text>
-      <text x="70" y="130" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="130" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">Git, GitHub &amp; CI/CD &#8212; version control and automation</tspan>
     </text>
-      <text x="70" y="156" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="156" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="4.7s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00e640">[ RUN ]</tspan> <tspan fill="#8fbf98">Networking &amp; Cloud &#8212; AWS in progress</tspan>
     </text>
-      <text x="70" y="182" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="182" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="5.4s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00e640">[ RUN ]</tspan> <tspan fill="#8fbf98">Security &#8212; CTFs, OWASP, hardening in progress</tspan>
     </text>
-      <text x="70" y="208" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
+      <text x="70" y="208" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="0">
         <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="6.1s" repeatCount="1" fill="freeze"/>
       
       <tspan fill="#00e640">[ RUN ]</tspan> <tspan fill="#8fbf98">Competitive programming &#8212; LeetCode / Codeforces consistency</tspan>
       <tspan fill="#00ff41">
-        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="infinite" fill="remove"/>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" fill="remove"/>
       &#9608;</tspan>
     </text>
     <text x="70" y="236" font-family="'Courier New', Consolas, monospace" font-size="17" letter-spacing="5" fill="#006b2e" opacity="0.8">
