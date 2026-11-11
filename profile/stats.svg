@@ -400,7 +400,7 @@
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">followers</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">12</tspan>
     </text>
     <text x="70" y="201" class="b6" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
-      <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">following</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">9</tspan>
+      <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">following</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">10</tspan>
     </text>
     <text x="70" y="230" class="b7" font-family="'Courier New', Consolas, monospace" font-size="21" opacity="1">
       <tspan fill="#00a32a">[ OK ]</tspan> <tspan fill="#8fbf98">stars earned</tspan> <tspan fill="#006b2e">........................</tspan> <tspan fill="#d4fdd9">0 · top: TypeScript</tspan>
